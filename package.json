@@ -1,0 +1,29 @@
+{
+  "name": "isdralit",
+  "version": "0.0.1",
+  "description": "http://www.isdralit.com.br",
+  "main": "scripts/isdralit.js",
+  "dependencies": {
+    "bower": "~1.3.12",
+    "ejs": "^1.0.0",
+    "express": "~4.10.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marlonconstante/isdralit.git"
+  },
+  "keywords": [
+    "isdralit"
+  ],
+  "author": "Lighthouse",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marlonconstante/isdralit/issues"
+  },
+  "homepage": "https://github.com/marlonconstante/isdralit"
+}
