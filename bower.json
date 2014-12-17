@@ -1,0 +1,25 @@
+{
+  "name": "isdralit",
+  "version": "0.0.1",
+  "homepage": "https://github.com/marlonconstante/isdralit",
+  "authors": [
+    "Lighthouse"
+  ],
+  "description": "http://www.isdralit.com.br",
+  "main": "scripts/isdralit.js",
+  "keywords": [
+    "isdralit"
+  ],
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
