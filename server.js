@@ -1,7 +1,9 @@
 /**
  * Created by marlon on 16/12/14.
  */
+var db = require('./db/database');
 var express = require('express');
+
 var app = express();
 app.engine('html', require('ejs').renderFile);
 
@@ -10,25 +12,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/menu/find', function (req, res) {
-    res.send([{
-        name: 'Home',
-        url: '/'
-    }, {
-        name: 'Produtos',
-        url: '/'
-    }, {
-        name: 'Institucional',
-        url: '/'
-    }, {
-        name: 'Contato',
-        url: '/'
-    }]);
+    db.Menu.findAll(res);
 });
 
-var server = app.listen(8000, function () {
-    var address = server.address();
-    var host = address.address;
-    var port = address.port;
-
-    console.log('Servidor Iniciado:\nhttp://%s:%s', host, port);
-});
+app.listen(8000);
