@@ -3,16 +3,34 @@
  */
 var db = require('./js/db/database');
 var express = require('express');
+var minify = require('express-minify');
+var compileSass = require('express-compile-sass');
+var browserify = require('browserify-middleware');
 
 var app = express();
-app.engine('html', require('ejs').renderFile);
 
-app.get('/', function(req, res) {
-    res.render('home.html');
+app.use(minify({
+    sass_match: /scss/,
+    cache: false
+}));
+
+app.use(compileSass({
+    root: __dirname,
+    watchFiles: true,
+    logToConsole: false
+}));
+
+app.use('/js/entry-points', browserify(__dirname + '/js/entry-points', {
+    minify: true,
+    cache: false
+}));
+
+app.get('/', function (req, res) {
+    res.redirect('/views/home');
 });
 
-app.get('/js/*', function (req, res) {
-    res.sendFile(__dirname + '/js/' + req.params[0]);
+app.get('/views/*', function (req, res) {
+    res.sendFile(__dirname + '/views/' + req.params[0] + '.html');
 });
 
 app.get('/menu/find', function (req, res) {
