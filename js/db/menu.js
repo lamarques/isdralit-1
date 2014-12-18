@@ -8,7 +8,7 @@ Menu = mongoose.model('Menu', mongoose.Schema({
     url: String
 }));
 
-exports.initialCharge = function() {
+exports.initialCharge = function () {
     Menu.count(function (err, count) {
         if (err) {
             return console.error(err);
@@ -33,7 +33,7 @@ exports.initialCharge = function() {
                 })
             ];
 
-            menus.forEach(function(menu) {
+            menus.forEach(function (menu) {
                 menu.save(function (err, menu) {
                     if (err) {
                         return console.error(err);
@@ -44,7 +44,7 @@ exports.initialCharge = function() {
     });
 };
 
-exports.findAll = function(res) {
+exports.findAll = function (res) {
     Menu.find({}).lean().exec(function (err, menus) {
         if (err) {
             res.status(404).send(err);

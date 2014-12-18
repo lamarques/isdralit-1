@@ -6,7 +6,7 @@ mongoose.connect('mongodb://localhost/isdralit');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Erro de conexão:'));
-db.once('open', function callback () {
+db.once('open', function callback() {
     console.log('Conexão realizada com sucesso');
 });
 
