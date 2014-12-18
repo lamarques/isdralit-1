@@ -6,7 +6,7 @@
     "Lighthouse"
   ],
   "description": "http://www.isdralit.com.br",
-  "main": "scripts/isdralit.js",
+  "main": "js/main/isdralit.js",
   "keywords": [
     "isdralit"
   ],
