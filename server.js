@@ -16,12 +16,11 @@ app.use(minify({
 
 app.use(compileSass({
     root: __dirname,
-    watchFiles: true,
-    logToConsole: false
+    watchFiles: true
 }));
 
 app.use('/js/entry-points', browserify(__dirname + '/js/entry-points', {
-    minify: true,
+    minify: false,
     cache: false
 }));
 

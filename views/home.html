@@ -7,7 +7,9 @@
 </head>
 <body>
 
-Página inicial
+<div data-bind="foreach: menus">
+    <span data-bind="text: name"> </span>
+</div>
 
 </body>
 <script type="text/javascript" src="../js/entry-points/home.js"></script>
