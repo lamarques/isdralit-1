@@ -15,7 +15,7 @@ app.use(minify({
 }));
 
 app.use(compileSass({
-    root: __dirname,
+    root: __dirname + '/styles',
     watchFiles: true
 }));
 

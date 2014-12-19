@@ -20,6 +20,6 @@ ViewModel = function () {
     };
 
     self.findMenus();
-}
+};
 
 ko.applyBindings(new ViewModel());
