@@ -10,7 +10,6 @@ var browserify = require('browserify-middleware');
 var app = express();
 
 app.use(minify({
-    sass_match: /scss/,
     cache: false
 }));
 
@@ -18,6 +17,8 @@ app.use(compileSass({
     root: __dirname + '/styles',
     watchFiles: true
 }));
+
+app.use('/fonts', express.static(__dirname + '/styles/fonts'));
 
 app.use('/js/entry-points', browserify(__dirname + '/js/entry-points', {
     minify: false,
