@@ -1,0 +1,64 @@
+@import "variables";
+
+.footer-column {
+  float: left;
+  width: 369px;
+  padding-right: 100px;
+  margin-top: 30px;
+  &:first-child {
+    margin-left: 131px;
+  }
+  .title {
+    > span {
+      border-bottom: 2px solid $main-color;
+    }
+    margin-bottom: 20px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid $highlighted-gray-color;
+  }
+}
+
+.footer {
+  .nav-bar {
+    height: 207px;
+    background-color: $light-gray-color;
+    border-top: 1px solid $light-gray-border-color;
+    .menu {
+      @extend .footer-column;
+      .link {
+        font-size: 16px;
+        height: 25px;
+      }
+    }
+    .certified {
+      @extend .footer-column;
+      .stamps {
+        width: 227px;
+        height: 63px;
+        background-image: url('/images/stamps.png');
+        background-size: 227px 63px;
+      }
+    }
+  }
+  .bottom-bar {
+    height: 73px;
+    background-color: $main-color;
+    .logo {
+      float: left;
+      width: 123px;
+      height: 26px;
+      margin-top: 23.5px;
+      margin-left: 131px;
+      background-image: url('/images/logo-clear.png');
+      background-size: 123px 26px;
+    }
+    .info {
+      float: right;
+      font-size: 13px;
+      text-align: right;
+      color: $clear-color;
+      margin-top: 12.5px;
+      margin-right: 131px;
+    }
+  }
+}

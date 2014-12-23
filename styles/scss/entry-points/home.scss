@@ -1,10 +1,6 @@
-$font-stack: PTSans-Regular;
-$primary-color: #5fad4c;
-
-@import "../../fonts/PTSans-Regular/style.css";
-@import "../../fonts/OpenSans-CondensedBold/style.css";
-
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-}
+@import "../fonts";
+@import "../common";
+@import "../header";
+@import "../banner";
+@import "../box";
+@import "../footer";

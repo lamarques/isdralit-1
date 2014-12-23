@@ -14,11 +14,13 @@ app.use(minify({
 }));
 
 app.use(compileSass({
-    root: __dirname + '/styles',
+    root: __dirname,
     watchFiles: true
 }));
 
-app.use('/fonts', express.static(__dirname + '/styles/fonts'));
+app.use('/images', express.static(__dirname + '/images'));
+
+app.use('/styles', express.static(__dirname + '/styles'));
 
 app.use('/js/entry-points', browserify(__dirname + '/js/entry-points', {
     minify: false,

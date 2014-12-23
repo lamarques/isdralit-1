@@ -1,0 +1,33 @@
+.header {
+  height: 122px;
+  .logo {
+    float: left;
+    width: 275px;
+    height: 58px;
+    margin-top: 32px;
+    margin-left: 131px;
+    background-image: url('/images/logo.png');
+    background-size: 275px 58px;
+  }
+  .menu {
+    float: right;
+    margin-right: 131px;
+    > div {
+      display: inline-block;
+      float: left;
+    }
+    .separator {
+      width: 2px;
+      height: 92px;
+      background-image: url('/images/separator.png');
+      &:first-child {
+        display: none;
+      }
+    }
+    .title {
+      margin-top: 46px;
+      padding: 0px 20px;
+      text-align: center;
+    }
+  }
+}

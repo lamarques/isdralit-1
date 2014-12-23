@@ -1,0 +1,79 @@
+@import "variables";
+
+.box-column {
+  display: table;
+  float: left;
+  height: 100%;
+  cursor: pointer;
+  margin-left: 2px;
+  &:first-child {
+    margin-left: 0px;
+  }
+  &:hover .background {
+    opacity: 0.7;
+  }
+  .background {
+    z-index: -1;
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+  .description {
+    display: table-cell;
+    vertical-align: bottom;
+    .title {
+      color: $clear-color;
+      text-shadow: $default-text-shadow;
+    }
+    .detail {
+      padding-top: 10px;
+      font-size: 17px;
+      font-family: PTSans-Regular;
+      color: $title-color;
+    }
+  }
+}
+
+.box {
+  margin: 0 auto;
+  width: 938px;
+  padding-bottom: 30px;
+  .product {
+    height: 281px;
+    > div {
+      @extend .box-column;
+      width: 233px;
+      .background {
+        width: 233px;
+        height: 281px;
+      }
+      .description {
+        padding: 20px;
+        .title {
+          font-size: 33px;
+        }
+      }
+    }
+  }
+  .info {
+    margin-top: 1px;
+    height: 200px;
+    > div {
+      @extend .box-column;
+      width: 468px;
+      border-bottom: 4px solid $main-color;
+      &:hover {
+        border-color: lighten($main-color, 15%);
+      }
+      .background {
+        width: 468px;
+        height: 200px;
+      }
+      .description {
+        padding: 30px;
+        .title {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "variables";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: PTSans-Regular;
+  background-color: $background-color;
+}
+
+.content {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.title {
+  font-family: OpenSans-CondensedBold;
+  font-size: 22px;
+  color: $title-color;
+}
+
+.link {
+  color: $title-color;
+  cursor: pointer;
+  &:hover {
+    color: lighten($title-color, 15%);
+  }
+}

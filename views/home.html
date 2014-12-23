@@ -3,14 +3,147 @@
 <head lang="pt-BR">
     <meta charset="UTF-8">
     <title>Isdralit</title>
-    <link rel="stylesheet" type="text/css" href="../scss/entry-points/home.scss"/>
+    <link rel="stylesheet" type="text/css" href="/styles/scss/entry-points/home.scss"/>
 </head>
 <body>
 
-<div data-bind="foreach: menus">
-    <span data-bind="text: name"> </span>
+<div class="header">
+    <div class="content">
+        <div class="logo"></div>
+
+        <div class="menu" data-bind="foreach: menus">
+            <div class="separator"></div>
+            <div class="title link" data-bind="text: name"></div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="banner" style="background-image: url('/images/banner-1.jpg');">
+        <div class="arrow"></div>
+
+        <div class="detail">
+            As melhores soluções<br>
+            em acabamentos<br>
+            e coberturas
+        </div>
+
+        <div class="button">
+            <span>Conheça nossos produtos</span>
+            <div class="play"></div>
+        </div>
+
+        <div class="arrow"></div>
+    </div>
+
+    <div class="box">
+        <div class="product">
+            <div>
+                <div class="background" style="background-image: url('/images/water-tanks.jpg');"></div>
+                <div class="description">
+                    <div class="title">
+                        Caixas<br>
+                        de água
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="background" style="background-image: url('/images/pvc-finishing-work.jpg');"></div>
+                <div class="description">
+                    <div class="title">
+                        Acabamentos<br>
+                        em PVC
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="background" style="background-image: url('/images/roof-tiles.jpg');"></div>
+                <div class="description">
+                    <div class="title">
+                        Coberturas
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="background" style="background-image: url('/images/pipes-fittings.jpg');"></div>
+                <div class="description">
+                    <div class="title">
+                        Tubos<br>
+                        e conexões
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info">
+            <div>
+                <div class="background" style="background-image: url('/images/contact.jpg');"></div>
+                <div class="description">
+                    <div class="title">
+                        Fale Conosco
+                    </div>
+
+                    <div class="detail">
+                        Para saber onde encontrar os produtos Isdralit e outras informações, fale com a nossa equipe.
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="background" style="background-image: url('/images/about.jpg');"></div>
+                <div class="description">
+                    <div class="title">
+                        Conheça a Isdralit
+                    </div>
+
+                    <div class="detail">
+                        Com mais de 60 anos no mercado...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="nav-bar">
+        <div class="content">
+            <div class="menu">
+                <div class="title">
+                    <span>Navegue</span>
+                </div>
+
+                <div data-bind="foreach: menus">
+                    <div class="link" data-bind="text: name"></div>
+                </div>
+            </div>
+
+            <div class="certified">
+                <div class="title">
+                    <span>Selos e Certificações</span>
+                </div>
+
+                <div class="stamps"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-bar">
+        <div class="content">
+            <div class="logo"></div>
+
+            <div class="info">
+                Isdralit Indústria e Comércio<br>
+                Rua da Praia Shopping - R. dos Andradas, 1001, CEP 90020-015<br>
+                Centro, Porto Alegre - RS
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
-<script type="text/javascript" src="../js/entry-points/home.js"></script>
+<script type="text/javascript" src="/js/entry-points/home.js"></script>
 </html>
