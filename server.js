@@ -39,4 +39,4 @@ app.get('/menu/find', function (req, res) {
     db.Menu.findAll(res);
 });
 
-app.listen(8000);
+app.listen(process.env.PORT || 8000);
