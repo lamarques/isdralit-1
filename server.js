@@ -42,4 +42,8 @@ app.get('/menu/find', function (req, res) {
     db.Menu.findAll(res);
 });
 
+app.get('/banner/find', function (req, res) {
+    db.Banner.findAll(res);
+});
+
 app.listen(process.env.PORT || 8000);
