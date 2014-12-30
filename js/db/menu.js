@@ -5,7 +5,8 @@ var mongoose = require('mongoose');
 
 Menu = mongoose.model('Menu', mongoose.Schema({
     name: String,
-    url: String
+    url: String,
+    order: Number
 }));
 
 exports.initialCharge = function () {
@@ -17,19 +18,23 @@ exports.initialCharge = function () {
             var menus = [
                 new Menu({
                     name: 'Home',
-                    url: '/'
+                    url: '/',
+                    order: 0
                 }),
                 new Menu({
                     name: 'Produtos',
-                    url: '/'
+                    url: '/',
+                    order: 1
                 }),
                 new Menu({
                     name: 'Institucional',
-                    url: '/'
+                    url: '/',
+                    order: 2
                 }),
                 new Menu({
                     name: 'Contato',
-                    url: '/'
+                    url: '/',
+                    order: 3
                 })
             ];
 
@@ -45,7 +50,7 @@ exports.initialCharge = function () {
 };
 
 exports.findAll = function (res) {
-    Menu.find({}).lean().exec(function (err, menus) {
+    Menu.find({}).sort('order').lean().exec(function (err, menus) {
         if (err) {
             res.status(404).send(err);
         } else {
