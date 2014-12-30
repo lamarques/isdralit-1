@@ -11,3 +11,4 @@ db.once('open', function callback() {
 });
 
 exports.Menu = require('./menu');
+exports.Banner = require('./banner');
