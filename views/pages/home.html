@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head lang="pt-BR">
-    <meta charset="UTF-8">
-    <title>Isdralit</title>
-    <link rel="stylesheet" type="text/css" href="/styles/scss/entry-points/home.scss"/>
+    <% include ../partials/head %>
 </head>
 <body>
 
-<div class="header">
-    <div class="content">
-        <div class="logo"></div>
-
-        <div class="menu" data-bind="foreach: menus">
-            <div class="separator"></div>
-            <div class="title link" data-bind="text: name"></div>
-        </div>
-    </div>
-</div>
+<% include ../partials/header %>
 
 <div class="content">
     <div class="banner" style="background-image: url('/images/banner-1.jpg');">
@@ -30,6 +19,7 @@
 
         <div class="button">
             <span>Conheça nossos produtos</span>
+
             <div class="play"></div>
         </div>
 
@@ -108,42 +98,7 @@
     </div>
 </div>
 
-<div class="footer">
-    <div class="nav-bar">
-        <div class="content">
-            <div class="menu">
-                <div class="title">
-                    <span>Navegue</span>
-                </div>
-
-                <div data-bind="foreach: menus">
-                    <div class="link" data-bind="text: name"></div>
-                </div>
-            </div>
-
-            <div class="certified">
-                <div class="title">
-                    <span>Selos e Certificações</span>
-                </div>
-
-                <div class="stamps"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="bottom-bar">
-        <div class="content">
-            <div class="logo"></div>
-
-            <div class="info">
-                Isdralit Indústria e Comércio<br>
-                Rua da Praia Shopping - R. dos Andradas, 1001, CEP 90020-015<br>
-                Centro, Porto Alegre - RS
-            </div>
-        </div>
-    </div>
-</div>
+<% include ../partials/footer %>
 
 </body>
-<script type="text/javascript" src="/js/entry-points/home.js"></script>
 </html>

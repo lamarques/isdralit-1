@@ -9,6 +9,8 @@ var browserify = require('browserify-middleware');
 
 var app = express();
 
+app.engine('html', require('ejs').renderFile);
+
 app.use(minify({
     cache: false
 }));
@@ -32,7 +34,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/views/*', function (req, res) {
-    res.sendFile(__dirname + '/views/' + req.params[0] + '.html');
+    var name = req.params[0];
+    res.render('pages/' + name + '.html', { name: name });
 });
 
 app.get('/menu/find', function (req, res) {
