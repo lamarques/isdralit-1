@@ -8,14 +8,12 @@
 <% include ../partials/header %>
 
 <div class="content">
-    <div class="banner" style="background-image: url('/images/banner-1.jpg');">
+
+    <!-- ko foreach: banners -->
+    <div class="banner" data-bind="style: { backgroundImage: backgroundImage }">
         <div class="arrow"></div>
 
-        <div class="detail">
-            As melhores soluções<br>
-            em acabamentos<br>
-            e coberturas
-        </div>
+        <div class="detail" data-bind="html: detailHtml"></div>
 
         <div class="button">
             <span>Conheça nossos produtos</span>
@@ -25,6 +23,7 @@
 
         <div class="arrow"></div>
     </div>
+    <!-- /ko -->
 
     <div class="box">
         <div class="product">
