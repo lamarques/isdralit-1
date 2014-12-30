@@ -11,7 +11,7 @@ exports.ViewModel = function () {
 
     self.findMenus = function () {
         libs.$.ajax({
-            url: "/menu/find"
+            url: '/menu/find'
         }).done(function (menus) {
             menus.forEach(function (menu) {
                 self.menus.push(menu);
@@ -21,4 +21,3 @@ exports.ViewModel = function () {
 
     self.findMenus();
 };
-
