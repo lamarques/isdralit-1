@@ -11,4 +11,5 @@ var charge = function(entity) {
 exports.start = function () {
     charge(db.Menu);
     charge(db.Banner);
+    charge(db.Product);
 };

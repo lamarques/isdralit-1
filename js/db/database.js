@@ -30,8 +30,8 @@ exports.findAll = function (model, res) {
     });
 };
 
-exports.removeAll = function(model) {
-    model.remove(function(err) {
+exports.removeAll = function (model) {
+    model.remove(function (err) {
         if (err) {
             return console.error(err);
         }
@@ -40,6 +40,7 @@ exports.removeAll = function(model) {
 
 exports.Menu = require('./menu');
 exports.Banner = require('./banner');
+exports.Product = require('./product');
 
 var initialCharge = require('./initial-charge');
 initialCharge.start();
