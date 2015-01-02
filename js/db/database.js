@@ -30,10 +30,12 @@ exports.findAll = function (model, res) {
     });
 };
 
-exports.removeAll = function (model) {
+exports.removeAll = function (model, afterAction) {
     model.remove(function (err) {
         if (err) {
             return console.error(err);
+        } else if (afterAction) {
+            afterAction();
         }
     });
 };
