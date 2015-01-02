@@ -12,4 +12,5 @@ exports.start = function () {
     charge(db.Menu);
     charge(db.Banner);
     charge(db.Product);
+    charge(db.Information);
 };

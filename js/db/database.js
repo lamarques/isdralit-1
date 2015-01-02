@@ -41,6 +41,7 @@ exports.removeAll = function (model) {
 exports.Menu = require('./menu');
 exports.Banner = require('./banner');
 exports.Product = require('./product');
+exports.Information = require('./information');
 
 var initialCharge = require('./initial-charge');
 initialCharge.start();
