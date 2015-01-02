@@ -6,6 +6,7 @@ var express = require('express');
 var minify = require('express-minify');
 var compileSass = require('express-compile-sass');
 var browserify = require('browserify-middleware');
+var utils = require('./js/common/utils');
 
 var app = express();
 
@@ -38,12 +39,9 @@ app.get('/views/*', function (req, res) {
     res.render('pages/' + name + '.html', { name: name });
 });
 
-app.get('/menu/find', function (req, res) {
-    db.Menu.findAll(res);
-});
-
-app.get('/banner/find', function (req, res) {
-    db.Banner.findAll(res);
+app.get('/*/find', function (req, res) {
+    var name = utils.capitalize(req.params[0]);
+    db.findAll(db[name].Model, res);
 });
 
 app.listen(process.env.PORT || 8000);
