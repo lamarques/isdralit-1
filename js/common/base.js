@@ -4,20 +4,25 @@
 
 var libs = require('./libs');
 
+var findAll = function (name, observableArray, itemAction) {
+    libs.$.ajax({
+        url: '/' + name + '/find'
+    }).done(function (values) {
+        values.forEach(function (value) {
+            if (itemAction) {
+                itemAction(value);
+            }
+            observableArray.push(value);
+        });
+    });
+};
+
 exports.ViewModel = function () {
     var self = this;
 
     self.menus = libs.ko.observableArray([]);
 
-    self.findMenus = function () {
-        libs.$.ajax({
-            url: '/menu/find'
-        }).done(function (menus) {
-            menus.forEach(function (menu) {
-                self.menus.push(menu);
-            });
-        });
-    };
-
-    self.findMenus();
+    findAll('menu', self.menus);
 };
+
+exports.findAll = findAll;

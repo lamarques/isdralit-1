@@ -8,19 +8,14 @@ ViewModel = function () {
     var self = this;
 
     self.banners = libs.ko.observableArray([]);
+    self.products = libs.ko.observableArray([]);
 
-    self.findBanners = function () {
-        libs.$.ajax({
-            url: '/banner/find'
-        }).done(function (banners) {
-            banners.forEach(function (banner) {
-                banner.backgroundImage = 'url(' + banner.imageUrl + ')';
-                self.banners.push(banner);
-            });
-        });
-    };
-
-    self.findBanners();
+    base.findAll('banner', self.banners, function(banner) {
+        banner.backgroundImage = 'url(' + banner.imageUrl + ')';
+    });
+    base.findAll('product', self.products, function(product) {
+        product.backgroundImage = 'url(' + product.buttonImageUrl + ')';
+    });
 
     libs.ko.utils.extend(self, new base.ViewModel());
 };
