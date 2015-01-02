@@ -3,13 +3,13 @@
 
 .banner {
   height: 378px;
+  cursor: pointer;
   .arrow {
     float: right;
     width: 34px;
     height: 50px;
     margin: 164px 34px;
     background-image: url('/images/arrow.png');
-    cursor: pointer;
     opacity: 0.8;
     &:hover {
       opacity: 1;
@@ -30,7 +30,6 @@
   }
   .button {
     position: absolute;
-    cursor: pointer;
     margin-top: 306px;
     margin-left: 131px;
     padding: 10px;
