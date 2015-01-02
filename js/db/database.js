@@ -10,5 +10,36 @@ db.once('open', function callback() {
     console.log('Conexão realizada com sucesso');
 });
 
+exports.saveAll = function (values) {
+    values.forEach(function (value) {
+        value.save(function (err, value) {
+            if (err) {
+                return console.error(err);
+            }
+        });
+    });
+};
+
+exports.findAll = function (model, res) {
+    model.find({}).sort('order').lean().exec(function (err, values) {
+        if (err) {
+            res.status(404).send(err);
+        } else {
+            res.send(values);
+        }
+    });
+};
+
+exports.removeAll = function(model) {
+    model.remove(function(err) {
+        if (err) {
+            return console.error(err);
+        }
+    });
+};
+
 exports.Menu = require('./menu');
 exports.Banner = require('./banner');
+
+var initialCharge = require('./initial-charge');
+initialCharge.start();
