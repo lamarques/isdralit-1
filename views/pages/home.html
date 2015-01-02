@@ -26,43 +26,11 @@
     <!-- /ko -->
 
     <div class="box">
-        <div class="product">
+        <div class="product" data-bind="foreach: products">
             <div>
-                <div class="background" style="background-image: url('/images/water-tanks.jpg');"></div>
+                <div class="background" data-bind="style: { backgroundImage: backgroundImage }"></div>
                 <div class="description">
-                    <div class="title">
-                        Caixas<br>
-                        de água
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="background" style="background-image: url('/images/pvc-finishing-work.jpg');"></div>
-                <div class="description">
-                    <div class="title">
-                        Acabamentos<br>
-                        em PVC
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="background" style="background-image: url('/images/roof-tiles.jpg');"></div>
-                <div class="description">
-                    <div class="title">
-                        Coberturas
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="background" style="background-image: url('/images/pipes-fittings.jpg');"></div>
-                <div class="description">
-                    <div class="title">
-                        Tubos<br>
-                        e conexões
-                    </div>
+                    <div class="title" data-bind="html: titleHtml"></div>
                 </div>
             </div>
         </div>
