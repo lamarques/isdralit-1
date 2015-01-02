@@ -7,7 +7,7 @@
                 </div>
 
                 <div data-bind="foreach: menus">
-                    <div class="link" data-bind="text: name"></div>
+                    <div class="link" data-bind="text: name, click: $parent.openUrl"></div>
                 </div>
             </div>
 

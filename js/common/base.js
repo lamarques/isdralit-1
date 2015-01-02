@@ -21,6 +21,10 @@ exports.ViewModel = function () {
     var self = this;
 
     self.menus = libs.ko.observableArray([]);
+    
+    self.openUrl = function(value) {
+        window.location = value['url'];
+    };
 
     findAll('menu', self.menus);
 };

@@ -10,7 +10,7 @@
 <div class="content">
 
     <!-- ko foreach: banners -->
-    <div class="banner" data-bind="style: { backgroundImage: backgroundImage }">
+    <div class="banner" data-bind="style: { backgroundImage: backgroundImage }, click: $parent.openUrl">
         <div class="arrow"></div>
 
         <div class="detail" data-bind="html: detailHtml"></div>
@@ -27,7 +27,7 @@
 
     <div class="box">
         <div class="product" data-bind="foreach: products">
-            <div>
+            <div data-bind="click: $parent.openUrl">
                 <div class="background" data-bind="style: { backgroundImage: backgroundImage }"></div>
                 <div class="description">
                     <div class="title" data-bind="html: titleHtml"></div>
@@ -36,7 +36,7 @@
         </div>
 
         <div class="info" data-bind="foreach: informations">
-            <div>
+            <div data-bind="click: $parent.openUrl">
                 <div class="background" data-bind="style: { backgroundImage: backgroundImage }"></div>
                 <div class="description">
                     <div class="title" data-bind="html: titleHtml"></div>
