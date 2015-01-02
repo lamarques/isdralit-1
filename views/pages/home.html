@@ -35,30 +35,12 @@
             </div>
         </div>
 
-        <div class="info">
+        <div class="info" data-bind="foreach: informations">
             <div>
-                <div class="background" style="background-image: url('/images/contact.jpg');"></div>
+                <div class="background" data-bind="style: { backgroundImage: backgroundImage }"></div>
                 <div class="description">
-                    <div class="title">
-                        Fale Conosco
-                    </div>
-
-                    <div class="detail">
-                        Para saber onde encontrar os produtos Isdralit e outras informações, fale com a nossa equipe.
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="background" style="background-image: url('/images/about.jpg');"></div>
-                <div class="description">
-                    <div class="title">
-                        Conheça a Isdralit
-                    </div>
-
-                    <div class="detail">
-                        Com mais de 60 anos no mercado...
-                    </div>
+                    <div class="title" data-bind="html: titleHtml"></div>
+                    <div class="detail" data-bind="html: detailHtml"></div>
                 </div>
             </div>
         </div>

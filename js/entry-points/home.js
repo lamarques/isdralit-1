@@ -9,12 +9,20 @@ ViewModel = function () {
 
     self.banners = libs.ko.observableArray([]);
     self.products = libs.ko.observableArray([]);
+    self.informations = libs.ko.observableArray([]);
+
+    self.addBackgroundImage = function (value, fieldName) {
+        value.backgroundImage = 'url(' + value[fieldName] + ')';
+    };
 
     base.findAll('banner', self.banners, function(banner) {
-        banner.backgroundImage = 'url(' + banner.imageUrl + ')';
+        self.addBackgroundImage(banner, 'imageUrl');
     });
     base.findAll('product', self.products, function(product) {
-        product.backgroundImage = 'url(' + product.buttonImageUrl + ')';
+        self.addBackgroundImage(product, 'buttonImageUrl');
+    });
+    base.findAll('information', self.informations, function(information) {
+        self.addBackgroundImage(information, 'imageUrl');
     });
 
     libs.ko.utils.extend(self, new base.ViewModel());
