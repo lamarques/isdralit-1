@@ -1,15 +1,17 @@
 /**
  * Created by marlon on 18/12/14.
  */
-var libs = require('../common/libs');
+var $ = require('jquery');
+var ko = require('knockout');
+
 var base = require('../common/base');
 
 ViewModel = function () {
     var self = this;
 
-    self.banners = libs.ko.observableArray([]);
-    self.products = libs.ko.observableArray([]);
-    self.informations = libs.ko.observableArray([]);
+    self.banners = ko.observableArray([]);
+    self.products = ko.observableArray([]);
+    self.informations = ko.observableArray([]);
 
     self.addBackgroundImage = function (value, fieldName) {
         value.backgroundImage = 'url(' + value[fieldName] + ')';
@@ -25,7 +27,7 @@ ViewModel = function () {
         self.addBackgroundImage(information, 'imageUrl');
     });
 
-    libs.ko.utils.extend(self, new base.ViewModel());
+    ko.utils.extend(self, new base.ViewModel());
 };
 
-libs.ko.applyBindings(new ViewModel());
+ko.applyBindings(new ViewModel());

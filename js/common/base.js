@@ -2,10 +2,11 @@
  * Created by marlon on 30/12/14.
  */
 
-var libs = require('./libs');
+var $ = require('jquery');
+var ko = require('knockout');
 
 var findAll = function (name, observableArray, itemAction) {
-    libs.$.ajax({
+    $.ajax({
         url: '/' + name + '/find'
     }).done(function (values) {
         values.forEach(function (value) {
@@ -20,7 +21,7 @@ var findAll = function (name, observableArray, itemAction) {
 exports.ViewModel = function () {
     var self = this;
 
-    self.menus = libs.ko.observableArray([]);
+    self.menus = ko.observableArray([]);
     
     self.openUrl = function(value) {
         window.location = value['url'];

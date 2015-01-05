@@ -21,6 +21,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.1",
-    "knockout": "~3.2.0"
+    "knockout": "~3.2.0",
+    "unslider": "~1.0.0"
   }
 }
