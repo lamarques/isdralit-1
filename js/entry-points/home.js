@@ -3,7 +3,7 @@
  */
 var $ = require('jquery');
 var ko = require('knockout');
-
+var slider = require('../common/slider');
 var base = require('../common/base');
 
 ViewModel = function () {
@@ -13,17 +13,25 @@ ViewModel = function () {
     self.products = ko.observableArray([]);
     self.informations = ko.observableArray([]);
 
+    self.openProducts = function (data, event) {
+        event.stopPropagation();
+    };
+
     self.addBackgroundImage = function (value, fieldName) {
         value.backgroundImage = 'url(' + value[fieldName] + ')';
     };
 
-    base.findAll('banner', self.banners, function(banner) {
+    base.findAll('banner', self.banners, function (banner) {
         self.addBackgroundImage(banner, 'imageUrl');
+    }, function () {
+        slider.init('.banner');
     });
-    base.findAll('product', self.products, function(product) {
+
+    base.findAll('product', self.products, function (product) {
         self.addBackgroundImage(product, 'buttonImageUrl');
     });
-    base.findAll('information', self.informations, function(information) {
+
+    base.findAll('information', self.informations, function (information) {
         self.addBackgroundImage(information, 'imageUrl');
     });
 
