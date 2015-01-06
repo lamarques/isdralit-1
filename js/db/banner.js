@@ -16,6 +16,12 @@ exports.defaultValues = [
         imageUrl: '/images/banner-1.jpg',
         url: '/',
         order: 0
+    }),
+    new Banner({
+        detailHtml: 'As melhores soluções<br>em acabamentos<br>e coberturas',
+        imageUrl: '/images/banner-1.jpg',
+        url: '/',
+        order: 1
     })
 ];
 
