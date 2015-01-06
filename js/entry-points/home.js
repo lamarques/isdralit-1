@@ -14,7 +14,7 @@ ViewModel = function () {
     self.informations = ko.observableArray([]);
 
     self.openProducts = function (data, event) {
-        window.location = '/views/product-list';
+        window.location = '/views/product-list/' + (data._id || '');
         event.stopPropagation();
     };
 
@@ -25,7 +25,7 @@ ViewModel = function () {
     });
 
     base.findAll('product', self.products, function (product) {
-        base.addBackgroundImage(product, 'buttonImageUrl');
+        base.addBackgroundImage(product, 'imageUrl');
     });
 
     base.findAll('information', self.informations, function (information) {
