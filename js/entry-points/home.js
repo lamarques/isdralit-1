@@ -18,22 +18,18 @@ ViewModel = function () {
         event.stopPropagation();
     };
 
-    self.addBackgroundImage = function (value, fieldName) {
-        value.backgroundImage = 'url(' + value[fieldName] + ')';
-    };
-
     base.findAll('banner', self.banners, function (banner) {
-        self.addBackgroundImage(banner, 'imageUrl');
+        base.addBackgroundImage(banner, 'imageUrl');
     }, function () {
         slider.init('.banner');
     });
 
     base.findAll('product', self.products, function (product) {
-        self.addBackgroundImage(product, 'buttonImageUrl');
+        base.addBackgroundImage(product, 'buttonImageUrl');
     });
 
     base.findAll('information', self.informations, function (information) {
-        self.addBackgroundImage(information, 'imageUrl');
+        base.addBackgroundImage(information, 'imageUrl');
     });
 
     ko.utils.extend(self, new base.ViewModel());

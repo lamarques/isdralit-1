@@ -34,3 +34,7 @@ exports.ViewModel = function () {
 };
 
 exports.findAll = findAll;
+
+exports.addBackgroundImage = function (value, fieldName) {
+    value.backgroundImage = 'url(' + value[fieldName] + ')';
+};
