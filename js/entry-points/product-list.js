@@ -10,6 +10,10 @@ ViewModel = function () {
 
     self.products = ko.observableArray([]);
 
+    self.openProduct = function (data, event) {
+        window.location = '/views/product/' + (data._id || '');
+    };
+
     base.findAll('product', self.products, function (product) {
         base.addBackgroundImage(product, 'buttonImageUrl');
     });
