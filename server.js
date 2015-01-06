@@ -35,7 +35,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/views/*', function (req, res) {
-    var name = req.params[0];
+    var paths = req.params[0].split('/');
+    var name = paths[0];
     res.render('pages/' + name + '.html', { name: name });
 });
 
