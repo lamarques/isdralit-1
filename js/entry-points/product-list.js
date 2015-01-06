@@ -10,7 +10,9 @@ ViewModel = function () {
 
     self.products = ko.observableArray([]);
 
-    base.findAll('product', self.products);
+    base.findAll('product', self.products, function (product) {
+        base.addBackgroundImage(product, 'buttonImageUrl');
+    });
 
     ko.utils.extend(self, new base.ViewModel());
 };
