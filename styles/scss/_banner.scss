@@ -2,27 +2,39 @@
 @import "functions";
 
 .banner {
-  height: 378px;
   cursor: pointer;
+  ul {
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    list-style: none;
+    li {
+      float: left;
+      height: 378px;
+    }
+  }
   .arrow {
-    float: right;
+    position: absolute;
     width: 34px;
     height: 50px;
-    margin: 164px 34px;
+    margin-top: 164px;
     background-image: url('/images/arrow.png');
     opacity: 0.8;
     &:hover {
       opacity: 1;
     }
-    &:first-child {
-      float: left;
+    &.previous {
+      margin-left: 34px;
       @include rotate(180);
+    }
+    &.next {
+      margin-left: 1132px;
     }
   }
   .detail {
-    float: left;
+    position: absolute;
     margin-top: 38px;
-    margin-left: 30px;
+    margin-left: 132px;
     font-family: OpenSans-CondensedBold;
     font-size: 43px;
     color: $clear-color;
