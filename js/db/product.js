@@ -3,47 +3,96 @@
  */
 var mongoose = require('mongoose');
 
-Product = mongoose.model('Product', mongoose.Schema({
+ItemSchema = mongoose.Schema({
     titleHtml: String,
     detailHtml: String,
-    buttonImageUrl: String,
     imagesUrl: Array,
-    url: String,
     order: Number
+});
+
+Product = mongoose.model('Product', mongoose.Schema({
+    titleHtml: String,
+    imageUrl: String,
+    order: Number,
+    items: [ItemSchema]
 }));
 
 exports.defaultValues = [
     new Product({
         titleHtml: 'Caixas<br>de água',
-        detailHtml: '',
-        buttonImageUrl: '/images/water-tanks.jpg',
-        imagesUrl: [],
-        url: '/',
-        order: 0
+        imageUrl: '/images/water-tanks.jpg',
+        order: 0,
+        items: [
+            {
+                titleHtml: 'Item 1',
+                detailHtml: 'Detalhes do produto 1',
+                imagesUrl: [],
+                order: 0
+            },
+            {
+                titleHtml: 'Item 2',
+                detailHtml: 'Detalhes do produto 2',
+                imagesUrl: [],
+                order: 1
+            }
+        ]
     }),
     new Product({
         titleHtml: 'Acabamentos<br>em PVC',
-        detailHtml: '',
-        buttonImageUrl: '/images/pvc-finishing-work.jpg',
-        imagesUrl: [],
-        url: '/',
-        order: 1
+        imageUrl: '/images/pvc-finishing-work.jpg',
+        order: 1,
+        items: [
+            {
+                titleHtml: 'Item 1',
+                detailHtml: 'Detalhes do produto 1',
+                imagesUrl: [],
+                order: 0
+            },
+            {
+                titleHtml: 'Item 2',
+                detailHtml: 'Detalhes do produto 2',
+                imagesUrl: [],
+                order: 1
+            }
+        ]
     }),
     new Product({
         titleHtml: 'Coberturas',
-        detailHtml: '',
-        buttonImageUrl: '/images/roof-tiles.jpg',
-        imagesUrl: [],
-        url: '/',
-        order: 2
+        imageUrl: '/images/roof-tiles.jpg',
+        order: 2,
+        items: [
+            {
+                titleHtml: 'Item 1',
+                detailHtml: 'Detalhes do produto 1',
+                imagesUrl: [],
+                order: 0
+            },
+            {
+                titleHtml: 'Item 2',
+                detailHtml: 'Detalhes do produto 2',
+                imagesUrl: [],
+                order: 1
+            }
+        ]
     }),
     new Product({
         titleHtml: 'Tubos<br>e conexões',
-        detailHtml: '',
-        buttonImageUrl: '/images/pipes-fittings.jpg',
-        imagesUrl: [],
-        url: '/',
-        order: 3
+        imageUrl: '/images/pipes-fittings.jpg',
+        order: 3,
+        items: [
+            {
+                titleHtml: 'Item 1',
+                detailHtml: 'Detalhes do produto 1',
+                imagesUrl: [],
+                order: 0
+            },
+            {
+                titleHtml: 'Item 2',
+                detailHtml: 'Detalhes do produto 2',
+                imagesUrl: [],
+                order: 1
+            }
+        ]
     })
 ];
 
