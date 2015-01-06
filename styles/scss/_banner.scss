@@ -11,6 +11,15 @@
     li {
       float: left;
       height: 378px;
+      .detail {
+        position: absolute;
+        margin-top: 38px;
+        margin-left: 132px;
+        font-family: OpenSans-CondensedBold;
+        font-size: 43px;
+        color: $clear-color;
+        text-shadow: $default-text-shadow;
+      }
     }
   }
   .arrow {
@@ -30,15 +39,6 @@
     &.next {
       margin-left: 1132px;
     }
-  }
-  .detail {
-    position: absolute;
-    margin-top: 38px;
-    margin-left: 132px;
-    font-family: OpenSans-CondensedBold;
-    font-size: 43px;
-    color: $clear-color;
-    text-shadow: $default-text-shadow;
   }
   .button {
     position: absolute;
