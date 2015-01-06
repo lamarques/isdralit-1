@@ -14,6 +14,7 @@ ViewModel = function () {
     self.informations = ko.observableArray([]);
 
     self.openProducts = function (data, event) {
+        window.location = '/views/product-list';
         event.stopPropagation();
     };
 
