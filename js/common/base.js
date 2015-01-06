@@ -5,16 +5,19 @@
 var $ = require('jquery');
 var ko = require('knockout');
 
-var findAll = function (name, observableArray, itemAction) {
+var findAll = function (name, observableArray, itemAction, completionAction) {
     $.ajax({
         url: '/' + name + '/find'
     }).done(function (values) {
-        values.forEach(function (value) {
-            if (itemAction) {
+        if (itemAction) {
+            values.forEach(function (value) {
                 itemAction(value);
-            }
-            observableArray.push(value);
-        });
+            });
+        }
+        ko.utils.arrayPushAll(observableArray, values);
+        if (completionAction) {
+            completionAction();
+        }
     });
 };
 
