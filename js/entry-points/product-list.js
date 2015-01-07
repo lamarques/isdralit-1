@@ -14,9 +14,7 @@ ViewModel = function () {
         window.location = '/views/product/' + (data._id || '');
     };
 
-    base.findAll('product', self.products, function (product) {
-        base.addBackgroundImage(product, 'buttonImageUrl');
-    });
+    base.findAll('product', self.products);
 
     ko.utils.extend(self, new base.ViewModel());
 };

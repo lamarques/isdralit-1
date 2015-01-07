@@ -8,14 +8,15 @@
 <% include ../partials/header %>
 
 <div class="content">
-    <div class="product-box" data-bind="foreach: products">
-        <div data-bind="click: $parent.openProduct">
-            <div class="background" data-bind="style: { backgroundImage: backgroundImage }"></div>
+    <!-- ko foreach: { data: products, as: 'product' } -->
+    <div class="product-box" data-bind="foreach: { data: items, as: 'item' }">
+        <div data-bind="click: $root.openProduct">
             <div class="description">
-                <div class="title" data-bind="html: titleHtml"></div>
+                <div class="title" data-bind="html: item.titleHtml"></div>
             </div>
         </div>
     </div>
+    <!-- /ko -->
 </div>
 
 <% include ../partials/footer %>
