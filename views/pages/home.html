@@ -27,7 +27,7 @@
 
     <div class="box">
         <div class="product" data-bind="foreach: products">
-            <div data-bind="click: $parent.openProducts">
+            <div data-bind="click: $root.openProducts">
                 <div class="background" data-bind="style: { backgroundImage: backgroundImage }"></div>
                 <div class="description">
                     <div class="title" data-bind="html: titleHtml"></div>
@@ -36,7 +36,7 @@
         </div>
 
         <div class="info" data-bind="foreach: informations">
-            <div data-bind="click: $parent.openUrl">
+            <div data-bind="click: $root.openUrl">
                 <div class="background" data-bind="style: { backgroundImage: backgroundImage }"></div>
                 <div class="description">
                     <div class="title" data-bind="html: titleHtml"></div>
