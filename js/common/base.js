@@ -4,10 +4,11 @@
 
 var $ = require('jquery');
 var ko = require('knockout');
+var utils = require('./utils');
 
-var findAll = function (name, observableArray, itemAction, completionAction) {
+var findAll = function (name, observableArray, query, itemAction, completionAction) {
     $.ajax({
-        url: '/' + name + '/find'
+        url: '/' + name + '/find' + queryString(query)
     }).done(function (values) {
         if (itemAction) {
             values.forEach(function (value) {
@@ -19,6 +20,14 @@ var findAll = function (name, observableArray, itemAction, completionAction) {
             completionAction();
         }
     });
+};
+
+var queryString = function(data) {
+    utils.removeInvalidAttributes(data);
+    if (!$.isEmptyObject(data)) {
+        return '?'.concat($.param(data));
+    }
+    return '';
 };
 
 exports.ViewModel = function () {
@@ -34,6 +43,12 @@ exports.ViewModel = function () {
 };
 
 exports.findAll = findAll;
+
+exports.queryString = queryString;
+
+exports.currentQuery = function() {
+    return JSON.parse($('input[name=query]').val());
+};
 
 exports.addBackgroundImage = function (value, fieldName) {
     value.backgroundImage = 'url(' + value[fieldName] + ')';

@@ -14,21 +14,21 @@ ViewModel = function () {
     self.informations = ko.observableArray([]);
 
     self.openProducts = function (data, event) {
-        window.location = '/views/product-list/' + (data._id || '');
+        window.location = '/views/product-list' + base.queryString({ _id: data._id });
         event.stopPropagation();
     };
 
-    base.findAll('banner', self.banners, function (banner) {
+    base.findAll('banner', self.banners, {}, function (banner) {
         base.addBackgroundImage(banner, 'imageUrl');
     }, function () {
         slider.init('.banner');
     });
 
-    base.findAll('product', self.products, function (product) {
+    base.findAll('product', self.products, {}, function (product) {
         base.addBackgroundImage(product, 'imageUrl');
     });
 
-    base.findAll('information', self.informations, function (information) {
+    base.findAll('information', self.informations, {}, function (information) {
         base.addBackgroundImage(information, 'imageUrl');
     });
 

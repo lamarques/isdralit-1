@@ -11,10 +11,10 @@ ViewModel = function () {
     self.products = ko.observableArray([]);
 
     self.openProduct = function (data, event) {
-        window.location = '/views/product/' + (data._id || '');
+        window.location = '/views/product' + base.queryString({ _id: data._id });
     };
 
-    base.findAll('product', self.products);
+    base.findAll('product', self.products, base.currentQuery());
 
     ko.utils.extend(self, new base.ViewModel());
 };
