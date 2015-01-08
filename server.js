@@ -3,8 +3,7 @@
  */
 var db = require('./js/db/database');
 var express = require('express');
-var minify = require('express-minify');
-var compileSass = require('express-compile-sass');
+var sass = require('node-sass-middleware');
 var browserify = require('browserify-middleware');
 var utils = require('./js/common/utils');
 
@@ -12,23 +11,18 @@ var app = express();
 
 app.engine('html', require('ejs').renderFile);
 
-app.use(minify({
-    cache: false
-}));
-
-app.use(compileSass({
-    root: __dirname,
-    watchFiles: true
+app.use(sass({
+    src: __dirname + '/styles/scss/entry-points',
+    dest: __dirname + '/styles/css',
+    outputStyle: 'compressed',
+    prefix: '/styles/css'
 }));
 
 app.use('/images', express.static(__dirname + '/images'));
 
 app.use('/styles', express.static(__dirname + '/styles'));
 
-app.use('/js/entry-points', browserify(__dirname + '/js/entry-points', {
-    minify: false,
-    cache: false
-}));
+app.use('/js', browserify(__dirname + '/js/entry-points'));
 
 app.get('/', function (req, res) {
     res.redirect('/views/home');
@@ -37,7 +31,10 @@ app.get('/', function (req, res) {
 app.get('/views/:name', function (req, res) {
     var name = req.params.name;
     var query = req.query;
-    res.render('pages/' + name + '.html', { name: name, query: query });
+    res.render('pages/' + name + '.html', {
+        name: name,
+        query: query
+    });
 });
 
 app.get('/:name/find', function (req, res) {
@@ -46,4 +43,4 @@ app.get('/:name/find', function (req, res) {
     db.findAll(db[name].Model, query, res);
 });
 
-app.listen(process.env.PORT || 8000);
+app.listen(process.env.PORT);

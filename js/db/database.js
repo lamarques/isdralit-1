@@ -2,13 +2,12 @@
  * Created by marlon on 17/12/14.
  */
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/isdralit');
+mongoose.connect(process.env.MONGOLAB_URI);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Erro de conexão:'));
 db.once('open', function callback() {
     console.log('Conexão realizada com sucesso');
-    console.log(process.env.NODE_ENV || 'development');
 });
 
 exports.saveAll = function (values) {

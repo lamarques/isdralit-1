@@ -9,11 +9,9 @@
     "browserify-shim": "^3.8.2",
     "ejs": "^1.0.0",
     "express": "~4.10.6",
-    "express-compile-sass": "^2.1.0",
-    "express-minify": "^0.1.1",
     "mongoose": "^3.8.20",
     "node-gyp": "^1.0.2",
-    "node-sass": "^1.2.3"
+    "node-sass-middleware": "^0.4.0"
   },
   "devDependencies": {},
   "scripts": {
