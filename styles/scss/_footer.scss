@@ -19,7 +19,9 @@
 }
 
 .footer {
-  min-width: 1200px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   .nav-bar {
     height: 207px;
     background-color: $light-gray-color;
