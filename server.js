@@ -34,15 +34,16 @@ app.get('/', function (req, res) {
     res.redirect('/views/home');
 });
 
-app.get('/views/*', function (req, res) {
-    var paths = req.params[0].split('/');
-    var name = paths[0];
-    res.render('pages/' + name + '.html', { name: name });
+app.get('/views/:name', function (req, res) {
+    var name = req.params.name;
+    var query = req.query;
+    res.render('pages/' + name + '.html', { name: name, query: query });
 });
 
-app.get('/*/find', function (req, res) {
-    var name = utils.capitalize(req.params[0]);
-    db.findAll(db[name].Model, res);
+app.get('/:name/find', function (req, res) {
+    var name = utils.capitalize(req.params.name);
+    var query = req.query;
+    db.findAll(db[name].Model, query, res);
 });
 
 app.listen(process.env.PORT || 8000);
