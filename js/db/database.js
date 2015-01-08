@@ -20,8 +20,8 @@ exports.saveAll = function (values) {
     });
 };
 
-exports.findAll = function (model, res) {
-    model.find({}).sort('order').lean().exec(function (err, values) {
+exports.findAll = function (model, query, res) {
+    model.find(query).sort('order').lean().exec(function (err, values) {
         if (err) {
             res.status(404).send(err);
         } else {
