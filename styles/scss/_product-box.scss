@@ -5,16 +5,13 @@
   margin: 0 auto;
   padding-bottom: 30px;
   .container {
-    float: left;
-    width: 454px;
+    display: inline-block;
+    width: 452px;
     margin-right: 30px;
     border: 1px solid $light-gray-border-color;
     background-color: $clear-color;
     &:nth-child(2n+0) {
       margin-right: 0px;
-    }
-    &:nth-child(2n+1) {
-      clear: both;
     }
     &:nth-child(n+3) {
       margin-top: 30px;
@@ -26,7 +23,7 @@
       background-color: $light-gray-color;
       .photo {
         height: 250px;
-        background-size: 444px 250px;
+        background-size: 442px 250px;
       }
       .description {
         padding: 15px;
