@@ -14,7 +14,11 @@ ViewModel = function () {
         window.location = '/views/product' + base.queryString({ _id: data._id });
     };
 
-    base.findAll('product', self.products, base.currentQuery());
+    base.findAll('product', self.products, base.currentQuery(), function (product) {
+        product.items.forEach(function (item) {
+            base.addBackgroundImage(item, 'imagesUrl');
+        });
+    });
 
     ko.utils.extend(self, new base.ViewModel());
 };
