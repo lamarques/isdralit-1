@@ -7,6 +7,8 @@ var sass = require('node-sass-middleware');
 var browserify = require('browserify-middleware');
 var utils = require('./js/common/utils');
 
+var isDevelopment = process.env.NODE_ENV == 'development';
+
 var app = express();
 
 app.engine('html', require('ejs').renderFile);
@@ -15,7 +17,9 @@ app.use(sass({
     src: __dirname + '/styles/scss/entry-points',
     dest: __dirname + '/styles/css',
     outputStyle: 'compressed',
-    prefix: '/styles/css'
+    prefix: '/styles/css',
+    force: isDevelopment,
+    debug: isDevelopment
 }));
 
 app.use('/images', express.static(__dirname + '/images'));
