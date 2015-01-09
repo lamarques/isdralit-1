@@ -26,13 +26,13 @@ exports.defaultValues = [
             {
                 titleHtml: 'Item 1',
                 detailHtml: 'Detalhes do produto 1',
-                imagesUrl: [],
+                imagesUrl: ['/images/tile.jpg'],
                 order: 0
             },
             {
                 titleHtml: 'Item 2',
                 detailHtml: 'Detalhes do produto 2',
-                imagesUrl: [],
+                imagesUrl: ['/images/tile.jpg'],
                 order: 1
             }
         ]
@@ -45,13 +45,13 @@ exports.defaultValues = [
             {
                 titleHtml: 'Item 3',
                 detailHtml: 'Detalhes do produto 3',
-                imagesUrl: [],
+                imagesUrl: ['/images/tile.jpg'],
                 order: 0
             },
             {
                 titleHtml: 'Item 4',
                 detailHtml: 'Detalhes do produto 4',
-                imagesUrl: [],
+                imagesUrl: ['/images/tile.jpg'],
                 order: 1
             }
         ]
@@ -64,13 +64,13 @@ exports.defaultValues = [
             {
                 titleHtml: 'Item 5',
                 detailHtml: 'Detalhes do produto 5',
-                imagesUrl: [],
+                imagesUrl: ['/images/tile.jpg'],
                 order: 0
             },
             {
                 titleHtml: 'Item 6',
                 detailHtml: 'Detalhes do produto 6',
-                imagesUrl: [],
+                imagesUrl: ['/images/tile.jpg'],
                 order: 1
             }
         ]
@@ -83,13 +83,13 @@ exports.defaultValues = [
             {
                 titleHtml: 'Item 7',
                 detailHtml: 'Detalhes do produto 7',
-                imagesUrl: [],
+                imagesUrl: ['/images/tile.jpg'],
                 order: 0
             },
             {
                 titleHtml: 'Item 8',
                 detailHtml: 'Detalhes do produto 8',
-                imagesUrl: [],
+                imagesUrl: ['/images/tile.jpg'],
                 order: 1
             }
         ]
