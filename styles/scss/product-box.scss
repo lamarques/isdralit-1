@@ -3,14 +3,13 @@
 .product-box {
   display: table;
   margin: 0 auto;
-  cursor: pointer;
-  width: 938px;
   padding-bottom: 30px;
-  > div {
+  .container {
     float: left;
-    background-color: $main-color;
     width: 454px;
     margin-right: 30px;
+    border: 1px solid $light-gray-border-color;
+    background-color: $clear-color;
     &:nth-child(2n+0) {
       margin-right: 0px;
     }
@@ -20,15 +19,24 @@
     &:nth-child(n+3) {
       margin-top: 30px;
     }
-    &:hover {
-      background-color: lighten($main-color, 7%);
-    }
-    .description {
-      padding: 30px;
-      .title {
-        color: $clear-color;
-        text-shadow: $default-text-shadow;
-        font-size: 28px;
+    > div {
+      margin: 5px;
+      padding-bottom: 55px;
+      border-bottom: 4px solid $main-color;
+      background-color: $light-gray-color;
+      .photo {
+        height: 250px;
+        background-size: 444px 250px;
+      }
+      .description {
+        padding: 15px;
+        color: $title-color;
+        .title {
+          font-size: 28px;
+        }
+      }
+      .button {
+        float: right;
       }
     }
   }
