@@ -22,6 +22,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  min-width: 1200px;
   .nav-bar {
     height: 207px;
     background-color: $light-gray-color;
@@ -62,6 +63,7 @@
       color: $clear-color;
       margin-top: 12.5px;
       margin-right: 131px;
+      width: 380px;
     }
   }
 }
