@@ -10,16 +10,6 @@ db.once('open', function callback() {
     console.log('Conexão realizada com sucesso');
 });
 
-exports.saveAll = function (values) {
-    values.forEach(function (value) {
-        value.save(function (err, value) {
-            if (err) {
-                return console.error(err);
-            }
-        });
-    });
-};
-
 exports.findAll = function (model, query, res) {
     model.find(query).sort('order').lean().exec(function (err, values) {
         if (err) {
@@ -27,6 +17,16 @@ exports.findAll = function (model, query, res) {
         } else {
             res.send(values);
         }
+    });
+};
+
+exports.saveAll = function (values) {
+    values.forEach(function (value) {
+        value.save(function (err, value) {
+            if (err) {
+                return console.error(err);
+            }
+        });
     });
 };
 
