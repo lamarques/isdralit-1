@@ -1,9 +1,10 @@
 @import "variables";
+@import "../../libs/bourbon/dist/bourbon";
 
 .navigation {
-  background-image: linear-gradient(to right, $background-color, darken($light-gray-color, 10%), $background-color);
   margin-top: 4px;
   padding: 10px;
+  @include linear-gradient(to right, $background-color, darken($light-gray-color, 10%), $background-color);
   .title {
     font-size: 28px;
     text-align: center;

@@ -1,4 +1,5 @@
 @import "variables";
+@import "../../libs/bourbon/dist/bourbon";
 
 .section {
   margin: 0 auto;
@@ -20,7 +21,7 @@
       height: 1px;
       width: 100%;
       top: 50%;
-      background-image: linear-gradient(to right, $background-color, darken($light-gray-border-color, 5%), $background-color);
+      @include linear-gradient(to right, $background-color, darken($light-gray-border-color, 5%), $background-color);
     }
   }
 }
