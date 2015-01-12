@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-BR">
+    <% include ../partials/head %>
+</head>
+<body>
+
+<% include ../partials/header %>
+
+<!-- ko foreach: { data: products, as: 'product' } -->
+<div class="content" data-bind="foreach: { data: items, as: 'item' }">
+    <div class="navigation">
+        <div class="title" data-bind="html: item.titleHtml"></div>
+    </div>
+
+    <div class="section">
+        <div class="title">
+            <span>...</span>
+        </div>
+
+        <div class="product-box">
+            <div class="container">
+                <div>
+                    <div class="photo" data-bind="style: { backgroundImage: item.backgroundImage }"></div>
+                    <div class="description">
+                        <div class="title" data-bind="html: item.titleHtml"></div>
+                        <div class="detail" data-bind="html: item.detailHtml"></div>
+                    </div>
+                    <div class="button" data-bind="click: $root.openProduct">
+                        Saiba mais
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /ko -->
+
+<% include ../partials/footer %>
+
+</body>
+</html>
