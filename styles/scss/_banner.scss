@@ -1,5 +1,5 @@
 @import "variables";
-@import "functions";
+@import "../../libs/bourbon/dist/bourbon";
 
 .banner {
   cursor: pointer;
@@ -34,7 +34,7 @@
     }
     &.previous {
       margin-left: 34px;
-      @include rotate(180);
+      @include transform(rotate(180deg));
     }
     &.next {
       margin-left: 1132px;
