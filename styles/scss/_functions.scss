@@ -1,8 +1,18 @@
 @import "../../libs/bourbon/dist/bourbon";
 
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
+  @include prefix('border-radius', $radius);
+}
+
+@mixin box-shadow($shadow) {
+  @include prefix('box-shadow', $shadow);
 }
