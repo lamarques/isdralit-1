@@ -8,6 +8,10 @@
 <% include ../partials/header %>
 
 <div class="content">
+    <div class="navigation">
+        <div class="title">Produtos</div>
+    </div>
+
     <div class="section" data-bind="foreach: { data: products, as: 'product' }">
         <div class="title">
             <span data-bind="html: product.titleHtml"></span>

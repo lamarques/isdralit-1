@@ -13,9 +13,6 @@
       padding: 0px 15px;
       background-color: $background-color;
     }
-    &:first-child {
-      padding-top: 0px;
-    }
     &:before {
       position: absolute;
       display: block;
@@ -23,7 +20,7 @@
       height: 1px;
       width: 100%;
       top: 50%;
-      background-image: linear-gradient(to right, transparent, darken($light-gray-border-color, 5%), transparent);
+      background-image: linear-gradient(to right, $background-color, darken($light-gray-border-color, 5%), $background-color);
     }
   }
 }

@@ -1,0 +1,13 @@
+@import "variables";
+
+.navigation {
+  background-image: linear-gradient(to right, $background-color, darken($light-gray-color, 10%), $background-color);
+  margin-top: 4px;
+  padding: 10px;
+  .title {
+    font-size: 28px;
+    text-align: center;
+    color: $clear-color;
+    text-shadow: $default-text-shadow;
+  }
+}

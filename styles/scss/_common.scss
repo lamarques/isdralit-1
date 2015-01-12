@@ -14,11 +14,12 @@ body {
   &:after {
     display: block;
     content: '';
-    height: 281px;
+    height: 248px;
   }
 }
 
 .content {
+  position: relative;
   margin: 0 auto;
   width: 1200px;
 }
