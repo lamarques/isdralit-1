@@ -1,5 +1,5 @@
 @import "variables";
-@import "../../libs/bourbon/dist/bourbon";
+@import "functions";
 
 .banner {
   cursor: pointer;
@@ -45,8 +45,8 @@
     margin-top: 306px;
     margin-left: 131px;
     padding: 10px;
-    border-radius: 10px;
     border: 1px solid $clear-color;
+    @include border-radius(10px);
     &:hover {
       background-color: $transparent-black-color;
     }
