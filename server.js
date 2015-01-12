@@ -44,7 +44,11 @@ app.get('/views/:name', function (req, res) {
 app.get('/:name/find', function (req, res) {
     var name = utils.capitalize(req.params.name);
     var query = req.query;
-    db.findAll(db[name].Model, query, res);
+
+    var fields = query['fields'];
+    delete query['fields'];
+
+    db.findAll(db[name].Model, query, fields, res);
 });
 
 app.listen(process.env.PORT);

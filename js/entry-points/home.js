@@ -24,7 +24,7 @@ ViewModel = function () {
         slider.init('.banner');
     });
 
-    base.findAll('product', self.products, {}, function (product) {
+    base.findAll('product', self.products, { fields: 'titleHtml imageUrl' }, function (product) {
         base.addBackgroundImage(product, 'imageUrl');
     });
 

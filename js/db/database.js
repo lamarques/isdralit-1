@@ -10,8 +10,8 @@ db.once('open', function callback() {
     console.log('Conexão realizada com sucesso');
 });
 
-exports.findAll = function (model, query, res) {
-    model.find(query).sort('order').lean().exec(function (err, values) {
+exports.findAll = function (model, query, fields, res) {
+    model.find(query, fields).sort('order').lean().exec(function (err, values) {
         if (err) {
             res.status(404).send(err);
         } else {
