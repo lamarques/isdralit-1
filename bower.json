@@ -23,6 +23,7 @@
     "jquery": "~2.1.1",
     "knockout": "~3.2.0",
     "unslider": "~1.0.0",
-    "bourbon": "~3.2.3"
+    "bourbon": "~3.2.3",
+    "Tabber": "~3.0.13"
   }
 }

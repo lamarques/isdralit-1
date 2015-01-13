@@ -1,0 +1,89 @@
+@import "variables";
+
+.tab-bar:not(.vertical) {
+  menu {
+    float: left;
+    margin-bottom: -1px;
+    a {
+      padding: 15px;
+      text-decoration: none;
+      font-family: OpenSans-CondensedBold;
+      font-size: 18px;
+      color: lighten($title-color, 30%);
+      background-color: $light-gray-color;
+      &:hover:not(.active) {
+        background-color: darken($light-gray-color, 5%);
+      }
+      &.active {
+        border: 1px solid $light-gray-border-color;
+        border-bottom: none;
+        color: $title-color;
+        background-color: $background-color;
+      }
+    }
+  }
+  > div {
+    padding: 15px;
+    border-top: 1px solid $light-gray-border-color;
+  }
+}
+
+.tabber {
+  overflow: hidden;
+  .tabber-menu {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .tabber-handle {
+    color: #999;
+    cursor: pointer;
+    display: block;
+    float: left;
+    &.active {
+      color: #333;
+    }
+    &.mobile {
+      display: none;
+      float: none;
+    }
+  }
+  .tabber-tab {
+    clear: both;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  &.vertical {
+    .tabber-menu {
+      float: left;
+      width: 20%;
+    }
+    .tabber-handle {
+      display: block;
+      width: 100%;
+      &.mobile {
+        display: none;
+      }
+    }
+    .tabber-tab {
+      clear: none;
+      float: right;
+      min-height: 100%;
+      width: 80%;
+    }
+  }
+  &.mobile .tabber-handle {
+    display: none;
+    &.mobile {
+      display: block;
+    }
+  }
+  &.vertical.mobile {
+    .tabber-menu, .tabber-tab {
+      float: none;
+      width: 100%;
+    }
+  }
+}

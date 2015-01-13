@@ -21,12 +21,18 @@
   "browser": {
     "jquery": "./libs/jquery/dist/jquery.js",
     "knockout": "./libs/knockout/dist/knockout.js",
-    "unslider": "./libs/unslider/src/unslider.js"
+    "unslider": "./libs/unslider/src/unslider.js",
+    "tabber": "./libs/Tabber/jquery.fs.tabber.js"
   },
   "browserify-shim": {
     "jquery": "$",
     "knockout": "ko",
     "unslider": {
+      "depends": [
+        "jquery"
+      ]
+    },
+    "tabber": {
       "depends": [
         "jquery"
       ]

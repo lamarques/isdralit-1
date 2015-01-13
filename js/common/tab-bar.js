@@ -1,0 +1,11 @@
+/**
+ * Created by marlon on 12/01/15.
+ */
+require('tabber');
+
+exports.init = function (selector) {
+    var $element = $(selector);
+    $element.tabber({
+        maxWidth: '0px'
+    });
+};
