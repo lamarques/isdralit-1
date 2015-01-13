@@ -13,11 +13,15 @@
         <!--<div class="title" data-bind="html: item.titleHtml"></div>-->
     <!--</div>-->
 
-    <div class="title" data-bind="html: item.titleHtml"></div>
+    <div class="title separator">
+        <span data-bind="html: item.titleHtml"></span>
+    </div>
 
     <div class="gallery">
         <div class="photo" data-bind="style: { backgroundImage: item.backgroundImage }"></div>
     </div>
+
+    <div class="separator"></div>
 
     <div class="tab-bar">
         <menu class="tabber-menu">
@@ -39,10 +43,8 @@
         </div>
     </div>
 
-    <div class="section">
-        <div class="title">
-            <span>...</span>
-        </div>
+    <div class="title separator">
+        <span>Veja também</span>
     </div>
 </div>
 <!-- /ko -->
