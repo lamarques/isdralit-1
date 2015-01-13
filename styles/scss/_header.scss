@@ -7,10 +7,7 @@
     height: 82px;
     @include linear-gradient(to right, $background-color, $light-gray-color, $background-color);
     &:after {
-      position: absolute;
-      display: block;
-      content: '';
-      width: 100%;
+      @extend .absolute-row;
       height: 4px;
       top: 82px;
       @include linear-gradient(to right, $background-color, $main-color, $background-color);

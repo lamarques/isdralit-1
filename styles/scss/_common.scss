@@ -50,10 +50,7 @@ body {
     background-color: $background-color;
   }
   &:before {
-    position: absolute;
-    display: block;
-    content: '';
-    width: 100%;
+    @extend .absolute-row;
     height: 1px;
     top: 50%;
     @include linear-gradient(to right, $background-color, darken($light-gray-border-color, 5%), $background-color);
@@ -66,4 +63,11 @@ body {
   &:hover {
     color: lighten($title-color, 15%);
   }
+}
+
+.absolute-row {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
 }

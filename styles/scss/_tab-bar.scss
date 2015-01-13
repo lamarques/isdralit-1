@@ -26,10 +26,7 @@
   > div {
     padding: 15px;
     &:before {
-      position: absolute;
-      display: block;
-      content: '';
-      width: 100%;
+      @extend .absolute-row;
       height: 1px;
       margin: -15px;
       z-index: -1;
