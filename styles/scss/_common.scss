@@ -24,6 +24,15 @@ body {
   width: 1200px;
 }
 
+.container {
+  border: 1px solid $light-gray-border-color;
+  background-color: $clear-color;
+  > div {
+    margin: 5px;
+    background-color: $light-gray-color;
+  }
+}
+
 .title {
   font-family: OpenSans-CondensedBold;
   font-size: 22px;
