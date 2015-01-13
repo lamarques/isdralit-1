@@ -1,0 +1,23 @@
+.product-grid {
+  display: table;
+  margin: 19px 0px 15px 0px;
+  padding: 0;
+  .gallery {
+    @extend .container;
+    margin-right: 15px;
+    width: 370px;
+    .photo {
+      height: 360px;
+    }
+  }
+  .info {
+    width: 813px;
+    .title {
+      font-size: 38px;
+    }
+  }
+  > div {
+    display: inline-block;
+    vertical-align: top;
+  }
+}

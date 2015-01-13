@@ -1,9 +1,0 @@
-@import "variables";
-
-.gallery {
-  @extend .container;
-  width: 452px;
-  .photo {
-      height: 250px;
-  }
-}
