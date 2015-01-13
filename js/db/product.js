@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 ItemSchema = mongoose.Schema({
     titleHtml: String,
     detailHtml: String,
+    imageUrl: String,
     imagesUrl: Array,
     order: Number
 });
@@ -26,13 +27,15 @@ exports.defaultValues = [
             {
                 titleHtml: 'Item 1',
                 detailHtml: 'Detalhes do produto 1',
-                imagesUrl: ['/images/tile.jpg'],
+                imageUrl: '/images/tile.jpg',
+                imagesUrl: ['/images/tile-1.jpg'],
                 order: 0
             },
             {
                 titleHtml: 'Item 2',
                 detailHtml: 'Detalhes do produto 2',
-                imagesUrl: ['/images/tile.jpg'],
+                imageUrl: '/images/tile.jpg',
+                imagesUrl: ['/images/tile-1.jpg'],
                 order: 1
             }
         ]
@@ -45,13 +48,15 @@ exports.defaultValues = [
             {
                 titleHtml: 'Item 3',
                 detailHtml: 'Detalhes do produto 3',
-                imagesUrl: ['/images/tile.jpg'],
+                imageUrl: '/images/tile.jpg',
+                imagesUrl: ['/images/tile-1.jpg'],
                 order: 0
             },
             {
                 titleHtml: 'Item 4',
                 detailHtml: 'Detalhes do produto 4',
-                imagesUrl: ['/images/tile.jpg'],
+                imageUrl: '/images/tile.jpg',
+                imagesUrl: ['/images/tile-1.jpg'],
                 order: 1
             }
         ]
@@ -64,13 +69,15 @@ exports.defaultValues = [
             {
                 titleHtml: 'Item 5',
                 detailHtml: 'Detalhes do produto 5',
-                imagesUrl: ['/images/tile.jpg'],
+                imageUrl: '/images/tile.jpg',
+                imagesUrl: ['/images/tile-1.jpg'],
                 order: 0
             },
             {
                 titleHtml: 'Item 6',
                 detailHtml: 'Detalhes do produto 6',
-                imagesUrl: ['/images/tile.jpg'],
+                imageUrl: '/images/tile.jpg',
+                imagesUrl: ['/images/tile-1.jpg'],
                 order: 1
             }
         ]
@@ -83,13 +90,15 @@ exports.defaultValues = [
             {
                 titleHtml: 'Item 7',
                 detailHtml: 'Detalhes do produto 7',
-                imagesUrl: ['/images/tile.jpg'],
+                imageUrl: '/images/tile.jpg',
+                imagesUrl: ['/images/tile-1.jpg'],
                 order: 0
             },
             {
                 titleHtml: 'Item 8',
                 detailHtml: 'Detalhes do produto 8',
-                imagesUrl: ['/images/tile.jpg'],
+                imageUrl: '/images/tile.jpg',
+                imagesUrl: ['/images/tile-1.jpg'],
                 order: 1
             }
         ]
