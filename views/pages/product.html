@@ -10,40 +10,40 @@
 <!-- ko foreach: { data: products, as: 'product' } -->
 <div class="content" data-bind="foreach: { data: items, as: 'item' }">
     <div class="section">
-    <div class="product-grid">
-        <div class="gallery">
-            <div class="photo" data-bind="style: { backgroundImage: item.backgroundImage }"></div>
+        <div class="product-grid">
+            <div class="gallery">
+                <div class="photo" data-bind="style: { backgroundImage: item.backgroundImage }"></div>
+            </div>
+
+            <div class="info">
+                <div class="title" data-bind="html: item.titleHtml"></div>
+                <div class="detail" data-bind="html: item.detailHtml"></div>
+            </div>
         </div>
 
-        <div class="info">
-            <div class="title" data-bind="html: item.titleHtml"></div>
-            <div class="detail" data-bind="html: item.detailHtml"></div>
+        <div class="tab-bar">
+            <menu class="tabber-menu">
+                <a href="#tab-1" class="tabber-handle">Vantagens</a>
+                <a href="#tab-2" class="tabber-handle">Medidas</a>
+                <a href="#tab-3" class="tabber-handle">Informações Técnicas</a>
+            </menu>
+
+            <div class="tabber-tab" id="tab-1">
+                Content 1...
+            </div>
+
+            <div class="tabber-tab" id="tab-2">
+                Content 2...
+            </div>
+
+            <div class="tabber-tab" id="tab-3">
+                Content 3...
+            </div>
         </div>
-    </div>
 
-    <div class="tab-bar">
-        <menu class="tabber-menu">
-            <a href="#tab-1" class="tabber-handle">Vantagens</a>
-            <a href="#tab-2" class="tabber-handle">Medidas</a>
-            <a href="#tab-3" class="tabber-handle">Informações Técnicas</a>
-        </menu>
-
-        <div class="tabber-tab" id="tab-1">
-            Content 1...
+        <div class="title separator">
+            <span>Veja também</span>
         </div>
-
-        <div class="tabber-tab" id="tab-2">
-            Content 2...
-        </div>
-
-        <div class="tabber-tab" id="tab-3">
-            Content 3...
-        </div>
-    </div>
-
-    <div class="title separator">
-        <span>Veja também</span>
-    </div>
     </div>
 </div>
 <!-- /ko -->
