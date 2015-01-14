@@ -4,6 +4,7 @@
 require('unslider');
 
 exports.init = function (selector) {
+    setTimeout(function() {
     var $element = $(selector);
     var unslider = $element.unslider({
         delay: 10000,
@@ -27,4 +28,5 @@ exports.init = function (selector) {
         var $li = $(this).find('ul li:eq(' + index + ')');
         window.location = $li.data('url');
     });
+    }, 0);
 };
