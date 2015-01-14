@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="thumbs" data-bind="foreach: { data: images, as: 'image' }">
-                    <div class="photo" data-bind="click: $root.selectPhoto">
+                    <div class="photo" data-bind="click: $root.selectPhoto, css: { active: image.normal == $root.selectedPhoto() }">
                         <div data-bind="style: { backgroundImage: image.small }"></div>
                     </div>
                 </div>
