@@ -24,6 +24,7 @@
     "knockout": "~3.2.0",
     "unslider": "~1.0.0",
     "bourbon": "~3.2.3",
-    "Tabber": "~3.0.13"
+    "Tabber": "~3.0.13",
+    "jquery-zoom": "~1.7.13"
   }
 }
