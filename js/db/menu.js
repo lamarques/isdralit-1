@@ -12,12 +12,12 @@ Menu = mongoose.model('Menu', mongoose.Schema({
 exports.defaultValues = [
     new Menu({
         name: 'Home',
-        url: '/',
+        url: '/views/home',
         order: 0
     }),
     new Menu({
         name: 'Produtos',
-        url: '/',
+        url: '/views/product-list',
         order: 1
     }),
     new Menu({
