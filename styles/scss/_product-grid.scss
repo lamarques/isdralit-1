@@ -1,7 +1,6 @@
 .product-grid {
   display: table;
-  margin: 19px 0px 15px 0px;
-  padding: 0;
+  padding-bottom: 15px;
   .gallery {
     @extend .container;
     margin-right: 15px;
@@ -11,7 +10,7 @@
     }
   }
   .info {
-    width: 813px;
+    width: 753px;
     .title {
       font-size: 38px;
     }

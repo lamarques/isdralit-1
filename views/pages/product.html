@@ -9,6 +9,7 @@
 
 <!-- ko foreach: { data: products, as: 'product' } -->
 <div class="content" data-bind="foreach: { data: items, as: 'item' }">
+    <div class="section">
     <div class="product-grid">
         <div class="gallery">
             <div class="photo" data-bind="style: { backgroundImage: item.backgroundImage }"></div>
@@ -42,6 +43,7 @@
 
     <div class="title separator">
         <span>Veja também</span>
+    </div>
     </div>
 </div>
 <!-- /ko -->
