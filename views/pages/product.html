@@ -12,7 +12,15 @@
     <div class="section">
         <div class="product-grid">
             <div class="gallery">
-                <div class="photo" data-bind="style: { backgroundImage: item.backgroundImage }"></div>
+                <div class="photo">
+                    <div data-bind="style: { backgroundImage: $root.selectedPhoto }"></div>
+                </div>
+
+                <div class="thumbs" data-bind="foreach: { data: images, as: 'image' }">
+                    <div class="photo" data-bind="click: $root.selectPhoto">
+                        <div data-bind="style: { backgroundImage: image.small }"></div>
+                    </div>
+                </div>
             </div>
 
             <div class="info">
@@ -23,9 +31,8 @@
 
         <div class="tab-bar">
             <menu class="tabber-menu">
-                <a href="#tab-1" class="tabber-handle">Vantagens</a>
-                <a href="#tab-2" class="tabber-handle">Medidas</a>
-                <a href="#tab-3" class="tabber-handle">Informações Técnicas</a>
+                <a href="#tab-1" class="tabber-handle">Medidas</a>
+                <a href="#tab-2" class="tabber-handle">Informações Técnicas</a>
             </menu>
 
             <div class="tabber-tab" id="tab-1">
@@ -34,10 +41,6 @@
 
             <div class="tabber-tab" id="tab-2">
                 Content 2...
-            </div>
-
-            <div class="tabber-tab" id="tab-3">
-                Content 3...
             </div>
         </div>
 

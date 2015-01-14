@@ -10,10 +10,24 @@ ViewModel = function () {
     var self = this;
 
     self.products = ko.observableArray([]);
+    self.selectedPhoto = ko.observable();
+
+    self.selectPhoto = function (data, event) {
+        self.selectedPhoto(data.normal);
+    };
 
     base.findAll('product', self.products, base.currentQuery(), function (product) {
         product.items.forEach(function (item) {
-            base.addBackgroundImage(item, 'imagesUrl');
+            item.images = [];
+            item.imagesUrl.forEach(function (imageUrl) {
+                item.images.push({
+                    small: base.getBackgroundUrl(imageUrl.replace(/\.([^.]+)$/, '-small.$1')),
+                    normal: base.getBackgroundUrl(imageUrl)
+                });
+            });
+            if (item.images.length) {
+                self.selectedPhoto(item.images[0].normal);
+            }
         });
     }, function () {
         tabBar.init('.tab-bar');

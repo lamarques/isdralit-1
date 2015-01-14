@@ -50,10 +50,14 @@ exports.currentQuery = function() {
     return JSON.parse($('input[name=query]').val());
 };
 
+exports.getBackgroundUrl = function (value) {
+    return value ? 'url(' + value + ')' : 'none';
+};
+
 exports.addBackgroundImage = function (item, fieldName) {
     var value = item[fieldName];
     if ($.isArray(value)) {
         value = value.length ? value[0] : '';
     }
-    item.backgroundImage = value ? 'url(' + value + ')' : 'none';
+    item.backgroundImage = this.getBackgroundUrl(value);
 };

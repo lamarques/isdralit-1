@@ -1,12 +1,39 @@
+@import "variables";
+
 .product-grid {
   display: table;
   padding-bottom: 15px;
   .gallery {
-    @extend .container;
     margin-right: 15px;
-    width: 370px;
     .photo {
-      height: 360px;
+      @extend .container;
+      display: inline-block;
+      float: left;
+      cursor: move;
+      > div {
+        width: 360px;
+        height: 360px;
+        background-size: 360px;
+      }
+    }
+    .thumbs {
+      margin-right: -12px;
+      .photo {
+        cursor: pointer;
+        margin: 12px 12px 0px 0px;
+        > div {
+          width: 72px;
+          height: 72px;
+          background-size: 72px;
+          opacity: 0.8;
+        }
+        &:hover {
+          border-color: darken($light-gray-border-color, 20%);
+          > div {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
   .info {

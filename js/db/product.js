@@ -28,14 +28,14 @@ exports.defaultValues = [
                 titleHtml: 'Item 1',
                 detailHtml: 'Detalhes do produto 1',
                 imageUrl: '/images/tile.jpg',
-                imagesUrl: ['/images/tile-1.jpg'],
+                imagesUrl: ['/images/tile-1.jpg', '/images/tile-2.jpg', '/images/tile-3.jpg', '/images/tile-4.jpg'],
                 order: 0
             },
             {
                 titleHtml: 'Item 2',
                 detailHtml: 'Detalhes do produto 2',
                 imageUrl: '/images/tile.jpg',
-                imagesUrl: ['/images/tile-1.jpg'],
+                imagesUrl: ['/images/tile-1.jpg', '/images/tile-2.jpg', '/images/tile-3.jpg', '/images/tile-4.jpg'],
                 order: 1
             }
         ]
@@ -49,14 +49,14 @@ exports.defaultValues = [
                 titleHtml: 'Item 3',
                 detailHtml: 'Detalhes do produto 3',
                 imageUrl: '/images/tile.jpg',
-                imagesUrl: ['/images/tile-1.jpg'],
+                imagesUrl: ['/images/tile-1.jpg', '/images/tile-2.jpg', '/images/tile-3.jpg', '/images/tile-4.jpg'],
                 order: 0
             },
             {
                 titleHtml: 'Item 4',
                 detailHtml: 'Detalhes do produto 4',
                 imageUrl: '/images/tile.jpg',
-                imagesUrl: ['/images/tile-1.jpg'],
+                imagesUrl: ['/images/tile-1.jpg', '/images/tile-2.jpg', '/images/tile-3.jpg', '/images/tile-4.jpg'],
                 order: 1
             }
         ]
@@ -70,14 +70,14 @@ exports.defaultValues = [
                 titleHtml: 'Item 5',
                 detailHtml: 'Detalhes do produto 5',
                 imageUrl: '/images/tile.jpg',
-                imagesUrl: ['/images/tile-1.jpg'],
+                imagesUrl: ['/images/tile-1.jpg', '/images/tile-2.jpg', '/images/tile-3.jpg', '/images/tile-4.jpg'],
                 order: 0
             },
             {
                 titleHtml: 'Item 6',
                 detailHtml: 'Detalhes do produto 6',
                 imageUrl: '/images/tile.jpg',
-                imagesUrl: ['/images/tile-1.jpg'],
+                imagesUrl: ['/images/tile-1.jpg', '/images/tile-2.jpg', '/images/tile-3.jpg', '/images/tile-4.jpg'],
                 order: 1
             }
         ]
@@ -91,14 +91,14 @@ exports.defaultValues = [
                 titleHtml: 'Item 7',
                 detailHtml: 'Detalhes do produto 7',
                 imageUrl: '/images/tile.jpg',
-                imagesUrl: ['/images/tile-1.jpg'],
+                imagesUrl: ['/images/tile-1.jpg', '/images/tile-2.jpg', '/images/tile-3.jpg', '/images/tile-4.jpg'],
                 order: 0
             },
             {
                 titleHtml: 'Item 8',
                 detailHtml: 'Detalhes do produto 8',
                 imageUrl: '/images/tile.jpg',
-                imagesUrl: ['/images/tile-1.jpg'],
+                imagesUrl: ['/images/tile-1.jpg', '/images/tile-2.jpg', '/images/tile-3.jpg', '/images/tile-4.jpg'],
                 order: 1
             }
         ]
