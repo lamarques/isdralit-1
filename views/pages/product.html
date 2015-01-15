@@ -35,7 +35,7 @@
                 <a href="#tab-2" class="tabber-handle">Informações Técnicas</a>
             </menu>
 
-            <div class="tabber-tab" id="tab-1">
+            <div id="tab-1" class="tabber-tab">
                 <table class="table">
                     <thead>
                     <tr>
@@ -46,111 +46,22 @@
                     </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody data-bind="foreach: { data: measures, as: 'measure' }">
                     <tr>
-                        <td>0,91</td>
-                        <td>3,30</td>
-                        <td>450</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>1,22</td>
-                        <td>4,50</td>
-                        <td>450</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>1,53</td>
-                        <td>5,60</td>
-                        <td>450</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>1,83</td>
-                        <td>6,70</td>
-                        <td>450</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>2,13</td>
-                        <td>7,80</td>
-                        <td>450</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>2,44</td>
-                        <td>9,00</td>
-                        <td>450</td>
-                        <td>4</td>
+                        <td data-bind="html: measure.extension"></td>
+                        <td data-bind="html: measure.weight"></td>
+                        <td data-bind="html: measure.width"></td>
+                        <td data-bind="html: measure.thickness"></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
 
-            <div class="tabber-tab" id="tab-2">
+            <div id="tab-2" class="tabber-tab" data-bind="foreach: { data: informations, as: 'information' }">
                 <div class="info-box">
                     <div>
-                        <div class="title">
-                            Inclinação
-                        </div>
-
-                        <div class="detail">
-                            Recomenda-se utilizar uma inclinação mínima de 15° ou 26,8%.<br>
-                            Inclinações menores, recomendamos consultar nosso departamento técnico.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-box">
-                    <div>
-                        <div class="title">
-                            Recobrimento Longitudinal
-                        </div>
-
-                        <div class="detail">
-                            É o traspasse das telhas no sentido longitudinal, sentido da inclinação do telhado.<br>
-                            Utilize um recobrimento mínimo de 14cm.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-box">
-                    <div>
-                        <div class="title">
-                            Recobrimento Lateral
-                        </div>
-
-                        <div class="detail">
-                            É o remonte das telhas no sentido de sua largura.<br>
-                            Recomenda-se utilizar um recobrimento lateral de no mínimo uma onda (56 mm), conforme
-                            ilustração.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-box">
-                    <div>
-                        <div class="title">
-                            Beiral
-                        </div>
-
-                        <div class="detail">
-                            Para obter maior proteção e segurança, coloque as telhas com um beiral com comprimento
-                            máximo de
-                            14 cm, conforme ilustração.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="info-box">
-                    <div>
-                        <div class="title">
-                            Apoio
-                        </div>
-
-                        <div class="detail">
-                            Recomendamos utilizar um apoio de no mínimo 4 cm de largura, conforme ilustração.
-                        </div>
+                        <div class="title" data-bind="html: information.titleHtml"></div>
+                        <div class="detail" data-bind="html: information.detailHtml"></div>
                     </div>
                 </div>
             </div>

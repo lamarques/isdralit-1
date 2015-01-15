@@ -49,22 +49,22 @@ exports.defaultValues = [
                 informations: [
                     {
                         titleHtml: 'Título 1',
-                        detailHtml: 'Recomendação 1',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 1.<br>Preste atenção nos mínimos detalhes...',
                         order: 0
                     },
                     {
                         titleHtml: 'Título 2',
-                        detailHtml: 'Recomendação 2',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 2.<br>Preste atenção nos mínimos detalhes...',
                         order: 1
                     },
                     {
                         titleHtml: 'Título 3',
-                        detailHtml: 'Recomendação 3',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 3.<br>Preste atenção nos mínimos detalhes...',
                         order: 2
                     },
                     {
                         titleHtml: 'Título 4',
-                        detailHtml: 'Recomendação 4',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 4.<br>Preste atenção nos mínimos detalhes...',
                         order: 3
                     }
                 ],
@@ -108,22 +108,22 @@ exports.defaultValues = [
                 informations: [
                     {
                         titleHtml: 'Título 1',
-                        detailHtml: 'Recomendação 1',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 1.<br>Preste atenção nos mínimos detalhes...',
                         order: 0
                     },
                     {
                         titleHtml: 'Título 2',
-                        detailHtml: 'Recomendação 2',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 2.<br>Preste atenção nos mínimos detalhes...',
                         order: 1
                     },
                     {
                         titleHtml: 'Título 3',
-                        detailHtml: 'Recomendação 3',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 3.<br>Preste atenção nos mínimos detalhes...',
                         order: 2
                     },
                     {
                         titleHtml: 'Título 4',
-                        detailHtml: 'Recomendação 4',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 4.<br>Preste atenção nos mínimos detalhes...',
                         order: 3
                     }
                 ],
@@ -174,22 +174,22 @@ exports.defaultValues = [
                 informations: [
                     {
                         titleHtml: 'Título 1',
-                        detailHtml: 'Recomendação 1',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 1.<br>Preste atenção nos mínimos detalhes...',
                         order: 0
                     },
                     {
                         titleHtml: 'Título 2',
-                        detailHtml: 'Recomendação 2',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 2.<br>Preste atenção nos mínimos detalhes...',
                         order: 1
                     },
                     {
                         titleHtml: 'Título 3',
-                        detailHtml: 'Recomendação 3',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 3.<br>Preste atenção nos mínimos detalhes...',
                         order: 2
                     },
                     {
                         titleHtml: 'Título 4',
-                        detailHtml: 'Recomendação 4',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 4.<br>Preste atenção nos mínimos detalhes...',
                         order: 3
                     }
                 ],
@@ -233,22 +233,22 @@ exports.defaultValues = [
                 informations: [
                     {
                         titleHtml: 'Título 1',
-                        detailHtml: 'Recomendação 1',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 1.<br>Preste atenção nos mínimos detalhes...',
                         order: 0
                     },
                     {
                         titleHtml: 'Título 2',
-                        detailHtml: 'Recomendação 2',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 2.<br>Preste atenção nos mínimos detalhes...',
                         order: 1
                     },
                     {
                         titleHtml: 'Título 3',
-                        detailHtml: 'Recomendação 3',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 3.<br>Preste atenção nos mínimos detalhes...',
                         order: 2
                     },
                     {
                         titleHtml: 'Título 4',
-                        detailHtml: 'Recomendação 4',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 4.<br>Preste atenção nos mínimos detalhes...',
                         order: 3
                     }
                 ],
@@ -299,22 +299,22 @@ exports.defaultValues = [
                 informations: [
                     {
                         titleHtml: 'Título 1',
-                        detailHtml: 'Recomendação 1',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 1.<br>Preste atenção nos mínimos detalhes...',
                         order: 0
                     },
                     {
                         titleHtml: 'Título 2',
-                        detailHtml: 'Recomendação 2',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 2.<br>Preste atenção nos mínimos detalhes...',
                         order: 1
                     },
                     {
                         titleHtml: 'Título 3',
-                        detailHtml: 'Recomendação 3',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 3.<br>Preste atenção nos mínimos detalhes...',
                         order: 2
                     },
                     {
                         titleHtml: 'Título 4',
-                        detailHtml: 'Recomendação 4',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 4.<br>Preste atenção nos mínimos detalhes...',
                         order: 3
                     }
                 ],
@@ -358,22 +358,22 @@ exports.defaultValues = [
                 informations: [
                     {
                         titleHtml: 'Título 1',
-                        detailHtml: 'Recomendação 1',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 1.<br>Preste atenção nos mínimos detalhes...',
                         order: 0
                     },
                     {
                         titleHtml: 'Título 2',
-                        detailHtml: 'Recomendação 2',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 2.<br>Preste atenção nos mínimos detalhes...',
                         order: 1
                     },
                     {
                         titleHtml: 'Título 3',
-                        detailHtml: 'Recomendação 3',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 3.<br>Preste atenção nos mínimos detalhes...',
                         order: 2
                     },
                     {
                         titleHtml: 'Título 4',
-                        detailHtml: 'Recomendação 4',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 4.<br>Preste atenção nos mínimos detalhes...',
                         order: 3
                     }
                 ],
@@ -424,22 +424,22 @@ exports.defaultValues = [
                 informations: [
                     {
                         titleHtml: 'Título 1',
-                        detailHtml: 'Recomendação 1',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 1.<br>Preste atenção nos mínimos detalhes...',
                         order: 0
                     },
                     {
                         titleHtml: 'Título 2',
-                        detailHtml: 'Recomendação 2',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 2.<br>Preste atenção nos mínimos detalhes...',
                         order: 1
                     },
                     {
                         titleHtml: 'Título 3',
-                        detailHtml: 'Recomendação 3',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 3.<br>Preste atenção nos mínimos detalhes...',
                         order: 2
                     },
                     {
                         titleHtml: 'Título 4',
-                        detailHtml: 'Recomendação 4',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 4.<br>Preste atenção nos mínimos detalhes...',
                         order: 3
                     }
                 ],
@@ -483,22 +483,22 @@ exports.defaultValues = [
                 informations: [
                     {
                         titleHtml: 'Título 1',
-                        detailHtml: 'Recomendação 1',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 1.<br>Preste atenção nos mínimos detalhes...',
                         order: 0
                     },
                     {
                         titleHtml: 'Título 2',
-                        detailHtml: 'Recomendação 2',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 2.<br>Preste atenção nos mínimos detalhes...',
                         order: 1
                     },
                     {
                         titleHtml: 'Título 3',
-                        detailHtml: 'Recomendação 3',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 3.<br>Preste atenção nos mínimos detalhes...',
                         order: 2
                     },
                     {
                         titleHtml: 'Título 4',
-                        detailHtml: 'Recomendação 4',
+                        detailHtml: 'Recomendação muito importante sobre a montagem do item 4.<br>Preste atenção nos mínimos detalhes...',
                         order: 3
                     }
                 ],
