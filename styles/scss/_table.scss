@@ -1,0 +1,36 @@
+@import "variables";
+@import "functions";
+
+.table {
+  position: relative;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 700px;
+  color: $title-color;
+  @include linear-gradient(90deg, $background-color 0%, $light-gray-color 10%, $light-gray-color 90%, $background-color 100%);
+  thead {
+    tr {
+      background-color: $background-color;
+      th {
+        font-family: OpenSans-CondensedBold;
+        text-align: left;
+        padding: 8px;
+      }
+    }
+    &:after {
+      @extend .absolute-row;
+      height: 2px;
+      @include linear-gradient(to right, $background-color, $main-color, $background-color);
+    }
+  }
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: $background-color;
+      }
+      td {
+        padding: 8px;
+      }
+    }
+  }
+}
