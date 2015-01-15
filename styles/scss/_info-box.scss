@@ -1,0 +1,24 @@
+@import "variables";
+@import "functions";
+
+.info-box {
+  > div {
+    position: relative;
+    display: inline-block;
+    color: $title-color;
+    .title {
+      font-size: 20px;
+    }
+  }
+  + .info-box {
+    > div {
+      padding-top: 20px;
+      &:before {
+        @extend .absolute-row;
+        height: 1px;
+        margin-top: -10px;
+        @include linear-gradient(to right, $background-color, darken($light-gray-border-color, 5%), $background-color);
+      }
+    }
+  }
+}
