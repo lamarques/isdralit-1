@@ -40,6 +40,8 @@ exports.ViewModel = function () {
     };
 
     findAll('menu', self.menus);
+
+    $('body > .content').css('display', 'block');
 };
 
 exports.findAll = findAll;

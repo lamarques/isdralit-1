@@ -17,6 +17,9 @@ body {
     content: '';
     height: 248px;
   }
+  > .content {
+    display: none;
+  }
 }
 
 .content {
