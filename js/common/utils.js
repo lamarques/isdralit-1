@@ -12,3 +12,28 @@ exports.removeInvalidAttributes = function (data) {
         }
     }
 };
+
+exports.removeAccents = function (text) {
+    var map = {
+        'a': '[àáâãäå]',
+        'ae': 'æ',
+        'c': 'ç',
+        'e': '[èéêë]',
+        'i': '[ìíîï]',
+        'n': 'ñ',
+        'o': '[òóôõö]',
+        'oe': 'œ',
+        'u': '[ùúûűü]',
+        'y': '[ýÿ]'
+    };
+
+    for (var character in map) {
+        text = text.replace(new RegExp(map[character], 'g'), character);
+        text = text.replace(new RegExp(map[character].toUpperCase(), 'g'), character.toUpperCase());
+    }
+    return text;
+};
+
+exports.urlKey = function (text) {
+    return this.removeAccents(text).replace(/\s+/g, '-').toLowerCase();
+};
