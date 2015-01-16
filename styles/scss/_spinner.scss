@@ -1,0 +1,23 @@
+@import "variables";
+
+.spinner {
+  min-height: 160px;
+  > div {
+    position: absolute;
+    margin: auto;
+    padding: 0;
+    left: 0;
+    right: 0;
+    top: 90px;
+    bottom: 248px;
+    width: 100px;
+    height: 100px;
+    > .sk-spinner {
+      width: 100px;
+      height: 100px;
+      > .sk-cube {
+        background-color: $main-color;
+      }
+    }
+  }
+}

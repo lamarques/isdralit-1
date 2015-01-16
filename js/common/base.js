@@ -41,6 +41,7 @@ exports.ViewModel = function () {
 
     findAll('menu', self.menus);
 
+    $('body > .spinner').css('display', 'none');
     $('body > .content').css('display', 'block');
 };
 
