@@ -10,8 +10,8 @@ ViewModel = function () {
 
     self.products = ko.observableArray([]);
 
-    self.openProduct = function (data, event) {
-        window.location = '/views/product' + base.queryString({ 'items._id': data._id, fields: 'items.$' });
+    self.openProduct = function (path, data, event) {
+        window.location = '/views/product/' + (path || '');
     };
 
     base.findAll('product', self.products, base.currentQuery(), function (product) {

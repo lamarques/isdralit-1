@@ -34,6 +34,26 @@ app.get('/', function (req, res) {
     res.redirect('/views/home');
 });
 
+app.get('/views/product/:className?/:productName?', function (req, res) {
+    var className = req.params.className;
+    var productName = req.params.productName;
+    var name = (className && productName) ? 'product' : 'product-list';
+
+    var query = {};
+    if (className) {
+        query['key'] = className;
+    }
+    if (productName) {
+        query['items.key'] = productName;
+        query['fields'] = 'items.$';
+    }
+
+    res.render('pages/' + name + '.html', {
+        name: name,
+        query: query
+    });
+});
+
 app.get('/views/:name', function (req, res) {
     var name = req.params.name;
     var query = req.query;

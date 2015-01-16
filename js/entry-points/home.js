@@ -14,7 +14,7 @@ ViewModel = function () {
     self.informations = ko.observableArray([]);
 
     self.openProducts = function (data, event) {
-        window.location = '/views/product-list' + base.queryString({ _id: data._id });
+        window.location = '/views/product/' + (data.key || '');
         event.stopPropagation();
     };
 
@@ -24,7 +24,7 @@ ViewModel = function () {
         slider.init('.banner');
     });
 
-    base.findAll('product', self.products, { fields: 'titleHtml imageUrl' }, function (product) {
+    base.findAll('product', self.products, { fields: 'key titleHtml imageUrl' }, function (product) {
         base.addBackgroundImage(product, 'imageUrl');
     });
 

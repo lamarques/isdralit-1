@@ -17,7 +17,7 @@ exports.defaultValues = [
     }),
     new Menu({
         name: 'Produtos',
-        url: '/views/product-list',
+        url: '/views/product',
         order: 1
     }),
     new Menu({

@@ -18,6 +18,7 @@ InformationSchema = mongoose.Schema({
 });
 
 ItemSchema = mongoose.Schema({
+    key: String,
     titleHtml: String,
     detailHtml: String,
     imageUrl: String,
@@ -28,6 +29,7 @@ ItemSchema = mongoose.Schema({
 });
 
 Product = mongoose.model('Product', mongoose.Schema({
+    key: String,
     titleHtml: String,
     imageUrl: String,
     order: Number,
@@ -36,11 +38,13 @@ Product = mongoose.model('Product', mongoose.Schema({
 
 exports.defaultValues = [
     new Product({
+        key: 'caixas-de-agua',
         titleHtml: 'Caixas<br>de água',
         imageUrl: '/images/water-tanks.jpg',
         order: 0,
         items: [
             {
+                key: 'item-1',
                 titleHtml: 'Item 1',
                 detailHtml: 'Detalhes do produto 1',
                 imageUrl: '/images/tile.jpg',
@@ -100,6 +104,7 @@ exports.defaultValues = [
                 ]
             },
             {
+                key: 'item-2',
                 titleHtml: 'Item 2',
                 detailHtml: 'Detalhes do produto 2',
                 imageUrl: '/images/tile.jpg',
@@ -161,11 +166,13 @@ exports.defaultValues = [
         ]
     }),
     new Product({
+        key: 'acabamentos-em-pvc',
         titleHtml: 'Acabamentos<br>em PVC',
         imageUrl: '/images/pvc-finishing-work.jpg',
         order: 1,
         items: [
             {
+                key: 'item-3',
                 titleHtml: 'Item 3',
                 detailHtml: 'Detalhes do produto 3',
                 imageUrl: '/images/tile.jpg',
@@ -225,6 +232,7 @@ exports.defaultValues = [
                 ]
             },
             {
+                key: 'item-4',
                 titleHtml: 'Item 4',
                 detailHtml: 'Detalhes do produto 4',
                 imageUrl: '/images/tile.jpg',
@@ -286,11 +294,13 @@ exports.defaultValues = [
         ]
     }),
     new Product({
+        key: 'coberturas',
         titleHtml: 'Coberturas',
         imageUrl: '/images/roof-tiles.jpg',
         order: 2,
         items: [
             {
+                key: 'item-5',
                 titleHtml: 'Item 5',
                 detailHtml: 'Detalhes do produto 5',
                 imageUrl: '/images/tile.jpg',
@@ -350,6 +360,7 @@ exports.defaultValues = [
                 ]
             },
             {
+                key: 'item-6',
                 titleHtml: 'Item 6',
                 detailHtml: 'Detalhes do produto 6',
                 imageUrl: '/images/tile.jpg',
@@ -411,11 +422,13 @@ exports.defaultValues = [
         ]
     }),
     new Product({
+        key: 'tubos-e-conexoes',
         titleHtml: 'Tubos<br>e conexões',
         imageUrl: '/images/pipes-fittings.jpg',
         order: 3,
         items: [
             {
+                key: 'item-7',
                 titleHtml: 'Item 7',
                 detailHtml: 'Detalhes do produto 7',
                 imageUrl: '/images/tile.jpg',
@@ -475,6 +488,7 @@ exports.defaultValues = [
                 ]
             },
             {
+                key: 'item-8',
                 titleHtml: 'Item 8',
                 detailHtml: 'Detalhes do produto 8',
                 imageUrl: '/images/tile.jpg',
