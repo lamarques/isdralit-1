@@ -22,7 +22,7 @@ var findAll = function (name, observableArray, query, itemAction, completionActi
     });
 };
 
-var queryString = function(data) {
+var queryString = function (data) {
     utils.removeInvalidAttributes(data);
     if (!$.isEmptyObject(data)) {
         return '?'.concat($.param(data));
@@ -34,8 +34,8 @@ exports.ViewModel = function () {
     var self = this;
 
     self.menus = ko.observableArray([]);
-    
-    self.openUrl = function(value) {
+
+    self.openUrl = function (value) {
         window.location = value['url'];
     };
 
@@ -49,7 +49,7 @@ exports.findAll = findAll;
 
 exports.queryString = queryString;
 
-exports.currentQuery = function() {
+exports.currentQuery = function () {
     return JSON.parse($('input[name=query]').val());
 };
 
