@@ -21,6 +21,7 @@ ItemSchema = mongoose.Schema({
     key: String,
     titleHtml: String,
     detailHtml: String,
+    backgroundImageUrl: String,
     imageUrl: String,
     imagesUrl: Array,
     order: Number,
