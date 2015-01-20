@@ -3,6 +3,7 @@
  */
 var db = require('./js/db/database');
 var express = require('express');
+var basicAuth = require('basic-auth-connect');
 var sass = require('node-sass-middleware');
 var browserify = require('browserify-middleware');
 var utils = require('./js/common/utils');
@@ -12,6 +13,8 @@ var isDevelopment = process.env.NODE_ENV == 'development';
 var app = express();
 
 app.engine('html', require('ejs').renderFile);
+
+app.use('/cms', basicAuth('isdralit', 'admin123'));
 
 app.use(sass({
     src: __dirname + '/styles/scss/entry-points',
