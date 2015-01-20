@@ -1,8 +1,21 @@
 /**
  * Created by marlon on 02/01/15.
  */
+var accounting = require('accounting');
+accounting.settings = {
+    number: {
+        precision: 0,
+        thousand: '.',
+        decimal: ','
+    }
+};
+
 exports.capitalize = function (text) {
     return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+};
+
+exports.formatNumber = function (value, precision) {
+    return accounting.formatNumber(value, precision);
 };
 
 exports.removeInvalidAttributes = function (data) {
