@@ -3,8 +3,8 @@
  */
 var $ = require('jquery');
 var ko = require('knockout');
-var slider = require('../common/slider');
-var base = require('../common/base');
+var slider = require('../../common/slider');
+var base = require('../../common/base');
 
 ViewModel = function () {
     var self = this;
