@@ -23,6 +23,21 @@ ViewModel = function () {
         window.location = '/views/product/' + (data.path || '');
     };
 
+    self.setMeasures = function (item) {
+        item.measureHeaders = [];
+        item.measureRows = [];
+
+        item.measures.forEach(function (measure) {
+            item.measureHeaders.push(measure.header);
+            measure.values.forEach(function (value, index) {
+                if (!item.measureRows[index]) {
+                    item.measureRows[index] = [];
+                }
+                item.measureRows[index].push(value);
+            });
+        });
+    };
+
     var query = base.currentQuery();
     base.findAll('product', self.products, query, function (product) {
         var suggestions = [];
@@ -40,6 +55,8 @@ ViewModel = function () {
                 if (item.images.length) {
                     self.selectPhoto(item.images[0]);
                 }
+
+                self.setMeasures(item);
             } else if (suggestions.length < 4) {
                 item.path = product.key + '/' + item.key;
                 base.addBackgroundImage(item, 'backgroundImageUrl');

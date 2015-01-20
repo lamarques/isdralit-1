@@ -39,20 +39,14 @@
             <div id="tab-1" class="tabber-tab">
                 <table class="table">
                     <thead>
-                    <tr>
-                        <th>Comprimento (m)</th>
-                        <th>Peso (kg)</th>
-                        <th>Largura Útil (mm)</th>
-                        <th>Espessura (mm)</th>
+                    <tr data-bind="foreach: { data: item.measureHeaders, as: 'header' }">
+                        <th data-bind="html: header"></th>
                     </tr>
                     </thead>
 
-                    <tbody data-bind="foreach: { data: measures, as: 'measure' }">
-                    <tr>
-                        <td data-bind="html: measure.extension"></td>
-                        <td data-bind="html: measure.weight"></td>
-                        <td data-bind="html: measure.width"></td>
-                        <td data-bind="html: measure.thickness"></td>
+                    <tbody data-bind="foreach: { data: item.measureRows, as: 'rowValues' }">
+                    <tr data-bind="foreach: { data: rowValues, as: 'value' }">
+                        <td data-bind="html: value"></td>
                     </tr>
                     </tbody>
                 </table>
