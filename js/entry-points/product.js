@@ -3,6 +3,7 @@
  */
 var $ = require('jquery');
 var ko = require('knockout');
+var utils = require('../common/utils');
 var zoom = require('../common/zoom');
 var tabBar = require('../common/tab-bar');
 var base = require('../common/base');
@@ -33,7 +34,7 @@ ViewModel = function () {
                 if (!item.measureRows[index]) {
                     item.measureRows[index] = [];
                 }
-                item.measureRows[index].push(value);
+                item.measureRows[index].push(utils.formatNumber(value, measure.precision));
             });
         });
     };
