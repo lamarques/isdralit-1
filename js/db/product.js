@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 MeasureSchema = mongoose.Schema({
     header: String,
     values: Array,
+    precision: Number,
     order: Number
 });
 
@@ -76,21 +77,25 @@ exports.defaultValues = [
                     {
                         header: 'Comprimento (m)',
                         values: [1, 1.5, 2, 2.5],
+                        precision: 2,
                         order: 0
                     },
                     {
                         header: 'Peso (kg)',
                         values: [2.25, 3.25, 4.25, 5.25],
+                        precision: 2,
                         order: 1
                     },
                     {
                         header: 'Largura Útil (mm)',
-                        values: [3.5, 4, 4.5, 5],
+                        values: [350, 400, 450, 500],
+                        precision: 0,
                         order: 2
                     },
                     {
                         header: 'Espessura (mm)',
-                        values: [4.75, 5.25, 5.75, 6.25],
+                        values: [4, 5, 5, 6],
+                        precision: 0,
                         order: 3
                     }
                 ]
@@ -129,21 +134,25 @@ exports.defaultValues = [
                     {
                         header: 'Comprimento (m)',
                         values: [1, 1.5, 2, 2.5],
+                        precision: 2,
                         order: 0
                     },
                     {
                         header: 'Peso (kg)',
                         values: [2.25, 3.25, 4.25, 5.25],
+                        precision: 2,
                         order: 1
                     },
                     {
                         header: 'Largura Útil (mm)',
-                        values: [3.5, 4, 4.5, 5],
+                        values: [350, 400, 450, 500],
+                        precision: 0,
                         order: 2
                     },
                     {
                         header: 'Espessura (mm)',
-                        values: [4.75, 5.25, 5.75, 6.25],
+                        values: [4, 5, 5, 6],
+                        precision: 0,
                         order: 3
                     }
                 ]
@@ -190,21 +199,25 @@ exports.defaultValues = [
                     {
                         header: 'Comprimento (m)',
                         values: [1, 1.5, 2, 2.5],
+                        precision: 2,
                         order: 0
                     },
                     {
                         header: 'Peso (kg)',
                         values: [2.25, 3.25, 4.25, 5.25],
+                        precision: 2,
                         order: 1
                     },
                     {
                         header: 'Largura Útil (mm)',
-                        values: [3.5, 4, 4.5, 5],
+                        values: [350, 400, 450, 500],
+                        precision: 0,
                         order: 2
                     },
                     {
                         header: 'Espessura (mm)',
-                        values: [4.75, 5.25, 5.75, 6.25],
+                        values: [4, 5, 5, 6],
+                        precision: 0,
                         order: 3
                     }
                 ]
@@ -243,21 +256,25 @@ exports.defaultValues = [
                     {
                         header: 'Comprimento (m)',
                         values: [1, 1.5, 2, 2.5],
+                        precision: 2,
                         order: 0
                     },
                     {
                         header: 'Peso (kg)',
                         values: [2.25, 3.25, 4.25, 5.25],
+                        precision: 2,
                         order: 1
                     },
                     {
                         header: 'Largura Útil (mm)',
-                        values: [3.5, 4, 4.5, 5],
+                        values: [350, 400, 450, 500],
+                        precision: 0,
                         order: 2
                     },
                     {
                         header: 'Espessura (mm)',
-                        values: [4.75, 5.25, 5.75, 6.25],
+                        values: [4, 5, 5, 6],
+                        precision: 0,
                         order: 3
                     }
                 ]
@@ -304,21 +321,25 @@ exports.defaultValues = [
                     {
                         header: 'Comprimento (m)',
                         values: [1, 1.5, 2, 2.5],
+                        precision: 2,
                         order: 0
                     },
                     {
                         header: 'Peso (kg)',
                         values: [2.25, 3.25, 4.25, 5.25],
+                        precision: 2,
                         order: 1
                     },
                     {
                         header: 'Largura Útil (mm)',
-                        values: [3.5, 4, 4.5, 5],
+                        values: [350, 400, 450, 500],
+                        precision: 0,
                         order: 2
                     },
                     {
                         header: 'Espessura (mm)',
-                        values: [4.75, 5.25, 5.75, 6.25],
+                        values: [4, 5, 5, 6],
+                        precision: 0,
                         order: 3
                     }
                 ]
@@ -357,21 +378,25 @@ exports.defaultValues = [
                     {
                         header: 'Comprimento (m)',
                         values: [1, 1.5, 2, 2.5],
+                        precision: 2,
                         order: 0
                     },
                     {
                         header: 'Peso (kg)',
                         values: [2.25, 3.25, 4.25, 5.25],
+                        precision: 2,
                         order: 1
                     },
                     {
                         header: 'Largura Útil (mm)',
-                        values: [3.5, 4, 4.5, 5],
+                        values: [350, 400, 450, 500],
+                        precision: 0,
                         order: 2
                     },
                     {
                         header: 'Espessura (mm)',
-                        values: [4.75, 5.25, 5.75, 6.25],
+                        values: [4, 5, 5, 6],
+                        precision: 0,
                         order: 3
                     }
                 ]
@@ -418,21 +443,25 @@ exports.defaultValues = [
                     {
                         header: 'Comprimento (m)',
                         values: [1, 1.5, 2, 2.5],
+                        precision: 2,
                         order: 0
                     },
                     {
                         header: 'Peso (kg)',
                         values: [2.25, 3.25, 4.25, 5.25],
+                        precision: 2,
                         order: 1
                     },
                     {
                         header: 'Largura Útil (mm)',
-                        values: [3.5, 4, 4.5, 5],
+                        values: [350, 400, 450, 500],
+                        precision: 0,
                         order: 2
                     },
                     {
                         header: 'Espessura (mm)',
-                        values: [4.75, 5.25, 5.75, 6.25],
+                        values: [4, 5, 5, 6],
+                        precision: 0,
                         order: 3
                     }
                 ]
@@ -471,21 +500,25 @@ exports.defaultValues = [
                     {
                         header: 'Comprimento (m)',
                         values: [1, 1.5, 2, 2.5],
+                        precision: 2,
                         order: 0
                     },
                     {
                         header: 'Peso (kg)',
                         values: [2.25, 3.25, 4.25, 5.25],
+                        precision: 2,
                         order: 1
                     },
                     {
                         header: 'Largura Útil (mm)',
-                        values: [3.5, 4, 4.5, 5],
+                        values: [350, 400, 450, 500],
+                        precision: 0,
                         order: 2
                     },
                     {
                         header: 'Espessura (mm)',
-                        values: [4.75, 5.25, 5.75, 6.25],
+                        values: [4, 5, 5, 6],
+                        precision: 0,
                         order: 3
                     }
                 ]
