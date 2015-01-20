@@ -74,7 +74,7 @@
             </div>
 
             <div class="product-items" data-bind="foreach: { data: $root.itemSuggestions, as: 'suggestion' }">
-                <div>
+                <div data-bind="click: $root.openProduct">
                     <div class="photo" data-bind="style: { backgroundImage: suggestion.backgroundImage }"></div>
                     <div class="title">
                         <span data-bind="html: suggestion.titleHtml"></span>

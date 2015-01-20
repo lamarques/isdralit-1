@@ -19,6 +19,10 @@ ViewModel = function () {
         zoom.set('.gallery > .photo > div', data.url);
     };
 
+    self.openProduct = function (data, event) {
+        window.location = '/views/product/' + (data.path || '');
+    };
+
     var query = base.currentQuery();
     base.findAll('product', self.products, query, function (product) {
         var suggestions = [];
@@ -37,6 +41,7 @@ ViewModel = function () {
                     self.selectPhoto(item.images[0]);
                 }
             } else if (suggestions.length < 4) {
+                item.path = product.key + '/' + item.key;
                 base.addBackgroundImage(item, 'backgroundImageUrl');
                 suggestions.push(item);
             }
