@@ -24,6 +24,20 @@ ViewModel = function () {
         window.location = '/views/product/' + (data.path || '');
     };
 
+    self.setImages = function (item) {
+        item.images = [];
+        item.imagesUrl.forEach(function (imageUrl) {
+            item.images.push({
+                url: imageUrl,
+                small: base.getBackgroundUrl(imageUrl.replace(/\.([^.]+)$/, '-small.$1')),
+                normal: base.getBackgroundUrl(imageUrl)
+            });
+        });
+        if (item.images.length) {
+            self.selectPhoto(item.images[0]);
+        }
+    };
+
     self.setMeasures = function (item) {
         item.measureHeaders = [];
         item.measureRows = [];
@@ -45,18 +59,7 @@ ViewModel = function () {
         product.items.forEach(function (item) {
             item.isMain = item.key == query['items.key'];
             if (item.isMain) {
-                item.images = [];
-                item.imagesUrl.forEach(function (imageUrl) {
-                    item.images.push({
-                        url: imageUrl,
-                        small: base.getBackgroundUrl(imageUrl.replace(/\.([^.]+)$/, '-small.$1')),
-                        normal: base.getBackgroundUrl(imageUrl)
-                    });
-                });
-                if (item.images.length) {
-                    self.selectPhoto(item.images[0]);
-                }
-
+                self.setImages(item);
                 self.setMeasures(item);
             } else if (suggestions.length < 4) {
                 item.path = product.key + '/' + item.key;
