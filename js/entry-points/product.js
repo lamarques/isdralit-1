@@ -25,17 +25,17 @@ ViewModel = function () {
         product.items.forEach(function (item) {
             item.isMain = item.key == query['items.key'];
             if (item.isMain) {
-            item.images = [];
-            item.imagesUrl.forEach(function (imageUrl) {
-                item.images.push({
-                    url: imageUrl,
-                    small: base.getBackgroundUrl(imageUrl.replace(/\.([^.]+)$/, '-small.$1')),
-                    normal: base.getBackgroundUrl(imageUrl)
+                item.images = [];
+                item.imagesUrl.forEach(function (imageUrl) {
+                    item.images.push({
+                        url: imageUrl,
+                        small: base.getBackgroundUrl(imageUrl.replace(/\.([^.]+)$/, '-small.$1')),
+                        normal: base.getBackgroundUrl(imageUrl)
+                    });
                 });
-            });
-            if (item.images.length) {
-                self.selectPhoto(item.images[0]);
-            }
+                if (item.images.length) {
+                    self.selectPhoto(item.images[0]);
+                }
             } else if (suggestions.length < 4) {
                 base.addBackgroundImage(item, 'backgroundImageUrl');
                 suggestions.push(item);
