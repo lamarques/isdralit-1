@@ -11,6 +11,7 @@ ViewModel = function () {
     var self = this;
 
     self.products = ko.observableArray([]);
+    self.itemSuggestions = ko.observableArray([]);
     self.selectedPhoto = ko.observable();
 
     self.selectPhoto = function (data, event) {
@@ -18,8 +19,12 @@ ViewModel = function () {
         zoom.set('.gallery > .photo > div', data.url);
     };
 
-    base.findAll('product', self.products, base.currentQuery(), function (product) {
+    var query = base.currentQuery();
+    base.findAll('product', self.products, query, function (product) {
+        var suggestions = [];
         product.items.forEach(function (item) {
+            item.isMain = item.key == query['items.key'];
+            if (item.isMain) {
             item.images = [];
             item.imagesUrl.forEach(function (imageUrl) {
                 item.images.push({
@@ -31,7 +36,12 @@ ViewModel = function () {
             if (item.images.length) {
                 self.selectPhoto(item.images[0]);
             }
+            } else if (suggestions.length < 4) {
+                base.addBackgroundImage(item, 'backgroundImageUrl');
+                suggestions.push(item);
+            }
         });
+        ko.utils.arrayPushAll(self.itemSuggestions, suggestions);
     }, function () {
         tabBar.init('.tab-bar');
     });

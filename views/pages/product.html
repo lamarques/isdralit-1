@@ -9,6 +9,7 @@
 
 <!-- ko foreach: { data: products, as: 'product' } -->
 <div class="content" data-bind="foreach: { data: items, as: 'item' }">
+    <!-- ko if: item.isMain -->
     <div class="section">
         <div class="product-grid">
             <div class="gallery">
@@ -67,24 +68,22 @@
             </div>
         </div>
 
-        <div class="title separator">
-            <span>Veja também</span>
-        </div>
-
-        <div class="product-items">
-            <div>
+        <div data-bind="visible: $root.itemSuggestions().length">
+            <div class="title separator">
+                <span>Veja também</span>
             </div>
 
-            <div>
-            </div>
-
-            <div>
-            </div>
-
-            <div>
+            <div class="product-items" data-bind="foreach: { data: $root.itemSuggestions, as: 'suggestion' }">
+                <div>
+                    <div class="photo" data-bind="style: { backgroundImage: suggestion.backgroundImage }"></div>
+                    <div class="title">
+                        <span data-bind="html: suggestion.titleHtml"></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!-- /ko -->
 </div>
 <!-- /ko -->
 
