@@ -50,7 +50,7 @@ app.get('/views/product/:className?/:productName?', function (req, res) {
         query['items.key'] = productName;
     }
 
-    res.render('pages/' + name + '.html', {
+    res.render('site/pages/' + name + '.html', {
         name: name,
         query: query
     });
@@ -59,7 +59,7 @@ app.get('/views/product/:className?/:productName?', function (req, res) {
 app.get('/views/:name', function (req, res) {
     var name = req.params.name;
     var query = req.query;
-    res.render('pages/' + name + '.html', {
+    res.render('site/pages/' + name + '.html', {
         name: name,
         query: query
     });
