@@ -45,7 +45,6 @@ app.get('/views/product/:className?/:productName?', function (req, res) {
     }
     if (productName) {
         query['items.key'] = productName;
-        query['fields'] = 'items.$';
     }
 
     res.render('pages/' + name + '.html', {
