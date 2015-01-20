@@ -37,6 +37,10 @@ app.get('/', function (req, res) {
     res.redirect('/views/home');
 });
 
+app.get('/cms', function (req, res) {
+    res.redirect('/cms/views/banner');
+});
+
 app.get('/views/product/:className?/:productName?', function (req, res) {
     var className = req.params.className;
     var productName = req.params.productName;
@@ -60,6 +64,15 @@ app.get('/views/:name', function (req, res) {
     var name = req.params.name;
     var query = req.query;
     res.render('site/pages/' + name + '.html', {
+        name: name,
+        query: query
+    });
+});
+
+app.get('/cms/views/:name', function (req, res) {
+    var name = req.params.name;
+    var query = req.query;
+    res.render('admin/pages/' + name + '.html', {
         name: name,
         query: query
     });
