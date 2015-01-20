@@ -4,10 +4,8 @@
 var mongoose = require('mongoose');
 
 MeasureSchema = mongoose.Schema({
-    extension: Number,
-    weight: Number,
-    width: Number,
-    thickness: Number,
+    header: String,
+    values: Array,
     order: Number
 });
 
@@ -76,31 +74,23 @@ exports.defaultValues = [
                 ],
                 measures: [
                     {
-                        extension: 1,
-                        weight: 2.25,
-                        width: 3.5,
-                        thickness: 4.75,
+                        header: 'Comprimento (m)',
+                        values: [1, 1.5, 2, 2.5],
                         order: 0
                     },
                     {
-                        extension: 1.5,
-                        weight: 3.25,
-                        width: 4,
-                        thickness: 5.25,
+                        header: 'Peso (kg)',
+                        values: [2.25, 3.25, 4.25, 5.25],
                         order: 1
                     },
                     {
-                        extension: 2,
-                        weight: 4.25,
-                        width: 4.5,
-                        thickness: 5.75,
+                        header: 'Largura Útil (mm)',
+                        values: [3.5, 4, 4.5, 5],
                         order: 2
                     },
                     {
-                        extension: 2.5,
-                        weight: 5.25,
-                        width: 5,
-                        thickness: 6.25,
+                        header: 'Espessura (mm)',
+                        values: [4.75, 5.25, 5.75, 6.25],
                         order: 3
                     }
                 ]
@@ -137,31 +127,23 @@ exports.defaultValues = [
                 ],
                 measures: [
                     {
-                        extension: 1,
-                        weight: 2.25,
-                        width: 3.5,
-                        thickness: 4.75,
+                        header: 'Comprimento (m)',
+                        values: [1, 1.5, 2, 2.5],
                         order: 0
                     },
                     {
-                        extension: 1.5,
-                        weight: 3.25,
-                        width: 4,
-                        thickness: 5.25,
+                        header: 'Peso (kg)',
+                        values: [2.25, 3.25, 4.25, 5.25],
                         order: 1
                     },
                     {
-                        extension: 2,
-                        weight: 4.25,
-                        width: 4.5,
-                        thickness: 5.75,
+                        header: 'Largura Útil (mm)',
+                        values: [3.5, 4, 4.5, 5],
                         order: 2
                     },
                     {
-                        extension: 2.5,
-                        weight: 5.25,
-                        width: 5,
-                        thickness: 6.25,
+                        header: 'Espessura (mm)',
+                        values: [4.75, 5.25, 5.75, 6.25],
                         order: 3
                     }
                 ]
@@ -206,31 +188,23 @@ exports.defaultValues = [
                 ],
                 measures: [
                     {
-                        extension: 1,
-                        weight: 2.25,
-                        width: 3.5,
-                        thickness: 4.75,
+                        header: 'Comprimento (m)',
+                        values: [1, 1.5, 2, 2.5],
                         order: 0
                     },
                     {
-                        extension: 1.5,
-                        weight: 3.25,
-                        width: 4,
-                        thickness: 5.25,
+                        header: 'Peso (kg)',
+                        values: [2.25, 3.25, 4.25, 5.25],
                         order: 1
                     },
                     {
-                        extension: 2,
-                        weight: 4.25,
-                        width: 4.5,
-                        thickness: 5.75,
+                        header: 'Largura Útil (mm)',
+                        values: [3.5, 4, 4.5, 5],
                         order: 2
                     },
                     {
-                        extension: 2.5,
-                        weight: 5.25,
-                        width: 5,
-                        thickness: 6.25,
+                        header: 'Espessura (mm)',
+                        values: [4.75, 5.25, 5.75, 6.25],
                         order: 3
                     }
                 ]
@@ -267,31 +241,23 @@ exports.defaultValues = [
                 ],
                 measures: [
                     {
-                        extension: 1,
-                        weight: 2.25,
-                        width: 3.5,
-                        thickness: 4.75,
+                        header: 'Comprimento (m)',
+                        values: [1, 1.5, 2, 2.5],
                         order: 0
                     },
                     {
-                        extension: 1.5,
-                        weight: 3.25,
-                        width: 4,
-                        thickness: 5.25,
+                        header: 'Peso (kg)',
+                        values: [2.25, 3.25, 4.25, 5.25],
                         order: 1
                     },
                     {
-                        extension: 2,
-                        weight: 4.25,
-                        width: 4.5,
-                        thickness: 5.75,
+                        header: 'Largura Útil (mm)',
+                        values: [3.5, 4, 4.5, 5],
                         order: 2
                     },
                     {
-                        extension: 2.5,
-                        weight: 5.25,
-                        width: 5,
-                        thickness: 6.25,
+                        header: 'Espessura (mm)',
+                        values: [4.75, 5.25, 5.75, 6.25],
                         order: 3
                     }
                 ]
@@ -336,31 +302,23 @@ exports.defaultValues = [
                 ],
                 measures: [
                     {
-                        extension: 1,
-                        weight: 2.25,
-                        width: 3.5,
-                        thickness: 4.75,
+                        header: 'Comprimento (m)',
+                        values: [1, 1.5, 2, 2.5],
                         order: 0
                     },
                     {
-                        extension: 1.5,
-                        weight: 3.25,
-                        width: 4,
-                        thickness: 5.25,
+                        header: 'Peso (kg)',
+                        values: [2.25, 3.25, 4.25, 5.25],
                         order: 1
                     },
                     {
-                        extension: 2,
-                        weight: 4.25,
-                        width: 4.5,
-                        thickness: 5.75,
+                        header: 'Largura Útil (mm)',
+                        values: [3.5, 4, 4.5, 5],
                         order: 2
                     },
                     {
-                        extension: 2.5,
-                        weight: 5.25,
-                        width: 5,
-                        thickness: 6.25,
+                        header: 'Espessura (mm)',
+                        values: [4.75, 5.25, 5.75, 6.25],
                         order: 3
                     }
                 ]
@@ -397,31 +355,23 @@ exports.defaultValues = [
                 ],
                 measures: [
                     {
-                        extension: 1,
-                        weight: 2.25,
-                        width: 3.5,
-                        thickness: 4.75,
+                        header: 'Comprimento (m)',
+                        values: [1, 1.5, 2, 2.5],
                         order: 0
                     },
                     {
-                        extension: 1.5,
-                        weight: 3.25,
-                        width: 4,
-                        thickness: 5.25,
+                        header: 'Peso (kg)',
+                        values: [2.25, 3.25, 4.25, 5.25],
                         order: 1
                     },
                     {
-                        extension: 2,
-                        weight: 4.25,
-                        width: 4.5,
-                        thickness: 5.75,
+                        header: 'Largura Útil (mm)',
+                        values: [3.5, 4, 4.5, 5],
                         order: 2
                     },
                     {
-                        extension: 2.5,
-                        weight: 5.25,
-                        width: 5,
-                        thickness: 6.25,
+                        header: 'Espessura (mm)',
+                        values: [4.75, 5.25, 5.75, 6.25],
                         order: 3
                     }
                 ]
@@ -466,31 +416,23 @@ exports.defaultValues = [
                 ],
                 measures: [
                     {
-                        extension: 1,
-                        weight: 2.25,
-                        width: 3.5,
-                        thickness: 4.75,
+                        header: 'Comprimento (m)',
+                        values: [1, 1.5, 2, 2.5],
                         order: 0
                     },
                     {
-                        extension: 1.5,
-                        weight: 3.25,
-                        width: 4,
-                        thickness: 5.25,
+                        header: 'Peso (kg)',
+                        values: [2.25, 3.25, 4.25, 5.25],
                         order: 1
                     },
                     {
-                        extension: 2,
-                        weight: 4.25,
-                        width: 4.5,
-                        thickness: 5.75,
+                        header: 'Largura Útil (mm)',
+                        values: [3.5, 4, 4.5, 5],
                         order: 2
                     },
                     {
-                        extension: 2.5,
-                        weight: 5.25,
-                        width: 5,
-                        thickness: 6.25,
+                        header: 'Espessura (mm)',
+                        values: [4.75, 5.25, 5.75, 6.25],
                         order: 3
                     }
                 ]
@@ -527,31 +469,23 @@ exports.defaultValues = [
                 ],
                 measures: [
                     {
-                        extension: 1,
-                        weight: 2.25,
-                        width: 3.5,
-                        thickness: 4.75,
+                        header: 'Comprimento (m)',
+                        values: [1, 1.5, 2, 2.5],
                         order: 0
                     },
                     {
-                        extension: 1.5,
-                        weight: 3.25,
-                        width: 4,
-                        thickness: 5.25,
+                        header: 'Peso (kg)',
+                        values: [2.25, 3.25, 4.25, 5.25],
                         order: 1
                     },
                     {
-                        extension: 2,
-                        weight: 4.25,
-                        width: 4.5,
-                        thickness: 5.75,
+                        header: 'Largura Útil (mm)',
+                        values: [3.5, 4, 4.5, 5],
                         order: 2
                     },
                     {
-                        extension: 2.5,
-                        weight: 5.25,
-                        width: 5,
-                        thickness: 6.25,
+                        header: 'Espessura (mm)',
+                        values: [4.75, 5.25, 5.75, 6.25],
                         order: 3
                     }
                 ]
