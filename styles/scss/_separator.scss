@@ -1,0 +1,19 @@
+@import "variables";
+@import "functions";
+
+.separator {
+  position: relative;
+  text-align: center;
+  padding: 15px 0px;
+  > span {
+    position: relative;
+    padding: 0px 15px;
+    background-color: $background-color;
+  }
+  &:before {
+    @extend .absolute-row;
+    height: 1px;
+    top: 50%;
+    @include linear-gradient(to right, $background-color, darken($light-gray-border-color, 5%), $background-color);
+  }
+}
