@@ -23,6 +23,7 @@
   "browser": {
     "jquery": "./libs/jquery/dist/jquery.js",
     "knockout": "./libs/knockout/dist/knockout.js",
+    "bootstrap": "./libs/bootstrap/dist/js/bootstrap.js",
     "unslider": "./libs/unslider/src/unslider.js",
     "tabber": "./libs/Tabber/jquery.fs.tabber.js",
     "jquery-zoom": "./libs/jquery-zoom/jquery.zoom.js"
@@ -30,6 +31,11 @@
   "browserify-shim": {
     "jquery": "$",
     "knockout": "ko",
+    "bootstrap": {
+      "depends": [
+        "jquery"
+      ]
+    },
     "unslider": {
       "depends": [
         "jquery"
