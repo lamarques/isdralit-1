@@ -8,8 +8,6 @@
     padding: 0;
     left: 0;
     right: 0;
-    top: 90px;
-    bottom: 248px;
     width: 100px;
     height: 100px;
     > .sk-spinner {
@@ -20,4 +18,14 @@
       }
     }
   }
+}
+
+.site .spinner > div {
+  top: 90px;
+  bottom: 248px;
+}
+
+.admin .spinner > div {
+  top: 51px;
+  bottom: 0px;
 }
