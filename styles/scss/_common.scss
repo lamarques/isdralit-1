@@ -14,10 +14,13 @@ body {
   min-height: 100%;
   font-family: PTSans-Regular;
   background-color: $background-color;
-  &:after {
+  &.site:after {
     display: block;
     content: '';
     height: 248px;
+  }
+  &.admin {
+    padding-top: 70px;
   }
   > .content {
     display: none;
@@ -27,6 +30,9 @@ body {
 .content {
   position: relative;
   margin: 0 auto;
+}
+
+.site .content {
   width: 1200px;
 }
 
