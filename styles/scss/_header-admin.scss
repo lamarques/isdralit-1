@@ -1,0 +1,15 @@
+@import "variables";
+
+.header {
+  .logo {
+    @media (max-width: $screen-mobile-max-width) {
+      float: none;
+    }
+    float: right;
+    margin: 7px auto;
+    width: 170px;
+    height: 36px;
+    background-size: 170px 36px;
+    background-image: url('/images/logo.png');
+  }
+}
