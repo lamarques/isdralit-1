@@ -10,6 +10,14 @@ var utils = require('./js/common/utils');
 
 var isDevelopment = process.env.NODE_ENV == 'development';
 
+var renderPage = function(res, name, path, query) {
+    res.render(path + '/pages/' + name + '.html', {
+        name: name,
+        path: path,
+        query: query
+    });
+};
+
 var app = express();
 
 app.engine('html', require('ejs').renderFile);
@@ -54,28 +62,15 @@ app.get('/views/product/:className?/:productName?', function (req, res) {
         query['items.key'] = productName;
     }
 
-    res.render('site/pages/' + name + '.html', {
-        name: name,
-        query: query
-    });
+    renderPage(res, name, 'site', query);
 });
 
 app.get('/views/:name', function (req, res) {
-    var name = req.params.name;
-    var query = req.query;
-    res.render('site/pages/' + name + '.html', {
-        name: name,
-        query: query
-    });
+    renderPage(res, req.params.name, 'site', req.query);
 });
 
 app.get('/cms/views/:name', function (req, res) {
-    var name = req.params.name;
-    var query = req.query;
-    res.render('admin/pages/' + name + '.html', {
-        name: name,
-        query: query
-    });
+    renderPage(res, req.params.name, 'admin', req.query);
 });
 
 app.get('/:name/find', function (req, res) {
