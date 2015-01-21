@@ -35,7 +35,9 @@ app.use(sass({
 
 app.use('/images', express.static(__dirname + '/images'));
 
-app.use('/styles/css/spinner.css', express.static(__dirname + '/libs/spinkit/css/spinners/9-cube-grid.css'));
+app.use('/styles/css/spinner', express.static(__dirname + '/libs/spinkit/css/spinners'));
+
+app.use('/styles/css/bootstrap', express.static(__dirname + '/libs/bootstrap/dist/css'));
 
 app.use('/styles', express.static(__dirname + '/styles'));
 
