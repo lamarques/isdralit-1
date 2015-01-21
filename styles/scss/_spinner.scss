@@ -15,7 +15,7 @@
     > .sk-spinner {
       width: 100px;
       height: 100px;
-      > .sk-cube {
+      &.sk-spinner-rotating-plane, .sk-cube {
         background-color: $main-color;
       }
     }
