@@ -34,5 +34,5 @@
     </div>
 </div>
 
-<input type="hidden" name="query" value="<%= JSON.stringify(query) %>"/>
-<script type="text/javascript" src="/js/site/<%= name %>.js"></script>
+<% include ../../common/partials/query %>
+<% include ../../common/partials/script %>
