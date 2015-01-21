@@ -6,6 +6,10 @@ var $ = require('jquery');
 var ko = require('knockout');
 var utils = require('./utils');
 
+var isAdmin = function () {
+    return $('body > .header').hasClass('admin');
+};
+
 var findAll = function (name, observableArray, query, itemAction, completionAction) {
     $.ajax({
         url: '/' + name + '/find' + queryString(query)
@@ -39,11 +43,15 @@ exports.ViewModel = function () {
         window.location = value['url'];
     };
 
-    findAll('menu', self.menus);
+    if (!isAdmin()) {
+        findAll('menu', self.menus);
+    }
 
     $('body > .spinner').css('display', 'none');
     $('body > .content').css('display', 'block');
 };
+
+exports.isAdmin = isAdmin;
 
 exports.findAll = findAll;
 
