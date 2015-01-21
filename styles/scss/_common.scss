@@ -49,10 +49,13 @@ body {
   }
 }
 
-.title {
+label, .title {
   font-family: OpenSans-CondensedBold;
-  font-size: 22px;
   color: $title-color;
+}
+
+.title {
+  font-size: 22px;
 }
 
 .link {
