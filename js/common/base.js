@@ -7,7 +7,7 @@ var ko = require('knockout');
 var utils = require('./utils');
 
 var isAdmin = function () {
-    return $('body > .header').hasClass('admin');
+    return $('input[name=path]').val() == 'admin';
 };
 
 var findAll = function (name, observableArray, query, itemAction, completionAction) {
