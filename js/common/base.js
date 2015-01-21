@@ -1,7 +1,6 @@
 /**
  * Created by marlon on 30/12/14.
  */
-
 var $ = require('jquery');
 var ko = require('knockout');
 var utils = require('./utils');
