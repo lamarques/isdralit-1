@@ -4,7 +4,7 @@
         <label data-bind="html: field.label, attr: { for: field.name }">Nome</label>
 
         <!-- ko if: field.type == 'text' -->
-        <input type="text" class="form-control" data-bind="value: field.value, attr: { id: field.name }"/>
+        <input type="text" class="form-control" data-bind="value: field.value, attr: { id: field.name }">
         <!-- /ko -->
 
         <!-- ko if: field.type == 'text-area' -->
@@ -12,7 +12,7 @@
         <!-- /ko -->
 
         <!-- ko if: field.type == 'number' -->
-        <input type="text" class="form-control" data-bind="value: field.value, attr: { id: field.name }"/>
+        <input type="text" class="form-control" data-bind="value: field.value, attr: { id: field.name }">
         <!-- /ko -->
     </div>
     <!-- /ko -->
