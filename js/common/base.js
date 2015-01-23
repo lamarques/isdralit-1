@@ -55,6 +55,11 @@ exports.addBackgroundImage = function (item, fieldName) {
     item.backgroundImage = external.getBackgroundUrl(value);
 };
 
+exports.showContent = function () {
+    $('body > .spinner').css('display', 'none');
+    $('body > .content').css('display', 'block');
+};
+
 exports.ViewModel = function () {
     var self = this;
 
@@ -68,6 +73,5 @@ exports.ViewModel = function () {
         external.findAll('menu', self.menus);
     }
 
-    $('body > .spinner').css('display', 'none');
-    $('body > .content').css('display', 'block');
+    external.showContent();
 };
