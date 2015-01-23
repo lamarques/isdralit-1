@@ -39,6 +39,22 @@ exports.inputValue = function (name) {
     return $('input[name=' + name + ']').val();
 };
 
+exports.currentQuery = function () {
+    return JSON.parse(external.inputValue('query'));
+};
+
+exports.getBackgroundUrl = function (value) {
+    return value ? 'url(' + value + ')' : 'none';
+};
+
+exports.addBackgroundImage = function (item, fieldName) {
+    var value = item[fieldName];
+    if ($.isArray(value)) {
+        value = value.length ? value[0] : '';
+    }
+    item.backgroundImage = external.getBackgroundUrl(value);
+};
+
 exports.ViewModel = function () {
     var self = this;
 
@@ -54,20 +70,4 @@ exports.ViewModel = function () {
 
     $('body > .spinner').css('display', 'none');
     $('body > .content').css('display', 'block');
-};
-
-exports.currentQuery = function () {
-    return JSON.parse(external.inputValue('query'));
-};
-
-exports.getBackgroundUrl = function (value) {
-    return value ? 'url(' + value + ')' : 'none';
-};
-
-exports.addBackgroundImage = function (item, fieldName) {
-    var value = item[fieldName];
-    if ($.isArray(value)) {
-        value = value.length ? value[0] : '';
-    }
-    item.backgroundImage = external.getBackgroundUrl(value);
 };
