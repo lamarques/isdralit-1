@@ -3,17 +3,31 @@
  */
 var $ = require('jquery');
 var ko = require('knockout');
-var base = require('../../common/base');
-
-require('bootstrap');
+var crud = require('../../common/crud');
 
 ViewModel = function () {
     var self = this;
 
-    self.headers = ko.observableArray(['Coluna 1', 'Coluna 2']);
-    self.rows = ko.observableArray([['Valor 1', 'Valor 2'], ['Valor 3', 'Valor 4']]);
+    self.dataModel = {
+        detailHtml: {
+            label: 'Descrição',
+            type: 'text'
+        },
+        imageUrl: {
+            label: 'URL da imagem',
+            type: 'text'
+        },
+        url: {
+            label: 'URL',
+            type: 'text'
+        },
+        order: {
+            label: 'Ordem',
+            type: 'number'
+        }
+    };
 
-    ko.utils.extend(self, new base.ViewModel());
+    ko.utils.extend(self, new crud.ViewModel('banner', self.dataModel));
 };
 
 ko.applyBindings(new ViewModel());
