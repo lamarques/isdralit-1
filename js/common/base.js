@@ -6,7 +6,7 @@ var ko = require('knockout');
 var utils = require('./utils');
 
 var isAdmin = function () {
-    return $('input[name=path]').val() == 'admin';
+    return inputValue('path') == 'admin';
 };
 
 var findAll = function (name, observableArray, query, itemAction, completionAction) {
@@ -33,6 +33,10 @@ var queryString = function (data) {
     return '';
 };
 
+var inputValue = function (name) {
+    return $('input[name=' + name + ']').val();
+};
+
 exports.ViewModel = function () {
     var self = this;
 
@@ -56,8 +60,10 @@ exports.findAll = findAll;
 
 exports.queryString = queryString;
 
+exports.inputValue = inputValue;
+
 exports.currentQuery = function () {
-    return JSON.parse($('input[name=query]').val());
+    return JSON.parse(inputValue('query'));
 };
 
 exports.getBackgroundUrl = function (value) {
