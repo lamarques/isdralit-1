@@ -1,0 +1,21 @@
+<form>
+    <!-- ko foreach: { data: fields, as: 'field' } -->
+    <div class="form-group">
+        <label data-bind="html: field.label, attr: { for: field.name }">Nome</label>
+
+        <!-- ko if: field.type == 'text' -->
+        <input type="text" class="form-control" data-bind="value: field.value, attr: { id: field.name }"/>
+        <!-- /ko -->
+
+        <!-- ko if: field.type == 'number' -->
+        <input type="text" class="form-control" data-bind="value: field.value, attr: { id: field.name }"/>
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+
+    <div class="btn-group">
+        <button type="button" class="btn button" data-bind="click: save">Salvar</button>
+        <button type="button" class="btn button" data-bind="click: clear, text: clearTitle"></button>
+        <button type="button" class="btn button" data-bind="click: remove, enable: selectedId">Remover</button>
+    </div>
+</form>

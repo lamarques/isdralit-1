@@ -1,0 +1,13 @@
+<table class="table">
+    <thead>
+    <tr data-bind="foreach: { data: $root.fields, as: 'field' }">
+        <th data-bind="html: field.label"></th>
+    </tr>
+    </thead>
+
+    <tbody data-bind="foreach: { data: $root.dataValues, as: 'dataValue' }">
+    <tr data-bind="foreach: { data: $root.fields, as: 'field' }, click: $root.selectRow">
+        <td data-bind="html: dataValue[field.name]"></td>
+    </tr>
+    </tbody>
+</table>
