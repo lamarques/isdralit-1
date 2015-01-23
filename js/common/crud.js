@@ -4,10 +4,11 @@
 var $ = require('jquery');
 var ko = require('knockout');
 var base = require('./base');
-
 require('bootstrap');
 
-var getFields = function (dataModel) {
+var external = this;
+
+exports.getFields = function (dataModel) {
     var fields = [];
     for (var fieldName in dataModel) {
         fields.push({
@@ -24,7 +25,7 @@ exports.ViewModel = function (name, dataModel) {
     var self = this;
 
     self.selectedId = ko.observable();
-    self.fields = ko.observableArray(getFields(dataModel));
+    self.fields = ko.observableArray(external.getFields(dataModel));
     self.dataValues = ko.observableArray([]);
 
     self.clearTitle = ko.computed(function () {

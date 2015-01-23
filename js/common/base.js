@@ -5,13 +5,15 @@ var $ = require('jquery');
 var ko = require('knockout');
 var utils = require('./utils');
 
-var isAdmin = function () {
-    return inputValue('path') == 'admin';
+var external = this;
+
+exports.isAdmin = function () {
+    return external.inputValue('path') == 'admin';
 };
 
-var findAll = function (name, observableArray, query, itemAction, completionAction) {
+exports.findAll = function (name, observableArray, query, itemAction, completionAction) {
     $.ajax({
-        url: '/' + name + '/find' + queryString(query)
+        url: '/' + name + '/find' + external.queryString(query)
     }).done(function (values) {
         if (itemAction) {
             values.forEach(function (value) {
@@ -25,7 +27,7 @@ var findAll = function (name, observableArray, query, itemAction, completionActi
     });
 };
 
-var queryString = function (data) {
+exports.queryString = function (data) {
     utils.removeInvalidAttributes(data);
     if (!$.isEmptyObject(data)) {
         return '?'.concat($.param(data));
@@ -33,7 +35,7 @@ var queryString = function (data) {
     return '';
 };
 
-var inputValue = function (name) {
+exports.inputValue = function (name) {
     return $('input[name=' + name + ']').val();
 };
 
@@ -46,24 +48,16 @@ exports.ViewModel = function () {
         window.location = value['url'];
     };
 
-    if (!isAdmin()) {
-        findAll('menu', self.menus);
+    if (!external.isAdmin()) {
+        external.findAll('menu', self.menus);
     }
 
     $('body > .spinner').css('display', 'none');
     $('body > .content').css('display', 'block');
 };
 
-exports.isAdmin = isAdmin;
-
-exports.findAll = findAll;
-
-exports.queryString = queryString;
-
-exports.inputValue = inputValue;
-
 exports.currentQuery = function () {
-    return JSON.parse(inputValue('query'));
+    return JSON.parse(external.inputValue('query'));
 };
 
 exports.getBackgroundUrl = function (value) {
@@ -75,5 +69,5 @@ exports.addBackgroundImage = function (item, fieldName) {
     if ($.isArray(value)) {
         value = value.length ? value[0] : '';
     }
-    item.backgroundImage = this.getBackgroundUrl(value);
+    item.backgroundImage = external.getBackgroundUrl(value);
 };
