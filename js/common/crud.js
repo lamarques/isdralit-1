@@ -21,6 +21,12 @@ exports.getFields = function (dataModel) {
     return fields;
 };
 
+exports.selectCurrentMenu = function () {
+    var path = document.location.pathname;
+    var $link = $('ul > li > a[href="' + path + '"]');
+    $link.parent().addClass('active');
+};
+
 exports.ViewModel = function (name, dataModel) {
     var self = this;
 
@@ -72,6 +78,8 @@ exports.ViewModel = function (name, dataModel) {
     };
 
     self.find();
+
+    external.selectCurrentMenu();
 
     ko.utils.extend(self, new base.ViewModel());
 };
