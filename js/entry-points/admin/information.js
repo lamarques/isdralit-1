@@ -15,7 +15,7 @@ ViewModel = function () {
         },
         detailHtml: {
             label: 'Descrição',
-            type: 'text'
+            type: 'text-area'
         },
         imageUrl: {
             label: 'URL da imagem',
