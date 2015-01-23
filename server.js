@@ -48,7 +48,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/cms', function (req, res) {
-    res.redirect('/cms/views/banner');
+    res.redirect('/cms/views/menu');
 });
 
 app.get('/views/product/:className?/:productName?', function (req, res) {
