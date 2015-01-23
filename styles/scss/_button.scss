@@ -29,6 +29,9 @@
       @extend .button-highlighted;
       border-color: darken($main-color, 15%);
     }
+    &.disabled, &[disabled] {
+      @extend .button-default;
+    }
   }
 }
 
