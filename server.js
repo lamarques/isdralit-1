@@ -3,6 +3,7 @@
  */
 var db = require('./js/db/database');
 var express = require('express');
+var bodyParser = require('body-parser');
 var basicAuth = require('basic-auth-connect');
 var sass = require('node-sass-middleware');
 var browserify = require('browserify-middleware');
@@ -21,6 +22,8 @@ var renderPage = function(res, name, path, query) {
 var app = express();
 
 app.engine('html', require('ejs').renderFile);
+
+app.use(bodyParser.json());
 
 app.use('/cms', basicAuth('isdralit', 'admin123'));
 
