@@ -85,7 +85,13 @@ app.get('/:name/find', function (req, res) {
     var fields = query['fields'];
     delete query['fields'];
 
-    db.findAll(db[name].Model, query, fields, res);
+    db.findAll(db[name].Model, query, fields, function (err, values) {
+        if (err) {
+            res.status(404).send(err);
+        } else {
+            res.send(values);
+        }
+    });
 });
 
 app.listen(process.env.PORT);

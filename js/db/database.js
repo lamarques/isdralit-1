@@ -6,38 +6,22 @@ mongoose.connect(process.env.MONGOLAB_URI);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Erro de conexão:'));
-db.once('open', function callback() {
+db.once('open', function () {
     console.log('Conexão realizada com sucesso');
 });
 
-exports.findAll = function (model, query, fields, res) {
-    model.find(query, fields).sort('order').lean().exec(function (err, values) {
-        if (err) {
-            res.status(404).send(err);
-        } else {
-            res.send(values);
-        }
-    });
+exports.findAll = function (model, query, fields, callback) {
+    model.find(query, fields).sort('order').lean().exec(callback);
 };
 
-exports.saveAll = function (values) {
+exports.saveAll = function (values, callback) {
     values.forEach(function (value) {
-        value.save(function (err, value) {
-            if (err) {
-                return console.error(err);
-            }
-        });
+        value.save(callback);
     });
 };
 
-exports.removeAll = function (model, afterAction) {
-    model.remove(function (err) {
-        if (err) {
-            return console.error(err);
-        } else if (afterAction) {
-            afterAction();
-        }
-    });
+exports.removeAll = function (model, callback) {
+    model.remove(callback);
 };
 
 exports.Menu = require('./menu');
