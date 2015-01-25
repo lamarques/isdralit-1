@@ -8,6 +8,19 @@ require('bootstrap');
 
 var external = this;
 
+exports.save = function (name, data, successfulAction) {
+    $.ajax({
+        type: 'POST',
+        contentType: 'application/json',
+        url: '/' + name + '/save',
+        data: JSON.stringify(data)
+    }).done(function (value) {
+        if (successfulAction) {
+            successfulAction(value);
+        }
+    });
+};
+
 exports.getFields = function (dataModel) {
     var fields = [];
     for (var fieldName in dataModel) {
@@ -60,7 +73,10 @@ exports.ViewModel = function (name, dataModel) {
             data[field.name] = field.value();
         });
 
-        self.find();
+        external.save(name, data, function () {
+            self.clear();
+            self.find();
+        });
     };
 
     self.clear = function () {
@@ -73,7 +89,6 @@ exports.ViewModel = function (name, dataModel) {
 
     self.remove = function () {
         self.clear();
-
         self.find();
     };
 
