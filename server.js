@@ -94,4 +94,29 @@ app.get('/:name/find', function (req, res) {
     });
 });
 
+app.post('/:name/save', function (req, res) {
+    var name = utils.capitalize(req.params.name);
+
+    db.saveOrUpdate(db[name].Model, req.body, function (err, value) {
+        if (err) {
+            res.status(404).send(err);
+        } else {
+            res.send(value);
+        }
+    });
+});
+
+app.delete('/:name/remove/:id', function (req, res) {
+    var name = utils.capitalize(req.params.name);
+    var id = req.params.id;
+
+    db.remove(db[name].Model, id, function (err, value) {
+        if (err) {
+            res.status(404).send(err);
+        } else {
+            res.send(value);
+        }
+    });
+});
+
 app.listen(process.env.PORT);
