@@ -8,11 +8,20 @@ var crud = require('../../common/crud');
 ViewModel = function () {
     var self = this;
 
+    
+    
     self.dataModel = {
-        
+        key: {
+            label: 'key',
+            type: 'text'
+        },
         titleHtml: {
-            label: 'Descrição',
+            label: 'Titulo',
             type: 'text-area'
+        },
+         backgroundImageUrl: {
+            label: 'URL da imagem de backgroud',
+            type: 'text'
         },
         imageUrl: {
             label: 'URL da imagem',
@@ -25,8 +34,8 @@ ViewModel = function () {
         }
     };
 
-
-    ko.utils.extend(self, new crud.ViewModel('product', self.dataModel));
+    console.log(self.dataModel);
+    ko.utils.extend(self, new crud.ViewModel('ItemSchema', self.dataModel));
 
 };
 

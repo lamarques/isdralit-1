@@ -1,7 +1,9 @@
 /**
  * Created by marlon on 02/01/15.
  */
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'),
+     ObjectId = mongoose.Schema.ObjectId;
+
 
 Information = mongoose.model('Information', mongoose.Schema({
     titleHtml: String,
@@ -28,4 +30,4 @@ exports.defaultValues = [
     })
 ];
 
-exports.Model = Information;
+exports.Model =  mongoose.model('Information', Information);
