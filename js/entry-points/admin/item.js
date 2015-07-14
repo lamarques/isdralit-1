@@ -11,13 +11,13 @@ ViewModel = function () {
     
     
     self.dataModel = {
-//       itens: {
-//           label: 'Categoria',
-//           type: 'combo-box',
-//           optionsText: 'name',
-//           options: [ { name: 'teste 123 '}, { name: 'uhul' } ]
-//
-//       } ,
+       itens: {
+           label: 'Categoria',
+           type: 'combo-box',
+           optionsText: 'name',
+           options:[ { name: 'teste 123 '}, { name: 'uhul' } ]
+//        option : ko.observableArray(Product)
+       } ,
         key: {
             label: 'key',
             type: 'text'
@@ -33,6 +33,7 @@ ViewModel = function () {
         imageUrl: {
             label: 'URL da imagem',
             type: 'text'
+            
         },
 
         order: {
@@ -48,6 +49,4 @@ ViewModel = function () {
 
 ko.applyBindings(new ViewModel());
 
-
-
-//       
+       
