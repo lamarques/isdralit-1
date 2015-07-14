@@ -7,7 +7,12 @@
 
     <tbody data-bind="foreach: { data: $root.dataValues, as: 'dataValue' }">
     <tr data-bind="foreach: { data: $root.fields, as: 'field' }, click: $root.selectRow">
+       <!-- ko if: field.type != 'combo-box' -->
         <td data-bind="html: dataValue[field.name]"></td>
+       <!-- /ko -->
+       <!-- ko if: field.type == 'combo-box' -->
+        <td data-bind="html: dataValue[field.name][field.optionsText]"></td>
+       <!-- /ko -->
     </tr>
     </tbody>
 </table>

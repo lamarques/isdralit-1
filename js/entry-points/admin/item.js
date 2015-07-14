@@ -4,13 +4,20 @@
 var $ = require('jquery');
 var ko = require('knockout');
 var crud = require('../../common/crud');
-
+//var Product = require ('../../db/product')
 ViewModel = function () {
     var self = this;
 
     
     
     self.dataModel = {
+//       itens: {
+//           label: 'Categoria',
+//           type: 'combo-box',
+//           optionsText: 'name',
+//           options: [ { name: 'teste 123 '}, { name: 'uhul' } ]
+//
+//       } ,
         key: {
             label: 'key',
             type: 'text'
@@ -32,11 +39,15 @@ ViewModel = function () {
             label: 'Ordem',
             type: 'number'
         }
+        
     };
 
-    console.log(self.dataModel);
     ko.utils.extend(self, new crud.ViewModel('Item', self.dataModel));
 
 };
 
 ko.applyBindings(new ViewModel());
+
+
+
+//       

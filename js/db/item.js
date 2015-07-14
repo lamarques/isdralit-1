@@ -1,17 +1,20 @@
 
 /* global exports */
 
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'),
+    ObjectId = mongoose.Schema.ObjectId;
 
 
 
  
 Item =  mongoose.model('Item', mongoose.Schema({
     key: String,
+    key: String,
     titleHtml: String,
     backgroundImageUrl: String,
     imageUrl: String,
-    order: Number
+    order: Number,
+    categoria: {type: ObjectId, ref:'Item'}
     
 }));
 
