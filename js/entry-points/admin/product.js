@@ -9,7 +9,10 @@ ViewModel = function () {
     var self = this;
 
     self.dataModel = {
-        
+        key: {
+            label: 'URL',
+            type: 'text'
+        },
         titleHtml: {
             label: 'Descrição',
             type: 'text-area'
@@ -18,13 +21,11 @@ ViewModel = function () {
             label: 'URL da imagem',
             type: 'text'
         },
-
         order: {
             label: 'Ordem',
             type: 'number'
         }
     };
-
 
     ko.utils.extend(self, new crud.ViewModel('product', self.dataModel));
 

@@ -1,24 +1,20 @@
 
 /* global exports */
 
-var mongoose = require('mongoose'),
-    ObjectId = mongoose.Schema.ObjectId;
+var mongoose = require('mongoose');
 
-
-
- 
 Item =  mongoose.model('Item', mongoose.Schema({
     key: String,
-    key: String,
     titleHtml: String,
+    detailHtml: String,
     backgroundImageUrl: String,
     imageUrl: String,
+    imagesUrl: Array,
     order: Number,
-    categoria: {type: ObjectId, ref:'Item'}
-    
+    product: { type: mongoose.Schema.ObjectId, ref: 'Product' }
 }));
 
-  exports.Model = Item;
+exports.Model = Item;
   
   
   
