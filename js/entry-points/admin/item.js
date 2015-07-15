@@ -1,22 +1,26 @@
+/* global self */
+
 /**
  * Created by marlon on 09/07/15.
  */
 var $ = require('jquery');
 var ko = require('knockout');
 var crud = require('../../common/crud');
-//var Product = require ('../../db/product')
+var base = require('../../common/base'); 
+ 
 ViewModel = function () {
     var self = this;
 
-    
-    
+  self.categorias = ko.observableArray([]);
+  base.findAll('product', self.categorias); 
+ 
     self.dataModel = {
        itens: {
            label: 'Categoria',
            type: 'combo-box',
            optionsText: 'name',
-           options:[ { name: 'teste 123 '}, { name: 'uhul' } ]
-//        option : ko.observableArray(Product)
+
+          option : self.categorias
        } ,
         key: {
             label: 'key',
