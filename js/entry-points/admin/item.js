@@ -12,12 +12,12 @@ ViewModel = function () {
     var self = this;
 
     self.dataModel = {
-//        product: {
-//            label: 'Categoria',
-//            type: 'combo-box',
-//            optionsText: 'titleHtml',
-//            options: ko.observableArray([])
-//        },
+        product: {
+            label: 'Categoria',
+            type: 'combo-box',
+            optionsText: 'titleHtml',
+            options: ko.observableArray([])
+        },
         key: {
             label: 'URL',
             type: 'text'
@@ -44,7 +44,7 @@ ViewModel = function () {
         }
     };
 
-//    base.findAll('product','name', self.dataModel.product.options);
+    base.findAll('product', self.dataModel.product.options);
 
     ko.utils.extend(self, new crud.ViewModel('Item', self.dataModel));
 };
