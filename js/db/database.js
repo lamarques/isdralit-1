@@ -36,6 +36,7 @@ exports.removeAll = function (model, callback) {
     model.remove(callback);
 };
 
+exports.File = require('./file');
 exports.Menu = require('./menu');
 exports.Banner = require('./banner');
 exports.Product = require('./product');
