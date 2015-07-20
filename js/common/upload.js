@@ -14,7 +14,8 @@ exports.init = function (selector) {
         var $uploadDrop = $element.find('.uk-placeholder');
 
         var settings = {
-            action: '/',
+            action: '/upload',
+            param: 'file',
             allow: '*.(jpg|jpeg|gif|png)',
             loadstart: function () {
                 $bar.css('width', '0%').text('0%');

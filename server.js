@@ -4,6 +4,7 @@
 var db = require('./js/db/database');
 var express = require('express');
 var bodyParser = require('body-parser');
+var multer = require('multer');
 var basicAuth = require('basic-auth-connect');
 var sass = require('node-sass-middleware');
 var browserify = require('browserify-middleware');
@@ -18,6 +19,10 @@ var renderPage = function(res, name, path, query) {
         query: query
     });
 };
+
+var upload = multer({
+    dest: 'upload/'
+});
 
 var app = express();
 
@@ -94,6 +99,10 @@ app.get('/:name/find', function (req, res) {
             res.send(values);
         }
     });
+});
+
+app.post('/upload', upload.single('file'), function (req, res) {
+    res.send(req.file);
 });
 
 app.post('/:name/save', function (req, res) {
