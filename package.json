@@ -24,6 +24,7 @@
   "browser": {
     "jquery": "./libs/jquery/dist/jquery.js",
     "knockout": "./libs/knockout/dist/knockout.js",
+    "uikit": "./libs/uikit/js/uikit.js",
     "bootstrap": "./libs/bootstrap/dist/js/bootstrap.js",
     "unslider": "./libs/unslider/src/unslider.js",
     "tabber": "./libs/Tabber/jquery.fs.tabber.js",
@@ -32,6 +33,11 @@
   "browserify-shim": {
     "jquery": "$",
     "knockout": "ko",
+    "uikit": {
+      "depends": [
+        "jquery"
+      ]
+    },
     "bootstrap": {
       "depends": [
         "jquery"
