@@ -12,7 +12,7 @@
         <!-- /ko -->
 
         <!-- ko if: field.type == 'upload' -->
-        <div class="upload" data-bind="attr: { id: field.name }">
+        <div data-bind="value: field.value, attr: { id: field.name }">
             <div class="uk-placeholder">
                 Arraste e solte um arquivo ou <a class="uk-form-file">selecione<input type="file"></a>.
             </div>

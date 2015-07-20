@@ -108,7 +108,13 @@ exports.ViewModel = function (name, dataModel) {
 
     self.find();
 
-    upload.init('.upload');
+    self.fields().forEach(function (field) {
+        if (field.type == 'upload')
+        {
+            upload.init(field);
+        }
+    });
+
     external.selectCurrentMenu();
 
     ko.utils.extend(self, new base.ViewModel());

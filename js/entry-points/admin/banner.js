@@ -13,7 +13,7 @@ ViewModel = function () {
             label: 'Descrição',
             type: 'text-area'
         },
-        imageUrl: {
+        image: {
             label: 'Imagem',
             type: 'upload'
         },
@@ -29,5 +29,5 @@ ViewModel = function () {
 
     ko.utils.extend(self, new crud.ViewModel('banner', self.dataModel));
 };
-
-ko.applyBindings(new ViewModel());
+window.ViewModel = new ViewModel();
+ko.applyBindings(window.ViewModel);

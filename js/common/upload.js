@@ -3,9 +3,9 @@
  */
 require('uikit-upload');
 
-exports.init = function (selector) {
+exports.init = function (field) {
     setTimeout(function () {
-        var $element = $(selector);
+        var $element = $('#' + field.name);
 
         var $progress = $element.find('.uk-progress');
         var $bar = $progress.find('.uk-progress-bar');
@@ -25,7 +25,8 @@ exports.init = function (selector) {
                 percent = Math.ceil(percent);
                 $bar.css('width', percent + '%').text(percent + '%');
             },
-            allcomplete: function (response) {
+            allcomplete: function (file) {
+                field.value(JSON.parse(file));
                 $bar.css('width', '100%').text('100%');
                 setTimeout(function () {
                     $progress.addClass('uk-hidden');
