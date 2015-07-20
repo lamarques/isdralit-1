@@ -1,1 +1,28 @@
-@import "/styles/css/uikit/uikit.css";
+@import "variables";
+@import "/styles/css/uikit/components/upload.gradient.css";
+@import "/styles/css/uikit/components/form-file.gradient.css";
+@import "/styles/css/uikit/components/progress.gradient.css";
+@import "/styles/css/uikit/components/placeholder.gradient.css";
+
+a.uk-form-file {
+  margin-top: -1px;
+  color: $main-color;
+  &:hover {
+    color: darken($main-color, 8%);
+    text-decoration: none;
+  }
+}
+
+.uk-progress-bar {
+  font-family: PTSans-Regular;
+  background: $main-color;
+  background-image: -webkit-linear-gradient(top, darken($main-color, 8%), $main-color);
+  background-image: linear-gradient(to bottom, darken($main-color, 8%), $main-color);
+}
+
+.uk-placeholder {
+  text-align: center;
+  border-color: lighten($title-color, 46%);
+  background-color: lighten($title-color, 58%);
+  color: $title-color;
+}
