@@ -15,7 +15,7 @@ ViewModel = function () {
         },
         url: {
             label: 'URL',
-            type: 'text'
+            type: 'upload'
         },
         order: {
             label: 'Ordem',
