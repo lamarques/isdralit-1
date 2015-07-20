@@ -82,7 +82,11 @@ exports.ViewModel = function (name, dataModel) {
             _id: self.selectedId()
         };
         self.fields().forEach(function (field) {
-            data[field.name] = field.value();
+            var value = field.value();
+            if (typeof value === 'object' && value._id) {
+                value = value._id;
+            }
+            data[field.name] = value;
         });
 
         external.save(name, data, function () {
