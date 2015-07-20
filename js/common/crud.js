@@ -4,6 +4,7 @@
 var $ = require('jquery');
 var ko = require('knockout');
 var base = require('./base');
+var upload = require('./upload');
 require('bootstrap');
 
 var external = this;
@@ -107,6 +108,7 @@ exports.ViewModel = function (name, dataModel) {
 
     self.find();
 
+    upload.init('.upload');
     external.selectCurrentMenu();
 
     ko.utils.extend(self, new base.ViewModel());
