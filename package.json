@@ -25,6 +25,7 @@
     "jquery": "./libs/jquery/dist/jquery.js",
     "knockout": "./libs/knockout/dist/knockout.js",
     "uikit": "./libs/uikit/js/uikit.js",
+    "uikit-upload": "./libs/uikit/js/components/upload.js",
     "bootstrap": "./libs/bootstrap/dist/js/bootstrap.js",
     "unslider": "./libs/unslider/src/unslider.js",
     "tabber": "./libs/Tabber/jquery.fs.tabber.js",
@@ -36,6 +37,11 @@
     "uikit": {
       "depends": [
         "jquery"
+      ]
+    },
+    "uikit-upload": {
+      "depends": [
+        "uikit"
       ]
     },
     "bootstrap": {
