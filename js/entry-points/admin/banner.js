@@ -29,5 +29,5 @@ ViewModel = function () {
 
     ko.utils.extend(self, new crud.ViewModel('banner', self.dataModel));
 };
-window.ViewModel = new ViewModel();
-ko.applyBindings(window.ViewModel);
+
+ko.applyBindings(new ViewModel());
