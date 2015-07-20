@@ -102,7 +102,13 @@ app.get('/:name/find', function (req, res) {
 });
 
 app.post('/upload', upload.single('file'), function (req, res) {
-    res.send(req.file);
+    db.saveOrUpdate(db['File'].Model, req.file, function (err, value) {
+        if (err) {
+            res.status(404).send(err);
+        } else {
+            res.send(value);
+        }
+    });
 });
 
 app.post('/:name/save', function (req, res) {
