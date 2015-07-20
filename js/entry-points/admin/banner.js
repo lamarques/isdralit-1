@@ -14,8 +14,8 @@ ViewModel = function () {
             type: 'text-area'
         },
         imageUrl: {
-            label: 'URL da imagem',
-            type: 'text'
+            label: 'Imagem',
+            type: 'upload'
         },
         url: {
             label: 'URL',
