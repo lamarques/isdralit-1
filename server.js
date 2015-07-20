@@ -42,6 +42,8 @@ app.use('/styles/css/spinner', express.static(__dirname + '/libs/spinkit/css/spi
 
 app.use('/styles/css/bootstrap', express.static(__dirname + '/libs/bootstrap/dist/css'));
 
+app.use('/styles/css/uikit', express.static(__dirname + '/libs/uikit/css'));
+
 app.use('/styles', express.static(__dirname + '/styles'));
 
 app.use('/js', browserify(__dirname + '/js/entry-points'));
