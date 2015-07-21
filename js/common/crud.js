@@ -63,6 +63,25 @@ exports.ViewModel = function (name, dataModel) {
         return self.selectedId() ? 'Novo' : 'Limpar';
     });
 
+    self.renderHtml = function (field, data) {
+        var value = data ? data[field.name]: field.value();
+        if (field.type == 'upload')
+        {
+            if (value) {
+                var link = '<a class="upload-link" href="/';
+                link += value['path'];
+                link += '">';
+                link += value['originalname'];
+                link += '</a>';
+
+                value = link;
+            } else {
+                value = "Nenhum arquivo anexado.";
+            }
+        }
+        return value;
+    };
+
     self.selectRow = function (data) {
         self.selectedId(data._id);
 

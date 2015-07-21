@@ -7,7 +7,7 @@
 
     <tbody data-bind="foreach: { data: $root.dataValues, as: 'dataValue' }">
     <tr data-bind="foreach: { data: $root.fields, as: 'field' }, click: $root.selectRow">
-        <td data-bind="html: dataValue[field.name]"></td>
+        <td data-bind="html: $root.renderHtml(field, dataValue)"></td>
     </tr>
     </tbody>
 </table>

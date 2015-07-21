@@ -14,6 +14,10 @@
         <!-- ko if: field.type == 'upload' -->
         <div data-bind="value: field.value, attr: { id: field.name }">
             <div class="uk-placeholder">
+                <div class="uk-alert">
+                    <p data-bind="html: $root.renderHtml(field)"></p>
+                </div>
+
                 Arraste e solte um arquivo ou <a class="uk-form-file">selecione<input type="file"></a>.
             </div>
 
