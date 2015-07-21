@@ -118,10 +118,10 @@ exports.ViewModel = function (name, dataModel) {
     self.clear = function () {
         self.selectedId(undefined);
 
-        self.fields().forEach(self.clearField);
+        self.fields().forEach(self.clearValue);
     };
 
-    self.clearField = function (field) {
+    self.clearValue = function (field) {
         field.value(undefined);
     };
 
