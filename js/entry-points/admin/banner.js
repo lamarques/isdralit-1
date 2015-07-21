@@ -11,7 +11,7 @@ ViewModel = function () {
     self.dataModel = {
         detailHtml: {
             label: 'Descrição',
-            type: 'text-area'
+            type: 'html-editor'
         },
         image: {
             label: 'Imagem',
