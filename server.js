@@ -43,6 +43,8 @@ app.use(sass({
 
 app.use('/images', express.static(__dirname + '/images'));
 
+app.use('/upload', express.static(__dirname + '/upload'));
+
 app.use('/styles/css/spinner', express.static(__dirname + '/libs/spinkit/css/spinners'));
 
 app.use('/styles/css/bootstrap', express.static(__dirname + '/libs/bootstrap/dist/css'));
