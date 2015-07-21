@@ -12,7 +12,7 @@ var utils = require('./js/common/utils');
 
 var isDevelopment = process.env.NODE_ENV == 'development';
 
-var renderPage = function(res, name, path, query) {
+var renderPage = function (res, name, path, query) {
     res.render(path + '/pages/' + name + '.html', {
         name: name,
         path: path,
@@ -61,6 +61,10 @@ app.get('/', function (req, res) {
 
 app.get('/cms', function (req, res) {
     res.redirect('/cms/views/menu');
+});
+
+app.get('/styles/css/fonts/fontawesome-webfont:extension', function (req, res) {
+    res.sendFile(__dirname + '/styles/fonts/FontAwesome/fontawesome-webfont' + req.params.extension);
 });
 
 app.get('/views/product/:className?/:productName?', function (req, res) {
