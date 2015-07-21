@@ -135,11 +135,12 @@ exports.ViewModel = function (name, dataModel) {
     self.find();
 
     lightbox.init('[data-uk-lightbox]');
-    htmleditor.init('[data-uk-htmleditor]');
 
     self.fields().forEach(function (field) {
         if (field.type == 'upload') {
             upload.init(field);
+        } else if (field.type == 'html-editor') {
+            htmleditor.init(field);
         }
     });
 

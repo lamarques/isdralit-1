@@ -3,9 +3,13 @@
  */
 require('uikit-html-editor');
 
-exports.init = function (selector) {
+exports.init = function (field) {
     setTimeout(function () {
-        var $element = $(selector);
-        UIkit.htmleditor($element);
+        var $element = $('#' + field.name);
+        UIkit.htmleditor($element, {
+            mode: 'tab',
+            lblCodeview: 'HTML',
+            lblPreview: 'Visualização'
+        });
     }, 0);
 };
