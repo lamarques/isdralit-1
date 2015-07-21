@@ -5,3 +5,10 @@
 .uk-htmleditor-fullscreen {
   top: 50px;
 }
+
+.uk-htmleditor-navbar {
+  font-family: OpenSans-CondensedBold;
+  .uk-htmleditor-navbar-flip a {
+    font-size: 14px;
+  }
+}
