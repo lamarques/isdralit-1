@@ -51,6 +51,10 @@ app.use('/styles/css/bootstrap', express.static(__dirname + '/libs/bootstrap/dis
 
 app.use('/styles/css/uikit', express.static(__dirname + '/libs/uikit/css'));
 
+app.use('/styles/codemirror', express.static(__dirname + '/libs/codemirror'));
+
+app.use('/styles/marked', express.static(__dirname + '/libs/marked'));
+
 app.use('/styles', express.static(__dirname + '/styles'));
 
 app.use('/js', browserify(__dirname + '/js/entry-points'));
