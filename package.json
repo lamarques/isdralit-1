@@ -27,6 +27,7 @@
     "knockout": "./libs/knockout/dist/knockout.js",
     "uikit": "./libs/uikit/js/uikit.js",
     "uikit-lightbox": "./libs/uikit/js/components/lightbox.js",
+    "uikit-html-editor": "./libs/uikit/js/components/htmleditor.js",
     "uikit-upload": "./libs/uikit/js/components/upload.js",
     "bootstrap": "./libs/bootstrap/dist/js/bootstrap.js",
     "unslider": "./libs/unslider/src/unslider.js",
@@ -42,6 +43,11 @@
       ]
     },
     "uikit-lightbox": {
+      "depends": [
+        "uikit"
+      ]
+    },
+    "uikit-html-editor": {
       "depends": [
         "uikit"
       ]
