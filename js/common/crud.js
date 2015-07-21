@@ -5,6 +5,7 @@ var $ = require('jquery');
 var ko = require('knockout');
 var base = require('./base');
 var lightbox = require('./lightbox');
+var htmleditor = require('./html-editor');
 var upload = require('./upload');
 require('bootstrap');
 
@@ -134,6 +135,7 @@ exports.ViewModel = function (name, dataModel) {
     self.find();
 
     lightbox.init('[data-uk-lightbox]');
+    htmleditor.init('[data-uk-htmleditor]');
 
     self.fields().forEach(function (field) {
         if (field.type == 'upload') {

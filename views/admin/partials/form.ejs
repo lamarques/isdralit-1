@@ -11,6 +11,10 @@
         <textarea class="form-control" data-bind="value: field.value, attr: { id: field.name }"></textarea>
         <!-- /ko -->
 
+        <!-- ko if: field.type == 'html-editor' -->
+        <textarea data-bind="value: field.value, attr: { id: field.name }" data-uk-htmleditor="{ mode: 'tab' }"></textarea>
+        <!-- /ko -->
+
         <!-- ko if: field.type == 'upload' -->
         <div data-bind="value: field.value, attr: { id: field.name }">
             <div class="uk-placeholder">
