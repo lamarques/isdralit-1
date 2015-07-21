@@ -29,3 +29,5 @@ exports.defaultValues = [
 ];
 
 exports.Model = Banner;
+exports.Populate = 'image';
+exports.Sort = 'order';

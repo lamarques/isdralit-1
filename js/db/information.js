@@ -29,3 +29,5 @@ exports.defaultValues = [
 ];
 
 exports.Model = Information;
+exports.Populate = '';
+exports.Sort = 'order';

@@ -528,3 +528,5 @@ exports.defaultValues = [
 ];
 
 exports.Model = Product;
+exports.Populate = '';
+exports.Sort = 'order';

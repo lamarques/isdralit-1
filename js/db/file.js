@@ -17,3 +17,5 @@ File = mongoose.model('File', mongoose.Schema({
 exports.defaultValues = [];
 
 exports.Model = File;
+exports.Populate = '';
+exports.Sort = '';
