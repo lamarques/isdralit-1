@@ -43,5 +43,8 @@
   &:hover {
     color: darken($main-color, 5%);
     border-bottom-color: $light-gray-border-color;
+    a {
+      color: darken($main-color, 5%);
+    }
   }
 }

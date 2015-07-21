@@ -1,15 +1,32 @@
 @import "variables";
+@import "/styles/css/uikit/uikit.gradient.css";
 @import "/styles/css/uikit/components/upload.gradient.css";
 @import "/styles/css/uikit/components/form-file.gradient.css";
 @import "/styles/css/uikit/components/progress.gradient.css";
 @import "/styles/css/uikit/components/placeholder.gradient.css";
 
+.uk-alert {
+  padding: 5px;
+  background: $light-gray-color;
+  border-color: darken($light-gray-color, 8%);
+  border-radius: 0px;
+  color: $title-color;
+}
+
+a.upload-link {
+  text-decoration: none !important;
+  color: $title-color;
+  &:hover {
+    color: $main-color;
+  }
+}
+
 a.uk-form-file {
-  margin-top: -1px;
+  text-decoration: none !important;
   color: $main-color;
+  margin-top: -1px;
   &:hover {
     color: darken($main-color, 8%);
-    text-decoration: none;
   }
 }
 
