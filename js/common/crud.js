@@ -4,6 +4,7 @@
 var $ = require('jquery');
 var ko = require('knockout');
 var base = require('./base');
+var lightbox = require('./lightbox');
 var upload = require('./upload');
 require('bootstrap');
 
@@ -70,7 +71,7 @@ exports.ViewModel = function (name, dataModel) {
             if (value) {
                 var link = '<a class="upload-link" href="/';
                 link += value['path'];
-                link += '">';
+                link += '" data-uk-lightbox data-lightbox-type="image">';
                 link += value['originalname'];
                 link += '</a>';
 
@@ -130,6 +131,8 @@ exports.ViewModel = function (name, dataModel) {
     };
 
     self.find();
+
+    lightbox.init('[data-uk-lightbox]');
 
     self.fields().forEach(function (field) {
         if (field.type == 'upload')
