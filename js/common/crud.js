@@ -65,9 +65,8 @@ exports.ViewModel = function (name, dataModel) {
     });
 
     self.renderHtml = function (field, data) {
-        var value = data ? data[field.name]: field.value();
-        if (field.type == 'upload')
-        {
+        var value = data ? data[field.name] : field.value();
+        if (field.type == 'upload') {
             if (value) {
                 var link = '<a class="upload-link" href="/';
                 link += value['path'];
@@ -103,10 +102,10 @@ exports.ViewModel = function (name, dataModel) {
         };
         self.fields().forEach(function (field) {
             var value = field.value();
-            if (typeof value === 'object' && value._id) {
+            if (value && typeof value === 'object') {
                 value = value._id;
             }
-            data[field.name] = value;
+            data[field.name] = value || null;
         });
 
         external.save(name, data, function () {
@@ -118,9 +117,11 @@ exports.ViewModel = function (name, dataModel) {
     self.clear = function () {
         self.selectedId(undefined);
 
-        self.fields().forEach(function (field) {
-            field.value(undefined);
-        });
+        self.fields().forEach(self.clearField);
+    };
+
+    self.clearField = function (field) {
+        field.value(undefined);
     };
 
     self.remove = function () {
@@ -135,8 +136,7 @@ exports.ViewModel = function (name, dataModel) {
     lightbox.init('[data-uk-lightbox]');
 
     self.fields().forEach(function (field) {
-        if (field.type == 'upload')
-        {
+        if (field.type == 'upload') {
             upload.init(field);
         }
     });

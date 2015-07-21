@@ -15,6 +15,7 @@
         <div data-bind="value: field.value, attr: { id: field.name }">
             <div class="uk-placeholder">
                 <div class="uk-alert">
+                    <i data-bind="click: $root.clearField(field)" class="uk-alert-close uk-close"></i>
                     <p data-bind="html: $root.renderHtml(field)"></p>
                 </div>
                 <i class="uk-icon-cloud-upload uk-icon-medium uk-text-muted uk-margin-small-right"></i>
