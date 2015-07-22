@@ -38,12 +38,13 @@ exports.remove = function (name, id, successfulAction) {
 exports.getFields = function (dataModel) {
     var fields = [];
     for (var fieldName in dataModel) {
+        var model = dataModel[fieldName];
         fields.push({
             name: fieldName,
-            label: dataModel[fieldName].label,
-            type: dataModel[fieldName].type,
-            isFormHidden: dataModel[fieldName].isFormHidden,
-            isTableHidden: dataModel[fieldName].isTableHidden,
+            label: model.label,
+            type: model.type,
+            isFormHidden: model.isFormHidden,
+            isTableHidden: model.isTableHidden,
             value: ko.observable()
         });
     }
