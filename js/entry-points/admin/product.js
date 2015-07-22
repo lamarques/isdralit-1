@@ -23,15 +23,18 @@ ViewModel = function () {
         },
         backgroundImage: {
             label: 'Imagem do Anúncio',
-            type: 'upload'
+            type: 'upload',
+            isTableHidden: true
         },
         image: {
             label: 'Imagem do Catálogo',
-            type: 'upload'
+            type: 'upload',
+            isTableHidden: true
         },
         images: {
             label: 'Galeria de Imagens',
-            type: 'upload-multiple'
+            type: 'upload-multiple',
+            isTableHidden: true
         },
         order: {
             label: 'Ordem',
