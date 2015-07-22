@@ -75,6 +75,16 @@ exports.getOptionText = function (field, option) {
     }
 };
 
+exports.findOption = function (field, id) {
+    if (field.type == 'combo-box') {
+        field.options().forEach(function (option) {
+            if (option && option._id == id) {
+                return option;
+            }
+        });
+    }
+};
+
 exports.selectCurrentMenu = function () {
     var path = document.location.pathname;
     var $link = $('ul > li > a[href="' + path + '"]');
