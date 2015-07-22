@@ -47,7 +47,7 @@ exports.getFields = function (dataModel) {
             type: model.type,
             isFormHidden: model.isFormHidden,
             isTableHidden: model.isTableHidden,
-            fieldOption: model.fieldOption,
+            fieldOptionName: model.fieldOptionName,
             options: self.getOptions(fieldName, model),
             value: ko.observable()
         });
@@ -61,7 +61,7 @@ exports.getOptions = function (fieldName, model) {
 
     if (model.type == 'combo-box') {
         base.findAll(fieldName, options, {}, function (option) {
-            var value = option[model.fieldOption];
+            var value = option[model.fieldOptionName];
             value = value.replace(/(<([^>]+)>)/ig, ' ').replace(/  +/g, ' ').trim();
             option.optionText = value;
         });

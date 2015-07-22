@@ -16,7 +16,7 @@ ViewModel = function () {
         category: {
             label: 'Categoria',
             type: 'combo-box',
-            fieldOption: 'titleHtml'
+            fieldOptionName: 'titleHtml'
         },
         titleHtml: {
             label: 'Título',
