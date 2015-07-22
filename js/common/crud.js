@@ -49,19 +49,19 @@ exports.getFields = function (dataModel) {
             fieldOptionName: model.fieldOptionName,
             value: ko.observable()
         };
-        field.options = external.getOptions(fieldName, model);
+        field.options = external.getOptions(field);
         fields.push(field);
     }
 
     return fields;
 };
 
-exports.getOptions = function (fieldName, model) {
+exports.getOptions = function (field) {
     var options = ko.observableArray([]);
 
-    if (model.type == 'combo-box') {
-        base.findAll(fieldName, options, {}, function (option) {
-            var value = option[model.fieldOptionName];
+    if (field.type == 'combo-box') {
+        base.findAll(field.name, options, {}, function (option) {
+            var value = option[field.fieldOptionName];
             value = value.replace(/(<([^>]+)>)/ig, ' ').replace(/  +/g, ' ').trim();
             option.optionText = value;
         });
