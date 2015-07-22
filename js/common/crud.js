@@ -70,8 +70,8 @@ exports.getOptions = function (field) {
 
 exports.getOptionText = function (field, option) {
     if (option) {
-    var value = option[field.fieldOptionName];
-    return value.replace(/(<([^>]+)>)/ig, ' ').replace(/  +/g, ' ').trim();
+        var value = option[field.fieldOptionName];
+        return value.replace(/(<([^>]+)>)/ig, ' ').replace(/  +/g, ' ').trim();
     }
 };
 
