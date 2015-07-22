@@ -69,8 +69,10 @@ exports.getOptions = function (field) {
 };
 
 exports.getOptionText = function (field, option) {
+    if (option) {
     var value = option[field.fieldOptionName];
     return value.replace(/(<([^>]+)>)/ig, ' ').replace(/  +/g, ' ').trim();
+    }
 };
 
 exports.selectCurrentMenu = function () {
@@ -104,6 +106,8 @@ exports.ViewModel = function (name, dataModel) {
             } else {
                 value = "Nenhum arquivo anexado.";
             }
+        } else if (field.type == 'combo-box') {
+            value = external.getOptionText(field, value);
         }
         return value;
     };
