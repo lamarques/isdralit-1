@@ -126,7 +126,8 @@ exports.ViewModel = function (name, dataModel) {
         self.selectedId(data._id);
 
         self.fields().forEach(function (field) {
-            field.value(data[field.name]);
+            var value = data[field.name];
+            field.value(value);
         });
     };
 
