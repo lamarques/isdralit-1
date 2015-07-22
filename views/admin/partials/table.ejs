@@ -1,13 +1,17 @@
 <table class="table">
     <thead>
     <tr data-bind="foreach: { data: $root.fields, as: 'field' }">
+        <!-- ko if: !field.isTableHidden -->
         <th data-bind="html: field.label"></th>
+        <!-- /ko -->
     </tr>
     </thead>
 
     <tbody data-bind="foreach: { data: $root.dataValues, as: 'dataValue' }">
     <tr data-bind="foreach: { data: $root.fields, as: 'field' }, click: $root.selectRow">
+        <!-- ko if: !field.isTableHidden -->
         <td data-bind="html: $root.renderHtml(field, dataValue)"></td>
+        <!-- /ko -->
     </tr>
     </tbody>
 </table>

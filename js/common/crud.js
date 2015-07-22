@@ -42,6 +42,8 @@ exports.getFields = function (dataModel) {
             name: fieldName,
             label: dataModel[fieldName].label,
             type: dataModel[fieldName].type,
+            isFormHidden: dataModel[fieldName].isFormHidden,
+            isTableHidden: dataModel[fieldName].isTableHidden,
             value: ko.observable()
         });
     }

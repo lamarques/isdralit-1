@@ -1,5 +1,6 @@
 <form>
     <!-- ko foreach: { data: fields, as: 'field' } -->
+    <!-- ko if: !field.isFormHidden -->
     <div class="form-group">
         <label data-bind="html: field.label, attr: { for: field.name }">Nome</label>
 
@@ -36,6 +37,7 @@
         <input type="text" class="form-control" data-bind="value: field.value, attr: { id: field.name }">
         <!-- /ko -->
     </div>
+    <!-- /ko -->
     <!-- /ko -->
 
     <div class="btn-group">
