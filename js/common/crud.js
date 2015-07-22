@@ -103,10 +103,13 @@ exports.ViewModel = function (name, dataModel) {
         };
         self.fields().forEach(function (field) {
             var value = field.value();
-            if (value && typeof value === 'object') {
+            if (typeof value === 'object') {
                 value = value._id;
             }
-            data[field.name] = value || null;
+            if (value == undefined) {
+                value = null;
+            }
+            data[field.name] = value;
         });
 
         external.save(name, data, function () {
