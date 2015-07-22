@@ -76,13 +76,15 @@ exports.getOptionText = function (field, option) {
 };
 
 exports.findOption = function (field, value) {
+    var result = undefined;
     if (value && field.type == 'combo-box') {
         field.options().forEach(function (option) {
             if (option && option._id == value._id) {
-                return option;
+                result = option;
             }
         });
     }
+    return result;
 };
 
 exports.selectCurrentMenu = function () {
@@ -127,7 +129,7 @@ exports.ViewModel = function (name, dataModel) {
 
         self.fields().forEach(function (field) {
             var value = data[field.name];
-            field.value(value);
+            field.value(external.findOption(field, value) || value);
         });
     };
 
