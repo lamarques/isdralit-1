@@ -38,7 +38,6 @@ exports.remove = function (name, id, successfulAction) {
 exports.getFields = function (dataModel) {
     var fields = [];
 
-    var self = this;
     for (var fieldName in dataModel) {
         var model = dataModel[fieldName];
         var field = {
@@ -50,7 +49,7 @@ exports.getFields = function (dataModel) {
             fieldOptionName: model.fieldOptionName,
             value: ko.observable()
         };
-        field.options = self.getOptions(fieldName, model);
+        field.options = external.getOptions(fieldName, model);
         fields.push(field);
     }
 
