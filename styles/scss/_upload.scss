@@ -7,7 +7,7 @@
 
 .uk-alert {
   padding: 5px;
-  background: $light-gray-color;
+  background: lighten($light-gray-color, 2%);
   border-color: darken($light-gray-color, 8%);
   border-radius: 0px;
   color: $title-color;
