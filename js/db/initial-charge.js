@@ -15,6 +15,7 @@ exports.start = function () {
     charge(db.Banner);
     charge(db.Category);
     charge(db.Item);
+    charge(db.Technical);
     charge(db.Product);
     charge(db.Information);
 };

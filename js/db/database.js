@@ -41,6 +41,7 @@ exports.Menu = require('./menu');
 exports.Banner = require('./banner');
 exports.Category = require('./category');
 exports.Item = require('./item');
+exports.Technical = require('./technical');
 exports.Product = require('./product');
 exports.Information = require('./information');
 
