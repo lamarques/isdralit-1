@@ -61,13 +61,16 @@ exports.getOptions = function (field) {
 
     if (field.type == 'combo-box') {
         base.findAll(field.name, options, {}, function (option) {
-            var value = option[field.fieldOptionName];
-            value = value.replace(/(<([^>]+)>)/ig, ' ').replace(/  +/g, ' ').trim();
-            option.optionText = value;
+            option.optionText = external.getOptionText(field, option);
         });
     }
 
     return options;
+};
+
+exports.getOptionText = function (field, option) {
+    var value = option[field.fieldOptionName];
+    return value.replace(/(<([^>]+)>)/ig, ' ').replace(/  +/g, ' ').trim();
 };
 
 exports.selectCurrentMenu = function () {
