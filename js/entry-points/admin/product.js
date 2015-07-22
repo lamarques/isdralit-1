@@ -13,6 +13,11 @@ ViewModel = function () {
             label: 'Chave da URL',
             type: 'text'
         },
+        category: {
+            label: 'Categoria',
+            type: 'combo-box',
+            fieldOption: 'titleHtml'
+        },
         titleHtml: {
             label: 'Título',
             type: 'html-editor'

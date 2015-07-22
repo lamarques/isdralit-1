@@ -37,6 +37,8 @@ exports.remove = function (name, id, successfulAction) {
 
 exports.getFields = function (dataModel) {
     var fields = [];
+
+    var self = this;
     for (var fieldName in dataModel) {
         var model = dataModel[fieldName];
         fields.push({
@@ -45,10 +47,26 @@ exports.getFields = function (dataModel) {
             type: model.type,
             isFormHidden: model.isFormHidden,
             isTableHidden: model.isTableHidden,
+            options: self.getOptions(fieldName, model),
             value: ko.observable()
         });
     }
+
     return fields;
+};
+
+exports.getOptions = function (fieldName, model) {
+    var options = ko.observableArray([]);
+
+    if (model.type == 'combo-box') {
+        base.findAll(fieldName, options, {}, function (option) {
+            var value = option[model.fieldOption];
+            value = value.replace(/(<([^>]+)>)/ig, ' ').replace(/  +/g, ' ').trim();
+            option.optionText = value;
+        });
+    }
+
+    return options;
 };
 
 exports.selectCurrentMenu = function () {
