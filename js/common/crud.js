@@ -75,10 +75,10 @@ exports.getOptionText = function (field, option) {
     }
 };
 
-exports.findOption = function (field, id) {
-    if (field.type == 'combo-box') {
+exports.findOption = function (field, value) {
+    if (value && field.type == 'combo-box') {
         field.options().forEach(function (option) {
-            if (option && option._id == id) {
+            if (option && option._id == value._id) {
                 return option;
             }
         });
