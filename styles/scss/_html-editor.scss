@@ -2,6 +2,10 @@
 @import "/styles/css/uikit/uikit.gradient.css";
 @import "/styles/css/uikit/components/htmleditor.gradient.css";
 
+.CodeMirror {
+  height: 200px !important;
+}
+
 .uk-htmleditor-fullscreen {
   top: 50px;
 }
