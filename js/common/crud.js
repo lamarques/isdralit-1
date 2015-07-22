@@ -41,7 +41,7 @@ exports.getFields = function (dataModel) {
     var self = this;
     for (var fieldName in dataModel) {
         var model = dataModel[fieldName];
-        fields.push({
+        var field = {
             name: fieldName,
             label: model.label,
             type: model.type,
@@ -50,7 +50,8 @@ exports.getFields = function (dataModel) {
             fieldOptionName: model.fieldOptionName,
             options: self.getOptions(fieldName, model),
             value: ko.observable()
-        });
+        };
+        fields.push(field);
     }
 
     return fields;
