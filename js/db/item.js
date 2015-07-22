@@ -9,6 +9,10 @@ Item = mongoose.model('Item', mongoose.Schema({
     key: String,
     titleHtml: String,
     detailHtml: String,
+    category: {
+        type: ObjectId,
+        ref: 'Category'
+    },
     backgroundImage: {
         type: ObjectId,
         ref: 'File'
