@@ -10,7 +10,7 @@ ViewModel = function () {
     var self = this;
 
     self.banners = ko.observableArray([]);
-    self.products = ko.observableArray([]);
+    self.categories = ko.observableArray([]);
     self.informations = ko.observableArray([]);
 
     self.openProducts = function (data, event) {
@@ -24,8 +24,8 @@ ViewModel = function () {
         slider.init('.banner');
     });
 
-    base.findAll('product', self.products, { fields: 'key titleHtml imageUrl' }, function (product) {
-        base.addBackgroundImage(product, 'imageUrl');
+    base.findAll('category', self.categories, {}, function (category) {
+        base.addBackgroundImage(category, 'image');
     });
 
     base.findAll('information', self.informations, {}, function (information) {
