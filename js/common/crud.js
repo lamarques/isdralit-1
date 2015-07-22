@@ -103,11 +103,10 @@ exports.ViewModel = function (name, dataModel) {
         };
         self.fields().forEach(function (field) {
             var value = field.value();
-            if (typeof value === 'object') {
-                value = value._id;
-            }
             if (value == undefined) {
                 value = null;
+            } else if (typeof value === 'object') {
+                value = value._id;
             }
             data[field.name] = value;
         });
