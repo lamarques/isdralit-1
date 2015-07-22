@@ -14,6 +14,15 @@ exports.init = function (field) {
         });
 
         var editor = $element.parent().find('.CodeMirror')[0].CodeMirror;
-        $element.data('editor', editor);
+        editor.on('change', function (editor) {
+            field.value(editor.getValue());
+        });
+
+        field.value.subscribe(function (value) {
+            value = value || '';
+            if (editor.getValue() != value) {
+                editor.setValue(value);
+            }
+        });
     }, 0);
 };
