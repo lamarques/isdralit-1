@@ -56,5 +56,5 @@ exports.defaultValues = [
 ];
 
 exports.Model = Item;
-exports.Populate = 'backgroundImage image images';
+exports.Populate = 'category backgroundImage image images';
 exports.Sort = 'order';
