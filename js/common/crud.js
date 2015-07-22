@@ -48,9 +48,9 @@ exports.getFields = function (dataModel) {
             isFormHidden: model.isFormHidden,
             isTableHidden: model.isTableHidden,
             fieldOptionName: model.fieldOptionName,
-            options: self.getOptions(fieldName, model),
             value: ko.observable()
         };
+        field.options = self.getOptions(fieldName, model);
         fields.push(field);
     }
 
