@@ -13,6 +13,7 @@ exports.start = function () {
     charge(db.File);
     charge(db.Menu);
     charge(db.Banner);
+    charge(db.Category);
     charge(db.Product);
     charge(db.Information);
 };
