@@ -27,7 +27,7 @@ ViewModel = function () {
         }
     };
 
-    ko.utils.extend(self, new crud.ViewModel('banner', self.dataModel));
+    ko.utils.extend(self, new crud.ViewModel('category', self.dataModel));
 };
 
 ko.applyBindings(new ViewModel());
