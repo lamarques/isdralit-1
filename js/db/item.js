@@ -10,8 +10,8 @@ Item =  mongoose.model('Item', mongoose.Schema({
     backgroundImageUrl: String,
     imageUrl: String,
     imagesUrl: Array,
-    order: Number
-    //    product: { type: mongoose.Schema.ObjectId, ref: 'Product' }
+    order: Number,
+    product: { type: mongoose.Schema.ObjectId, ref: 'Product' }
 }));
 
 exports.Model = Item;
