@@ -33,19 +33,18 @@ exports.remove = function (name, id, successfulAction) {
 };
 
 exports.getFields = function (dataModel) {
-   var fields = [];
-   for (var fieldName in dataModel) {
-       fields.push({
-           name: fieldName,
-           label: dataModel[fieldName].label,
-           type: dataModel[fieldName].type,
-           optionsText: dataModel[fieldName].optionsText,
-           options: ko.observableArray(dataModel[fieldName].options),
-           value: ko.observable()
-       });
-   }
-   return fields;
-}; 
+    var fields = [];
+    for (var fieldName in dataModel) {
+        fields.push({
+            name: fieldName,
+            label: dataModel[fieldName].label,
+            type: dataModel[fieldName].type,
+            value: ko.observable()
+        });
+    }
+    return fields;
+};
+
 exports.selectCurrentMenu = function () {
     var path = document.location.pathname;
     var $link = $('ul > li > a[href="' + path + '"]');
