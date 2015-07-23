@@ -8,16 +8,21 @@ var base = require('../../common/base');
 ViewModel = function () {
     var self = this;
 
-    self.products = ko.observableArray([]);
+    self.categories = ko.observableArray([]);
 
     self.openProduct = function (path, data, event) {
         window.location = '/views/product/' + (path || '');
     };
 
-    base.findAll('product', self.products, base.currentQuery(), function (product) {
-        product.titleHtml = product.titleHtml.replace(/(<([^>]+)>)/ig, ' ').replace(/  +/g, ' ').trim();
-        product.items.forEach(function (item) {
-            base.addBackgroundImage(item, 'imageUrl');
+    base.findAll('category', self.categories, base.currentQuery(), function (category) {
+        category.titleHtml = category.titleHtml.replace(/(<([^>]+)>)/ig, ' ').replace(/  +/g, ' ').trim();
+        category.items = ko.observableArray([]);
+
+        var query = {
+            category: category._id
+        };
+        base.findAll('item', category.items, query, function (item) {
+            base.addBackgroundImage(item, 'image');
         });
     });
 
