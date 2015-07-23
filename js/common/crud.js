@@ -186,6 +186,7 @@ exports.ViewModel = function (name, dataModel) {
 
     self.clearValue = function (field) {
         field.value(undefined);
+        external.selectCurrentOption(field);
     };
 
     self.remove = function () {
