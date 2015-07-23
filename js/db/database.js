@@ -45,5 +45,7 @@ exports.Technical = require('./technical');
 exports.Product = require('./product');
 exports.Information = require('./information');
 
-var initialCharge = require('./initial-charge');
-initialCharge.start();
+if (process.env.NODE_ENV == 'development') {
+    var initialCharge = require('./initial-charge');
+    initialCharge.start();
+}
