@@ -35,7 +35,7 @@ ViewModel = function () {
     };
 
     console.log(self.dataModel);
-    ko.utils.extend(self, new crud.ViewModel('Item', self.dataModel));
+    ko.utils.extend(self, new crud.ViewModel('ItemSchema', self.dataModel));
 
 };
 

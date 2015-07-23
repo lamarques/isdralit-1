@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 
 
  
-Item =  mongoose.model('Item', mongoose.Schema({
+ItemSchema =  mongoose.model('ItemSchema', mongoose.Schema({
     key: String,
     titleHtml: String,
     backgroundImageUrl: String,
@@ -15,7 +15,7 @@ Item =  mongoose.model('Item', mongoose.Schema({
     
 }));
 
-  exports.Model = Item;
+  exports.Model = ItemSchema;
   
   
   

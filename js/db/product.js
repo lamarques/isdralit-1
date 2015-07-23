@@ -6,7 +6,7 @@
 var mongoose = require('mongoose'),
      ObjectId = mongoose.Schema.ObjectId;
 
-var item = require('./item');
+var ItemSchema = require('./ItemSchema.js');
 
 
 Product = mongoose.model('Product', mongoose.Schema({
@@ -14,7 +14,7 @@ Product = mongoose.model('Product', mongoose.Schema({
     titleHtml: String,
     imageUrl: String,
     order: Number,
-    items: [{type: ObjectId, ref:'Item'}]
+    items: [{type: ObjectId, ref:'ItemSchema'}]
 }));
 
 exports.defaultValues = [

@@ -45,7 +45,7 @@ exports.Menu = require('./menu');
 exports.Banner = require('./banner');
 exports.Product = require('./product');
 exports.Information = require('./information');
-exports.Item = require('./item');
+exports.ItemSchema = require('./ItemSchema');
 
 var initialCharge = require('./initial-charge');
 initialCharge.start();
