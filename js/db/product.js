@@ -12,6 +12,10 @@ Product = mongoose.model('Product', mongoose.Schema({
     order: Number,
     items: [{ type: mongoose.Schema.ObjectId, ref: 'Item' }]
 }));
+exports.push = function(item){
+    
+     this.items.push(item);
+}
 
 exports.defaultValues = [
     new Product({
