@@ -26,7 +26,14 @@ exports.init = function (field) {
                 $bar.css('width', percent + '%').text(percent + '%');
             },
             allcomplete: function (file) {
-                field.value(JSON.parse(file));
+                var value = JSON.parse(file);
+                if (field.isMultiple) {
+                    field.value.push(value);
+                }
+                else {
+                    field.value(value);
+                }
+
                 $bar.css('width', '100%').text('100%');
                 setTimeout(function () {
                     $progress.addClass('uk-hidden');
