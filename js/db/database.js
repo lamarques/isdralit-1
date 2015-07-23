@@ -1,7 +1,3 @@
-/* global exports */
-
-/* global exports */
-
 /**
  * Created by marlon on 17/12/14.
  */
@@ -27,7 +23,6 @@ exports.remove = function (model, id, callback) {
 };
 
 exports.findAll = function (model, query, fields, callback) {
-   
     model.find(query, fields).sort('order').lean().exec(callback);
 };
 
@@ -45,7 +40,6 @@ exports.Menu = require('./menu');
 exports.Banner = require('./banner');
 exports.Product = require('./product');
 exports.Information = require('./information');
-exports.ItemSchema = require('./ItemSchema');
 
 var initialCharge = require('./initial-charge');
 initialCharge.start();

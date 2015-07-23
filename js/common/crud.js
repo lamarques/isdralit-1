@@ -53,6 +53,7 @@ exports.selectCurrentMenu = function () {
 
 exports.ViewModel = function (name, dataModel) {
     var self = this;
+
     self.selectedId = ko.observable();
     self.fields = ko.observableArray(external.getFields(dataModel));
     self.dataValues = ko.observableArray([]);

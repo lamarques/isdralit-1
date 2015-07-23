@@ -9,7 +9,6 @@ ViewModel = function () {
     var self = this;
 
     self.dataModel = {
-        
         titleHtml: {
             label: 'Descrição',
             type: 'text-area'
@@ -25,9 +24,7 @@ ViewModel = function () {
         }
     };
 
-
     ko.utils.extend(self, new crud.ViewModel('product', self.dataModel));
-
 };
 
 ko.applyBindings(new ViewModel());
