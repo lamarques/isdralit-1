@@ -13,7 +13,10 @@
       > div {
         width: 360px;
         height: 360px;
-        background-size: 360px;
+        background: lighten($title-color, 50%) center/contain no-repeat;
+        .zoomImg {
+          background-color: lighten($title-color, 50%);
+        }
       }
     }
     .thumbs {
