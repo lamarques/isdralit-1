@@ -136,7 +136,7 @@ exports.ViewModel = function (name, dataModel) {
     self.find = function () {
         self.dataValues([]);
 
-        base.findAll(name, self.dataValues);
+        base.findAll(name, self.dataValues, base.currentQuery());
     };
 
     self.save = function () {
