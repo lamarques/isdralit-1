@@ -44,10 +44,11 @@ exports.getFields = function (dataModel) {
             name: fieldName,
             label: model.label,
             type: model.type,
+            isMultiple: model.isMultiple,
             isFormHidden: model.isFormHidden,
             isTableHidden: model.isTableHidden,
             fieldOptionName: model.fieldOptionName,
-            value: ko.observable()
+            value: model.isMultiple ? ko.observableArray([]) : ko.observable()
         };
         field.options = external.getOptions(field);
         fields.push(field);
@@ -126,17 +127,24 @@ exports.ViewModel = function (name, dataModel) {
     self.renderHtml = function (field, data) {
         var value = data ? data[field.name] : field.value();
         if (field.type == 'upload') {
-            if (value) {
-                var link = '<a class="upload-link" href="/';
-                link += value['path'];
-                link += '" data-uk-lightbox data-lightbox-type="image">';
-                link += value['originalname'];
-                link += '</a>';
-
-                value = link;
-            } else {
-                value = "Nenhum arquivo anexado.";
+            if (!$.isArray(value)) {
+                value = [value];
             }
+
+            var link = '';
+            for (var index = 0; index < value.length; index++) {
+                var file = value[index];
+                if (file) {
+                    link += index ? ', ' : '';
+                    link += '<a class="upload-link" href="/';
+                    link += file['path'];
+                    link += '" data-uk-lightbox data-lightbox-type="image">';
+                    link += file['originalname'];
+                    link += '</a>';
+                }
+            }
+
+            value = link || 'Nenhum arquivo anexado.';
         } else if (field.type == 'combo-box') {
             value = external.getOptionText(field, value);
         }
@@ -152,6 +160,22 @@ exports.ViewModel = function (name, dataModel) {
         });
     };
 
+    self.getValue = function (value) {
+        if (value == undefined) {
+            return null;
+        } else if ($.isArray(value)) {
+            var array = [];
+            for (var index = 0; index < value.length; index++) {
+                array.push(self.getValue(value[index]));
+            }
+            return array;
+        }
+        else if (typeof value === 'object') {
+            return value._id;
+        }
+        return value;
+    };
+
     self.find = function () {
         self.dataValues([]);
 
@@ -162,14 +186,10 @@ exports.ViewModel = function (name, dataModel) {
         var data = {
             _id: self.selectedId()
         };
+
         self.fields().forEach(function (field) {
             var value = field.value();
-            if (value == undefined) {
-                value = null;
-            } else if (typeof value === 'object') {
-                value = value._id;
-            }
-            data[field.name] = value;
+            data[field.name] = self.getValue(value);
         });
 
         external.save(name, data, function () {
@@ -185,7 +205,7 @@ exports.ViewModel = function (name, dataModel) {
     };
 
     self.clearValue = function (field) {
-        field.value(undefined);
+        field.value(field.isMultiple ? [] : undefined);
         external.selectCurrentOption(field);
     };
 
