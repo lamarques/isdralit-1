@@ -40,7 +40,7 @@ ViewModel = function () {
     base.findAll('category', self.categories, { key: query['category.key'] }, function (category) {
         var suggestions = [];
         category.items = ko.observableArray([]);
-        base.findAll('item', category.items, {}, function (item) {
+        base.findAll('item', category.items, { category: category._id }, function (item) {
             item.isMain = item.key == query['key'];
             if (item.isMain) {
                 self.setImages(item);
