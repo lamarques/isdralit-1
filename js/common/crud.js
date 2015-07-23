@@ -65,6 +65,12 @@ exports.getOptions = function (field) {
         });
     }
 
+    options.subscribe(function () {
+        setTimeout(function () {
+            external.selectCurrentOption(field);
+        }, 0);
+    });
+
     return options;
 };
 
@@ -85,6 +91,19 @@ exports.findOption = function (field, value) {
         });
     }
     return result;
+};
+
+exports.selectCurrentOption = function (field) {
+    if (field.type == 'combo-box') {
+        var query = base.currentQuery();
+        var value = query[field.name];
+        if (value) {
+            var filter = {
+                '_id': value
+            };
+            field.value(external.findOption(field, filter));
+        }
+    }
 };
 
 exports.selectCurrentMenu = function () {
