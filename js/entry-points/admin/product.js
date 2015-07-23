@@ -38,7 +38,8 @@ ViewModel = function () {
         },
         images: {
             label: 'Galeria de Imagens',
-            type: 'upload-multiple',
+            type: 'upload',
+            isMultiple: true,
             isTableHidden: true
         },
         order: {
