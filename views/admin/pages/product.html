@@ -12,6 +12,15 @@
     <div class="row">
         <div class="col-sm-5">
             <% include ../partials/form %>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="btn-group">
+                        <button type="button" class="btn button" data-bind="click: openTechnical, enable: selectedId">Medidas</button>
+                        <button type="button" class="btn button" data-bind="click: openTechnical, enable: selectedId">Informações Técnicas</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="col-sm-7">

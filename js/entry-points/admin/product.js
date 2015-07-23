@@ -47,6 +47,10 @@ ViewModel = function () {
         }
     };
 
+    self.openTechnical = function () {
+        window.location = '/cms/views/technical/item/' + self.selectedId();
+    };
+
     ko.utils.extend(self, new crud.ViewModel('item', self.dataModel));
 };
 
