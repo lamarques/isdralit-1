@@ -13,11 +13,6 @@ Product = mongoose.model('Product', mongoose.Schema({
     items: [{ type: mongoose.Schema.ObjectId, ref: 'Item' }]
 }));
 
-exports.pushItem = function(Item){
-    
-    items.push(item);
-};
-
 exports.defaultValues = [
     new Product({
         key: 'caixas-de-agua',
