@@ -78,10 +78,12 @@ app.get('/views/product/:className?/:productName?', function (req, res) {
 
     var query = {};
     if (className) {
-        query['key'] = className;
-    }
-    if (productName) {
-        query['items.key'] = productName;
+        if (productName) {
+            query['key'] = productName;
+            query['category.key'] = className;
+        } else {
+            query['key'] = className;
+        }
     }
 
     renderPage(res, name, 'site', query);
