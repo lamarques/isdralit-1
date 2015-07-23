@@ -18,7 +18,7 @@
       border-bottom: 4px solid $main-color;
       .photo {
         height: 250px;
-        background-size: 442px 250px;
+        background: lighten($title-color, 50%) center/auto 250px no-repeat;
       }
       .description {
         padding: 15px;
