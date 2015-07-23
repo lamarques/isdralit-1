@@ -26,6 +26,11 @@ ViewModel = function () {
             label: 'Descrição',
             type: 'html-editor'
         },
+        measuresImage: {
+            label: 'Imagem das Medidas',
+            type: 'upload',
+            isTableHidden: true
+        },
         backgroundImage: {
             label: 'Imagem do Anúncio',
             type: 'upload',

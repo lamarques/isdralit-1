@@ -13,6 +13,10 @@ Item = mongoose.model('Item', mongoose.Schema({
         type: ObjectId,
         ref: 'Category'
     },
+    measuresImage: {
+        type: ObjectId,
+        ref: 'File'
+    },
     backgroundImage: {
         type: ObjectId,
         ref: 'File'
@@ -56,5 +60,5 @@ exports.defaultValues = [
 ];
 
 exports.Model = Item;
-exports.Populate = 'category backgroundImage image images';
+exports.Populate = 'category measuresImage backgroundImage image images';
 exports.Sort = 'order';
