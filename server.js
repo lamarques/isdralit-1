@@ -95,6 +95,13 @@ app.get('/cms/views/:name', function (req, res) {
     renderPage(res, req.params.name, 'admin', req.query);
 });
 
+app.get('/cms/views/:name/:object/:id', function (req, res) {
+    var query = {};
+    query[req.params.object] = req.params.id;
+
+    renderPage(res, req.params.name, 'admin', query);
+});
+
 app.get('/:name/find', function (req, res) {
     var name = utils.capitalize(req.params.name);
     var query = req.query;
