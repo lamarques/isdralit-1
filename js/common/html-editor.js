@@ -9,9 +9,8 @@ exports.init = function (field) {
 
         UIkit.htmleditor($element, {
             mode: 'tab',
-            markdown: true,
             height: 150,
-            lblMarkedview: 'HTML',
+            lblCodeview: 'HTML',
             lblPreview: 'Visualização'
         });
 
