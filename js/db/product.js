@@ -3,17 +3,22 @@
 /**
  * Created by marlon on 02/01/15.
  */
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'),
+     ObjectId = mongoose.Schema.ObjectId;
+
+var item = require('./item');
+
 
 Product = mongoose.model('Product', mongoose.Schema({
     key: String,
     titleHtml: String,
     imageUrl: String,
     order: Number,
-    items: [{ type: mongoose.Schema.ObjectId, ref: 'Item' }]
+    items: [{type: ObjectId, ref:'Item'}]
 }));
 
 exports.defaultValues = [
+
     new Product({
         key: 'caixas-de-agua',
         titleHtml: 'Caixas<br>de água',

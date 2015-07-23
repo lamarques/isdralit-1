@@ -11,45 +11,46 @@ var base = require('../../common/base');
 ViewModel = function () {
     var self = this;
 
+  self.categorias = ko.observableArray([]);
+  base.findAll('product', self.categorias); 
+ 
     self.dataModel = {
-        product: {
-            label: 'Categoria',
-            type: 'combo-box',
-            optionsText: 'titleHtml',
-            options: ko.observableArray([])
-        },
+       itens: {
+           label: 'Categoria',
+           type: 'combo-box',
+           optionsText: 'name',
+
+          option : self.categorias
+       } ,
         key: {
-            label: 'URL',
+            label: 'key',
             type: 'text'
         },
         titleHtml: {
-            label: 'Título',
+            label: 'Titulo',
             type: 'text-area'
         },
-        detailHtml: {
-            label: 'Descrição',
-            type: 'text-area'
-        },
-        backgroundImageUrl: {
-            label: 'URL da imagem de fundo',
+         backgroundImageUrl: {
+            label: 'URL da imagem de backgroud',
             type: 'text'
         },
         imageUrl: {
             label: 'URL da imagem',
             type: 'text'
+            
         },
+
         order: {
             label: 'Ordem',
             type: 'number'
         }
+        
     };
 
-    base.findAll('product', self.dataModel.product.options);
-
     ko.utils.extend(self, new crud.ViewModel('Item', self.dataModel));
+
 };
 
-window.viewModel = new ViewModel();
-ko.applyBindings(window.viewModel);
+ko.applyBindings(new ViewModel());
 
        

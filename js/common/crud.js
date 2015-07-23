@@ -40,7 +40,7 @@ exports.getFields = function (dataModel) {
            label: dataModel[fieldName].label,
            type: dataModel[fieldName].type,
            optionsText: dataModel[fieldName].optionsText,
-           options: dataModel[fieldName].options,
+           options: ko.observableArray(dataModel[fieldName].options),
            value: ko.observable()
        });
    }
@@ -80,14 +80,8 @@ exports.ViewModel = function (name, dataModel) {
         var data = {
             _id: self.selectedId()
         };
-
         self.fields().forEach(function (field) {
-            var value = field.value();
-            if (typeof value === 'object')
-            {
-                value = value._id;
-            }
-            data[field.name] = value;
+            data[field.name] = field.value();
         });
 
         external.save(name, data, function () {

@@ -27,6 +27,7 @@ exports.remove = function (model, id, callback) {
 };
 
 exports.findAll = function (model, query, fields, callback) {
+   
     model.find(query, fields).sort('order').lean().exec(callback);
 };
 
