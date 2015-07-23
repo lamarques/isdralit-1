@@ -1,8 +1,14 @@
 
 /* global exports */
 
-var mongoose = require('mongoose');
+var mongoose = require('mongoose'),
+     ObjectId = mongoose.Schema.ObjectId;
 
+
+
+//
+//var InformationSchema = require('./InformationSchema.js');
+//var MeasureSchema = require('./MeasureSchema.js');
 
 
  
@@ -15,15 +21,7 @@ ItemSchema =  mongoose.model('ItemSchema', mongoose.Schema({
     
 }));
 
-  exports.Model = ItemSchema;
   
-  
-  
-//
-//var InformationSchema = require('./InformationSchema.js');
-//var MeasureSchema = require('./MeasureSchema.js');
-
-
 //  
 //  ItemSchema = new Schema({
 //    key: String,
@@ -41,4 +39,4 @@ ItemSchema =  mongoose.model('ItemSchema', mongoose.Schema({
   
 
 //exports.Model =   mongoose.model('ItemSchema', ItemSchema);
-
+exports.Model =   ItemSchema;

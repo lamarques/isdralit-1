@@ -1,5 +1,3 @@
-/* global exports */
-
 /**
  * Created by marlon on 30/12/14.
  */
