@@ -11,13 +11,13 @@ var base = require('../../common/base');
 ViewModel = function () {
     var self = this;
 
-    self.products = ko.observableArray([]);
+    self.categories = ko.observableArray([]);
     self.itemSuggestions = ko.observableArray([]);
     self.selectedPhoto = ko.observable();
 
     self.selectPhoto = function (data, event) {
-        self.selectedPhoto(data.normal);
-        zoom.set('.gallery > .photo > div', data.url);
+        self.selectedPhoto(data.url);
+        zoom.set('.gallery > .photo > div', '/' + data.path);
     };
 
     self.openProduct = function (data, event) {
@@ -25,51 +25,37 @@ ViewModel = function () {
     };
 
     self.setImages = function (item) {
-        item.images = [];
-        item.imagesUrl.forEach(function (imageUrl) {
-            item.images.push({
-                url: imageUrl,
-                small: base.getBackgroundUrl(imageUrl.replace(/\.([^.]+)$/, '-small.$1')),
-                normal: base.getBackgroundUrl(imageUrl)
+        var images = item.images;
+        if (images) {
+            images.forEach(function (image) {
+                image.url = base.getBackgroundUrl('/' + image.path);
             });
-        });
-        if (item.images.length) {
-            self.selectPhoto(item.images[0]);
+            if (images.length) {
+                self.selectPhoto(images[0]);
+            }
         }
     };
 
-    self.setMeasures = function (item) {
-        item.measureHeaders = [];
-        item.measureRows = [];
-
-        item.measures.forEach(function (measure) {
-            item.measureHeaders.push(measure.header);
-            measure.values.forEach(function (value, index) {
-                if (!item.measureRows[index]) {
-                    item.measureRows[index] = [];
-                }
-                item.measureRows[index].push(utils.formatNumber(value, measure.precision));
-            });
-        });
-    };
-
     var query = base.currentQuery();
-    base.findAll('product', self.products, query, function (product) {
+    base.findAll('category', self.categories, { key: query['category.key'] }, function (category) {
         var suggestions = [];
-        product.items.forEach(function (item) {
-            item.isMain = item.key == query['items.key'];
+        category.items = ko.observableArray([]);
+        base.findAll('item', category.items, {}, function (item) {
+            item.isMain = item.key == query['key'];
             if (item.isMain) {
                 self.setImages(item);
-                self.setMeasures(item);
+                item.measuresImageSource = item.measuresImage ? '/' + item.measuresImage.path : '';
+                item.informations = ko.observableArray([]);
+                base.findAll('technical', item.informations, { item: item._id });
             } else if (suggestions.length < 4) {
-                item.path = product.key + '/' + item.key;
-                base.addBackgroundImage(item, 'backgroundImageUrl');
+                item.path = category.key + '/' + item.key;
+                base.addBackgroundImage(item, 'backgroundImage');
                 suggestions.push(item);
             }
+        }, function () {
+            ko.utils.arrayPushAll(self.itemSuggestions, suggestions);
+            tabBar.init('.tab-bar');
         });
-        ko.utils.arrayPushAll(self.itemSuggestions, suggestions);
-    }, function () {
-        tabBar.init('.tab-bar');
     });
 
     ko.utils.extend(self, new base.ViewModel());
