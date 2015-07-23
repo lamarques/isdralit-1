@@ -33,3 +33,5 @@ exports.defaultValues = [
 ];
 
 exports.Model = Menu;
+exports.Populate = '';
+exports.Sort = 'order';

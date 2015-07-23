@@ -1,5 +1,6 @@
 <form>
     <!-- ko foreach: { data: fields, as: 'field' } -->
+    <!-- ko if: !field.isFormHidden -->
     <div class="form-group">
         <label data-bind="html: field.label, attr: { for: field.name }">Nome</label>
 
@@ -7,14 +8,40 @@
         <input type="text" class="form-control" data-bind="value: field.value, attr: { id: field.name }">
         <!-- /ko -->
 
+        <!-- ko if: field.type == 'combo-box' -->
+        <select class="form-control" data-bind="options: field.options, optionsText: 'optionText', optionsCaption: 'Selecione...', value: field.value, attr: { id: field.name }"></select>
+        <!-- /ko -->
+
         <!-- ko if: field.type == 'text-area' -->
         <textarea class="form-control" data-bind="value: field.value, attr: { id: field.name }"></textarea>
+        <!-- /ko -->
+
+        <!-- ko if: field.type == 'html-editor' -->
+        <textarea data-bind="value: field.value, attr: { id: field.name }"></textarea>
+        <!-- /ko -->
+
+        <!-- ko if: field.type == 'upload' -->
+        <div data-bind="value: field.value, attr: { id: field.name }">
+            <div class="uk-placeholder">
+                <div class="uk-alert">
+                    <i data-bind="click: $root.clearValue(field)" class="uk-alert-close uk-close"></i>
+                    <p data-bind="html: $root.renderHtml(field)"></p>
+                </div>
+                <i class="uk-icon-cloud-upload uk-icon-medium uk-text-muted uk-margin-small-right"></i>
+                Arraste e solte um arquivo ou <a class="uk-form-file">selecione<input type="file"></a>.
+            </div>
+
+            <div class="uk-progress uk-hidden">
+                <div class="uk-progress-bar" style="width: 0%;"></div>
+            </div>
+        </div>
         <!-- /ko -->
 
         <!-- ko if: field.type == 'number' -->
         <input type="text" class="form-control" data-bind="value: field.value, attr: { id: field.name }">
         <!-- /ko -->
     </div>
+    <!-- /ko -->
     <!-- /ko -->
 
     <div class="btn-group">

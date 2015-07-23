@@ -52,6 +52,10 @@ exports.addBackgroundImage = function (item, fieldName) {
     if ($.isArray(value)) {
         value = value.length ? value[0] : '';
     }
+    if (value && value.path)
+    {
+        value = '/' + value.path;
+    }
     item.backgroundImage = external.getBackgroundUrl(value);
 };
 

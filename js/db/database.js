@@ -22,8 +22,8 @@ exports.remove = function (model, id, callback) {
     model.findByIdAndRemove(id, callback);
 };
 
-exports.findAll = function (model, query, fields, callback) {
-    model.find(query, fields).sort('order').lean().exec(callback);
+exports.findAll = function (value, query, fields, callback) {
+    value.Model.find(query, fields).populate(value.Populate).sort(value.Sort).lean().exec(callback);
 };
 
 exports.saveAll = function (values, callback) {
@@ -36,8 +36,12 @@ exports.removeAll = function (model, callback) {
     model.remove(callback);
 };
 
+exports.File = require('./file');
 exports.Menu = require('./menu');
 exports.Banner = require('./banner');
+exports.Category = require('./category');
+exports.Item = require('./item');
+exports.Technical = require('./technical');
 exports.Product = require('./product');
 exports.Information = require('./information');
 

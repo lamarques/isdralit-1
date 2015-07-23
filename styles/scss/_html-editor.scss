@@ -1,0 +1,14 @@
+@import "/styles/codemirror/lib/codemirror.css";
+@import "/styles/css/uikit/uikit.gradient.css";
+@import "/styles/css/uikit/components/htmleditor.gradient.css";
+
+.uk-htmleditor-fullscreen {
+  top: 50px;
+}
+
+.uk-htmleditor-navbar {
+  font-family: OpenSans-CondensedBold;
+  .uk-htmleditor-navbar-flip a {
+    font-size: 14px;
+  }
+}

@@ -15,7 +15,7 @@ ViewModel = function () {
     };
 
     base.findAll('product', self.products, base.currentQuery(), function (product) {
-        product.titleHtml = product.titleHtml.replace(/<br>/g, ' ');
+        product.titleHtml = product.titleHtml.replace(/(<([^>]+)>)/ig, ' ').replace(/  +/g, ' ').trim();
         product.items.forEach(function (item) {
             base.addBackgroundImage(item, 'imageUrl');
         });

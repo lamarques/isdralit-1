@@ -10,8 +10,12 @@ var charge = function(entity) {
 };
 
 exports.start = function () {
+    charge(db.File);
     charge(db.Menu);
     charge(db.Banner);
+    charge(db.Category);
+    charge(db.Item);
+    charge(db.Technical);
     charge(db.Product);
     charge(db.Information);
 };

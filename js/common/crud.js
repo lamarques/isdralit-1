@@ -4,6 +4,9 @@
 var $ = require('jquery');
 var ko = require('knockout');
 var base = require('./base');
+var lightbox = require('./lightbox');
+var htmleditor = require('./html-editor');
+var upload = require('./upload');
 require('bootstrap');
 
 var external = this;
@@ -34,15 +37,74 @@ exports.remove = function (name, id, successfulAction) {
 
 exports.getFields = function (dataModel) {
     var fields = [];
+
     for (var fieldName in dataModel) {
-        fields.push({
+        var model = dataModel[fieldName];
+        var field = {
             name: fieldName,
-            label: dataModel[fieldName].label,
-            type: dataModel[fieldName].type,
-            value: ko.observable()
+            label: model.label,
+            type: model.type,
+            isMultiple: model.isMultiple,
+            isFormHidden: model.isFormHidden,
+            isTableHidden: model.isTableHidden,
+            fieldOptionName: model.fieldOptionName,
+            value: model.isMultiple ? ko.observableArray([]) : ko.observable()
+        };
+        field.options = external.getOptions(field);
+        fields.push(field);
+    }
+
+    return fields;
+};
+
+exports.getOptions = function (field) {
+    var options = ko.observableArray([]);
+
+    if (field.type == 'combo-box') {
+        base.findAll(field.name, options, {}, function (option) {
+            option.optionText = external.getOptionText(field, option);
         });
     }
-    return fields;
+
+    options.subscribe(function () {
+        setTimeout(function () {
+            external.selectCurrentOption(field);
+        }, 0);
+    });
+
+    return options;
+};
+
+exports.getOptionText = function (field, option) {
+    if (option) {
+        var value = option[field.fieldOptionName];
+        return value.replace(/(<([^>]+)>)/ig, ' ').replace(/  +/g, ' ').trim();
+    }
+};
+
+exports.findOption = function (field, value) {
+    var result = undefined;
+    if (value && field.type == 'combo-box') {
+        field.options().forEach(function (option) {
+            if (option && option._id == value._id) {
+                result = option;
+            }
+        });
+    }
+    return result;
+};
+
+exports.selectCurrentOption = function (field) {
+    if (field.type == 'combo-box') {
+        var query = base.currentQuery();
+        var value = query[field.name];
+        if (value) {
+            var filter = {
+                '_id': value
+            };
+            field.value(external.findOption(field, filter));
+        }
+    }
 };
 
 exports.selectCurrentMenu = function () {
@@ -62,26 +124,72 @@ exports.ViewModel = function (name, dataModel) {
         return self.selectedId() ? 'Novo' : 'Limpar';
     });
 
+    self.renderHtml = function (field, data) {
+        var value = data ? data[field.name] : field.value();
+        if (field.type == 'upload') {
+            if (!$.isArray(value)) {
+                value = [value];
+            }
+
+            var link = '';
+            for (var index = 0; index < value.length; index++) {
+                var file = value[index];
+                if (file) {
+                    link += index ? ', ' : '';
+                    link += '<a class="upload-link" href="/';
+                    link += file['path'];
+                    link += '" data-uk-lightbox data-lightbox-type="image">';
+                    link += file['originalname'];
+                    link += '</a>';
+                }
+            }
+
+            value = link || 'Nenhum arquivo anexado.';
+        } else if (field.type == 'combo-box') {
+            value = external.getOptionText(field, value);
+        }
+        return value;
+    };
+
     self.selectRow = function (data) {
         self.selectedId(data._id);
 
         self.fields().forEach(function (field) {
-            field.value(data[field.name]);
+            var value = data[field.name];
+            field.value(external.findOption(field, value) || value);
         });
+    };
+
+    self.getValue = function (value) {
+        if (value == undefined) {
+            return null;
+        } else if ($.isArray(value)) {
+            var array = [];
+            for (var index = 0; index < value.length; index++) {
+                array.push(self.getValue(value[index]));
+            }
+            return array;
+        }
+        else if (typeof value === 'object') {
+            return value._id;
+        }
+        return value;
     };
 
     self.find = function () {
         self.dataValues([]);
 
-        base.findAll(name, self.dataValues);
+        base.findAll(name, self.dataValues, base.currentQuery());
     };
 
     self.save = function () {
         var data = {
             _id: self.selectedId()
         };
+
         self.fields().forEach(function (field) {
-            data[field.name] = field.value();
+            var value = field.value();
+            data[field.name] = self.getValue(value);
         });
 
         external.save(name, data, function () {
@@ -93,9 +201,12 @@ exports.ViewModel = function (name, dataModel) {
     self.clear = function () {
         self.selectedId(undefined);
 
-        self.fields().forEach(function (field) {
-            field.value(undefined);
-        });
+        self.fields().forEach(self.clearValue);
+    };
+
+    self.clearValue = function (field) {
+        field.value(field.isMultiple ? [] : undefined);
+        external.selectCurrentOption(field);
     };
 
     self.remove = function () {
@@ -106,6 +217,16 @@ exports.ViewModel = function (name, dataModel) {
     };
 
     self.find();
+
+    lightbox.init('[data-uk-lightbox]');
+
+    self.fields().forEach(function (field) {
+        if (field.type == 'upload') {
+            upload.init(field);
+        } else if (field.type == 'html-editor') {
+            htmleditor.init(field);
+        }
+    });
 
     external.selectCurrentMenu();
 

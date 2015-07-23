@@ -1,5 +1,5 @@
 /**
- * Created by marlon on 21/01/15.
+ * Created by marlon on 22/07/15.
  */
 var $ = require('jquery');
 var ko = require('knockout');
@@ -9,17 +9,18 @@ ViewModel = function () {
     var self = this;
 
     self.dataModel = {
+        item: {
+            label: 'Produto',
+            type: 'combo-box',
+            fieldOptionName: 'titleHtml'
+        },
+        titleHtml: {
+            label: 'Título',
+            type: 'html-editor'
+        },
         detailHtml: {
             label: 'Descrição',
             type: 'html-editor'
-        },
-        image: {
-            label: 'Imagem',
-            type: 'upload'
-        },
-        url: {
-            label: 'URL',
-            type: 'text'
         },
         order: {
             label: 'Ordem',
@@ -27,7 +28,7 @@ ViewModel = function () {
         }
     };
 
-    ko.utils.extend(self, new crud.ViewModel('banner', self.dataModel));
+    ko.utils.extend(self, new crud.ViewModel('technical', self.dataModel));
 };
 
 ko.applyBindings(new ViewModel());

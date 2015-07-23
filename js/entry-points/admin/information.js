@@ -11,15 +11,15 @@ ViewModel = function () {
     self.dataModel = {
         titleHtml: {
             label: 'Título',
-            type: 'text'
+            type: 'html-editor'
         },
         detailHtml: {
             label: 'Descrição',
-            type: 'text-area'
+            type: 'html-editor'
         },
-        imageUrl: {
-            label: 'URL da imagem',
-            type: 'text'
+        image: {
+            label: 'Imagem',
+            type: 'upload'
         },
         url: {
             label: 'URL',
