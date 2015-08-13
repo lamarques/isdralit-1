@@ -4,3 +4,6 @@ bower_components
 libs
 styles/css
 upload
+/nbproject/private/
+nbproject/project.properties
+nbproject/project.xml
