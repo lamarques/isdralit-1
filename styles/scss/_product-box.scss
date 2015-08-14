@@ -19,11 +19,11 @@
       border-bottom: 4px solid $main-color;
       .photo {
         height: 250px;
-        background: lighten($title-color, 80%) center/contain no-repeat;
+        background: lighten($title-color, 100%) center/contain no-repeat;
       }
       .description {
         padding: 15px;
-        color: $title-color;
+        color: lighten($title-color, 10%);
         .title {
           font-size: 28px;
         }
