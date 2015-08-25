@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-BR">
+    <% include ../partials/head %>
+</head>
+<body class="<%= path %>">
+
+<% include ../partials/header %>
+
+
+<div>
+    <h1>Contato</h1>
+    <p>Nome: <input type="text" class="form-control" data-bind="value: firstName" /></p>
+    <p>Sobre nome: <input type="text" class="form-control" data-bind="value: lastName" /></p>
+    <p>Email: <input type="text" class="form-control" type="email" data-bind="value: email" /></p>
+    <p>Titulo: <input type="text" class="form-control" data-bind="value: subject" /></p>
+    <p>Sua menssagem: <textarea class="form-control" rows="5" data-bind="value: content"></textarea></p>
+    <p>Categoria:</p>
+    <select class="form-control" data-bind="options: categories, optionsCaption: 'Selecione...', value: category"></select>
+
+    <p><button data-bind="click: submit">Submit</button></p>
+</div>
+
+
+
+<% include ../partials/footer %>
+
+</body>
+</html>

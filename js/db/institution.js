@@ -26,4 +26,5 @@ exports.defaultValues = [
 ];
 
 exports.Model = Institution;
+exports.Populate = 'image';
 exports.Sort = 'order';

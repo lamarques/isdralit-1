@@ -7,34 +7,18 @@
 
 <% include ../partials/header %>
 
-<!-- ko foreach: { data: categories, as: 'category' } -->
-<div class="content" data-bind="foreach: { data: items, as: 'item' }">
-    <!-- ko if: item.isMain -->
+<div class="content" data-bind="foreach: { data: institutions, as: 'item' }">
     <div class="section">
-        <div class="product-grid">
-
-
-
-                <div class="thumbs" data-bind="foreach: { data: images, as: 'image' }">
-                    <div class="photo"
-                         data-bind="click: $root.selectPhoto, css: { active: image.url == $root.selectedPhoto() }">
-                        <div data-bind="style: { backgroundImage: image.url }"></div>
-                    </div>
-                </div>
+        <div class="institution-grid">
+            <div data-bind="style: { backgroundImage: item.backgroundImage }"></div>
 
             <div class="info">
                 <div class="title" data-bind="html: item.titleHtml"></div>
                 <div class="detail" data-bind="html: item.detailHtml"></div>
             </div>
         </div>
-
-
-
-
     </div>
-    <!-- /ko -->
 </div>
-<!-- /ko -->
 
 <% include ../partials/footer %>
 
