@@ -10,7 +10,10 @@
 <div class="content" data-bind="foreach: { data: institutions, as: 'item' }">
     <div class="section">
         <div class="institution-grid">
-            <div data-bind="style: { backgroundImage: item.backgroundImage }"></div>
+
+
+            <img data-bind="attr: { src: item.imageSource }"/>
+
 
             <div class="info">
                 <div class="title" data-bind="html: item.titleHtml"></div>

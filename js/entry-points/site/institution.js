@@ -13,9 +13,8 @@ ViewModel = function () {
     self.institutions = ko.observableArray([]);
 
     base.findAll('institution', self.institutions, {}, function (institution) {
-        base.addBackgroundImage(institution, 'image');
+        institution.imageSource = institution.image ? '/' + institution.image.path : '';
     });
-
     ko.utils.extend(self, new base.ViewModel());
 };
 

@@ -13,6 +13,7 @@
       @include linear-gradient(to right, $background-color, $main-color, $background-color);
     }
     .logo {
+      display: block;
       float: left;
       width: 244px;
       height: 58px;

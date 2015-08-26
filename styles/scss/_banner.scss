@@ -3,6 +3,7 @@
 
 .banner {
   cursor: pointer;
+  position: relative;
   ul {
     margin: 0;
     padding: 0;
@@ -40,10 +41,11 @@
       margin-left: 1132px;
     }
   }
+
   .button {
     position: absolute;
-    margin-top: 306px;
-    margin-left: 131px;
+    bottom: 30px;
+    left: 131px;
     padding: 10px;
     border: 1px solid $clear-color;
     @include border-radius(10px);
