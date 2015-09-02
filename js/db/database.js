@@ -2,7 +2,8 @@
  * Created by marlon on 17/12/14.
  */
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGOLAB_URI);
+//mongoose.connect(process.env.MONGOLAB_URI);
+mongoose.connect('mongodb://localhost/isdralit');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Erro de conexão:'));
