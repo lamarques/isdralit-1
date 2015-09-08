@@ -1,10 +1,22 @@
 <div class="header">
     <div class="content">
         <a href="/" class="logo"></a>
+        <div class="menu" data-bind="foreach:{data:menus,as:'menu'}" >
+                <li class="title link" data-bind="text: menu.name, click: $root.openUrl">
 
-        <div class="menu" data-bind="foreach: menus">
-            <div class="title link" data-bind="text: name, click: $root.openUrl"></div>
+
+                    <ul class="submenu" data-bind="visible: menu.isInstitucional">
+                        <li><a href="#">National</a></li>
+                        <li><a href="#">International</a>
+                        </li> <li><a href="#">Sport</a></li>
+                        <li><a href="#">Hollybood</a></li>
+                    </ul>
+                    <!-- /ko -->
+                </li>
+
         </div>
+
+
     </div>
 </div>
 

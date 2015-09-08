@@ -25,14 +25,14 @@
     .menu {
       float: right;
       margin-right: 12px;
-      > div {
-        display: inline-block;
-        float: left;
-      }
-      .title {
-        margin-top: 26px;
-        padding: 0px 20px;
-        text-align: center;
+      ul {
+        display: table;
+        li {
+          display: table-cell;
+          margin-top: 26px;
+          padding: 0px 20px;
+          text-align: center;
+        }
       }
     }
   }

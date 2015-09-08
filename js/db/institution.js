@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 
 ObjectId = mongoose.Schema.Types.ObjectId;
 
+
 Institution = mongoose.model('Institution', mongoose.Schema({
     key: String,
     titleHtml: String,
@@ -13,7 +14,8 @@ Institution = mongoose.model('Institution', mongoose.Schema({
         type: ObjectId,
         ref: 'File'
     },
-    order: Number
+    order: Number,
+
 }));
 
 exports.defaultValues = [

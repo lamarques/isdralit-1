@@ -74,7 +74,9 @@ exports.ViewModel = function () {
     };
 
     if (!external.isAdmin()) {
-        external.findAll('menu', self.menus);
+        external.findAll('menu', self.menus, {}, function (menu) {
+            menu.isInstitucional = menu.name == 'Institucional';
+        });
     }
 
     external.showContent();
