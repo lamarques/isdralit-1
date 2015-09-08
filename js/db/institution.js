@@ -14,7 +14,7 @@ Institution = mongoose.model('Institution', mongoose.Schema({
         type: ObjectId,
         ref: 'File'
     },
-    order: Number,
+    order: Number
 
 }));
 

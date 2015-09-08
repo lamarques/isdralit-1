@@ -3,7 +3,7 @@
  */
 var mongoose = require('mongoose');
 //mongoose.connect(process.env.MONGOLAB_URI);
-mongoose.connect('mongodb://localhost   /isdralit');
+mongoose.connect('mongodb://localhost/isdralit');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Erro de conexão:'));
