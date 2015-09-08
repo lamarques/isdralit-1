@@ -76,6 +76,13 @@ exports.ViewModel = function () {
     if (!external.isAdmin()) {
         external.findAll('menu', self.menus, {}, function (menu) {
             menu.isInstitucional = menu.name == 'Institucional';
+            if (menu.isInstitucional)
+            {
+                menu.institutions = ko.observableArray([]);
+                external.findAll('institution', menu.institutions, {}, function (institution) {
+                    console.log( institution);
+                });
+            }
         });
     }
 

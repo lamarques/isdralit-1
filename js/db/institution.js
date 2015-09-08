@@ -18,14 +18,7 @@ Institution = mongoose.model('Institution', mongoose.Schema({
 
 }));
 
-exports.defaultValues = [
-    new Item({
-        key: 'institution',
-        titleHtml: 'Item 1',
-        detailHtml: 'text ahsdkjhaskjd kajhskdjhaskjdh',
-        order: 0
-    })
-];
+
 
 exports.Model = Institution;
 exports.Populate = 'image';

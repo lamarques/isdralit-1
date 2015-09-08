@@ -3,19 +3,18 @@
         <a href="/" class="logo"></a>
         <div class="menu" data-bind="foreach:{data:menus,as:'menu'}" >
 
-                <li  >
+                <li>
                     <p class="title link" data-bind="text: menu.name, click: $root.openUrl"></p>
                     <div data-bind="if: menu.isInstitucional">
-
-                        <ul class="submenu" data-bind="foreach:{data: sub, as Instituion}">
+                        <ul class="submenu" data-bind="foreach:{data: menu.institutions,as: 'institution'}">
                             <li>
-                            <p data-bind="text: sub.titleHtml"></p>
+                                <a data-bind="attr: { href: institution.key ,title:institution.titleHtml"> <p data-bind="text: institution.titleHtml"></p></a>
+
+
+
                             </li>
                         </ul>
-
                     </div>
-
-
                 </li>
 
         </div>
