@@ -1,23 +1,20 @@
 <div class="header">
     <div class="content">
         <a href="/" class="logo"></a>
-        <div class="menu" data-bind="foreach:{data:menus,as:'menu'}" >
+        <ul class="menu" data-bind="foreach:{data:menus,as:'menu'}" >
 
                 <li>
                     <p class="title link" data-bind="text: menu.name, click: $root.openUrl"></p>
                     <div data-bind="if: menu.isInstitucional">
-                        <ul class="submenu" data-bind="foreach:{data: menu.institutions,as: 'institution'}">
+                        <ul class="" data-bind="foreach:{data: menu.institutions,as: 'institution'}">
                             <li>
-                                <a data-bind="attr: { href: institution.key ,title:institution.titleHtml"> <p data-bind="text: institution.titleHtml"></p></a>
-
-
-
+                                <p  class="title link"  data-bind="text: institution.titleHtml, click: $root.openUrl"></p>
                             </li>
                         </ul>
                     </div>
                 </li>
 
-        </div>
+        </ul>
 
 
     </div>

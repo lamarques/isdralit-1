@@ -24,14 +24,36 @@
     }
     .menu {
       float: right;
-      margin-right: 12px;
-      ul {
-        display: table;
-        li {
-          display: table-cell;
-          margin-top: 26px;
-          padding: 0px 20px;
-          text-align: center;
+      list-style: none;
+      display: table;
+      padding: 0;
+      margin: 0;
+      ul { padding: 0; }
+      > li {
+        position: relative;
+        line-height: 5em;
+        &:hover {
+          div {
+            display: block;
+            visibility: visible;
+          }
+        }
+        div {
+          position: absolute;
+          z-index: 1000;
+          display: none;
+          min-width: 200%;
+          visibility: hidden;
+          background-color: $background-color;
+        }
+      }
+      li {
+        display: table-cell;
+        text-align: center;
+        float: left;
+        margin: 0 2em;
+        .link {
+          margin: 0;
         }
       }
     }

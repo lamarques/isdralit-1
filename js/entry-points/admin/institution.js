@@ -9,7 +9,7 @@ ViewModel = function () {
     var self = this;
 
     self.dataModel = {
-        key: {
+        url: {
             label: 'Chave da URL',
             type: 'text'
         },

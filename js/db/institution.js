@@ -7,7 +7,7 @@ ObjectId = mongoose.Schema.Types.ObjectId;
 
 
 Institution = mongoose.model('Institution', mongoose.Schema({
-    key: String,
+    url: String,
     titleHtml: String,
     detailHtml: String,
     image: {

@@ -80,7 +80,7 @@ exports.ViewModel = function () {
             {
                 menu.institutions = ko.observableArray([]);
                 external.findAll('institution', menu.institutions, {}, function (institution) {
-                    console.log( institution);
+                    //console.log( institution);
                 });
             }
         });
