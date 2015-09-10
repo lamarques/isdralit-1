@@ -5,6 +5,7 @@
   padding-bottom: 15px;
   .gallery {
     margin-right: 15px;
+    float: left;
     .photo {
       @extend .container;
       display: inline-block;
@@ -37,6 +38,7 @@
   }
   .info {
     width: 753px;
+    float: left;
     color: $title-color;
     .title {
       font-size: 38px;
