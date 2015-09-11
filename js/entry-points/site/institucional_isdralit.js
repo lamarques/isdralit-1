@@ -13,7 +13,7 @@ ViewModel = function () {
     self.institutions = ko.observableArray([]);
 
 
-    base.findAll('institution', self.institutions, {     "titleHtml": "Isdra" }, function (institution) {
+    base.findAll('institution', self.institutions, {     "titleHtml": "Isdralit" }, function (institution) {
         institution.imageSource = institution.image ? '/' + institution.image.path : '';
     });
     ko.utils.extend(self, new base.ViewModel());
