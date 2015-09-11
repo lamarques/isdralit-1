@@ -75,8 +75,13 @@
     
     
     
-      width: 468px;
+      width: 49.5%;
+      float: left;
+
       border-bottom: 4px solid $main-color;
+      &:last-of-type {
+        margin-left: 1%;
+      }
       &:hover {
         border-color: lighten($main-color, 15%);
       }
