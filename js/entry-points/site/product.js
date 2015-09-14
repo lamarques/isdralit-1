@@ -45,6 +45,7 @@ ViewModel = function () {
             if (item.isMain) {
                 self.setImages(item);
                 item.measuresImageSource = item.measuresImage ? '/' + item.measuresImage.path : '';
+                item.informationsImageSource = item.image ? '/' + item.image.path : '';
                 item.informations = ko.observableArray([]);
                 base.findAll('technical', item.informations, { item: item._id });
             } else if (suggestions.length < 4) {
