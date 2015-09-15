@@ -1,29 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head lang="pt-BR">
-    <% include ../partials/head %>
-</head>
-<body class="<%= path %>">
+    <!DOCTYPE html>
+    <html>
+    <head lang="pt-BR">
+        <% include ../partials/head %>
+    </head>
+    <body class="<%= path %>">
 
-<% include ../partials/header %>
-hhh
+    <% include ../partials/header %>
 
-<div>
-    <h1>Contato</h1>
-    <p>Nome: <input type="text" class="form-control" data-bind="value: firstName" /></p>
-    <p>Sobre nome: <input type="text" class="form-control" data-bind="value: lastName" /></p>
-    <p>Email: <input type="text" class="form-control" type="email" data-bind="value: email" /></p>
-    <p>Titulo: <input type="text" class="form-control" data-bind="value: subject" /></p>
-    <p>Sua menssagem: <textarea class="form-control" rows="5" data-bind="value: content"></textarea></p>
-    <p>Categoria:</p>
-    <select class="form-control" data-bind="options: categories, optionsCaption: 'Selecione...', value: category"></select>
+    <div class="content">
+        <div class="section">
+            <h1>Contato</h1>
 
-    <p><button data-bind="click: submit">Submit</button></p>
-</div>
-
+            <div><p>Nome: <input type="text" class="form-control" data-bind="value: firstName" /></p></div>
+            <div><p>Sobre nome: <input type="text" class="form-control" data-bind="value: lastName" /></p></div>
+            <div><p>Email: <input type="text" class="form-control" type="email" data-bind="value: email" /></p></div>
+            <div><p>Titulo: <input type="text" class="form-control" data-bind="value: subject" /></p></div>
+            <div><p>Sua menssagem: <textarea class="form-control" rows="5" data-bind="value: content"></textarea></p></div>
+            <div><p>Categoria:</p>
+            <select class="form-control" data-bind="options: categories, optionsCaption: 'Selecione...', value: category"></select>
+            <div><p><button data-bind="click: submit">Submit</button></p></div>
 
 
-<% include ../partials/footer %>
+            </div>
+    </div>
+    </div>
+            <% include ../partials/footer %>
 
-</body>
-</html>
+    </body>
+    </html>

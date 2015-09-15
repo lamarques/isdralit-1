@@ -6,7 +6,7 @@ var $ = require('jquery');
 var ko = require('knockout');
 var utils = require('../../common/utils');
 var zoom = require('../../common/zoom');
-var base = require('../../common/base');
+var crud = require('../../common/crud');
 
 ViewModel = function () {
     var self = this;
@@ -24,9 +24,9 @@ ViewModel = function () {
         'Volvo', 'Saab', 'Fiat', 'Audi'
     ];
 
-    self.submit = function (data) {
-    };
-
+    //self.submit = function (data) {
+    //};
+    ko.utils.extend(self, new crud.ViewModel('contact', self.dataModel));
 };
 
 ko.applyBindings(new ViewModel());

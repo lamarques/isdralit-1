@@ -46,6 +46,7 @@ exports.Technical = require('./technical');
 exports.Product = require('./product');
 exports.Information = require('./information');
 exports.Institution = require('./institution');
+exports.Contact = require('./contact');
 
 //if (process.env.NODE_ENV == 'development') {
 //    var initialCharge = require('./initial-charge');

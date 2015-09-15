@@ -6,6 +6,7 @@ var ko = require('knockout');
 var utils = require('../../common/utils');
 var zoom = require('../../common/zoom');
 var base = require('../../common/base');
+var crud = require('../../common/crud');
 
 ViewModel = function () {
     var self = this;
@@ -26,6 +27,9 @@ ViewModel = function () {
     self.submit = function (data) {
     };
 
+
+    //ko.utils.extend(self, new base.ViewModel());
+    ko.utils.extend(self, new crud.ViewModel('contact', self.dataModel));
 };
 
 ko.applyBindings(new ViewModel());

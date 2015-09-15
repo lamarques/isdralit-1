@@ -1,15 +1,14 @@
-
 var mongoose = require('mongoose');
 
 ObjectId = mongoose.Schema.Types.ObjectId;
 
 Contact = mongoose.model('Contact', mongoose.Schema({
 
-    firstName:String,
+    firstName: String,
     lastName: String,
-        email: String,
+    email: String,
     subject: String,
-        content: String,
+    content: String,
     category: String
 }));
 
