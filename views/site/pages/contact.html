@@ -1,30 +1,23 @@
-    <!DOCTYPE html>
-    <html>
-    <head lang="pt-BR">
-        <% include ../partials/head %>
-    </head>
-    <body class="<%= path %>">
+<!DOCTYPE html>
+<html>
+<head lang="pt-BR">
+    <% include ../partials/head %>
 
-    <% include ../partials/header %>
+</head>
+<body class="<%= path %>">
 
-    <div class="content">
-        <div class="section">
-            <h1>Contato</h1>
+<% include ../partials/header %>
 
-            <div><p>Nome: <input type="text" class="form-control" data-bind="value: contact.firstName" /></p></div>
-            <div><p>Sobre nome: <input type="text" class="form-control" data-bind="value: contact.lastName" /></p></div>
-            <div><p>Email: <input type="text" class="form-control" type="email" data-bind="value: contact.email" /></p></div>
-            <div><p>Titulo: <input type="text" class="form-control" data-bind="value: contact.subject" /></p></div>
-            <div><p>Sua menssagem: <textarea class="form-control" rows="5" data-bind="value: contact.content"></textarea></p></div>
-            <div><p>Categoria:</p>
-            <select class="form-control" data-bind="options: categories, optionsCaption: 'Selecione...', value: contact.category"></select>
-            <div><p><button data-bind="click: submit">Submit</button></p></div>
+<div class="content container-fluid">
+    <div class="row">
+        <!--<div class="col-sm-5">-->
+        <!--</div>-->
+            <% include ../partials/form %>
 
-
-            </div>
     </div>
-    </div>
-            <% include ../partials/footer %>
+</div>
 
-    </body>
-    </html>
+<% include ../partials/footer %>
+
+</body>
+</html>
