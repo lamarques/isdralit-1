@@ -8,3 +8,114 @@
 @import "../../button";
 @import "../../html-editor";
 @import "../../upload";
+
+
+#form-contato {
+
+  width: 50%;
+
+  margin: 0 auto;
+
+  min-height: 650px;
+
+}
+
+form {
+
+  width: 100%;
+
+  float: left;
+
+  margin: 2em 0;
+
+  .form-group,
+
+  .btn-group {
+
+    margin: .5em 0;
+
+    width: 100%;
+
+    float: left;
+
+  }
+
+  .form-group {
+
+    label,
+
+    input,
+
+    textarea {
+
+      float: left;
+
+      width: 100%;
+
+    }
+
+    label {
+
+      width: 100%;
+
+      margin-bottom: .35em;
+
+    }
+
+    input{
+
+      border: 1px solid;
+
+      padding: .5em !important;
+
+      box-sizing: border-box;
+
+      font-size: 16px;
+
+      &:focus {
+
+        outline: none;
+
+      }
+
+    }
+
+  }
+
+  .btn-group {
+
+    .btn {
+
+      float: right;
+
+      margin-left: 10px;
+
+    }
+
+  }
+
+}
+
+textarea#content {
+
+  width: 100%;
+
+  border: 1px solid;
+
+  padding: .5em !important;
+
+  box-sizing: border-box;
+
+  font-size: 16px;
+
+  min-height: 5em;
+
+  resize: none;
+
+  &:focus {
+
+    outline: none;
+
+  }
+
+}
