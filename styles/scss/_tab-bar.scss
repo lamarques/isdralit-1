@@ -58,6 +58,20 @@
   .tabber-tab {
     clear: both;
     display: none;
+
+
+
+      text-align: center;
+
+      .info-box {
+
+        text-align: left;
+
+      }
+
+
+
+
     &.active {
       display: block;
     }

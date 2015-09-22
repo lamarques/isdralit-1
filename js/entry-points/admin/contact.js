@@ -18,15 +18,15 @@ ViewModel = function () {
     var self = this;
 
     self.dataModel = {
-
+        state: {
+            label: 'Estado',
+            type: 'text'
+        },
         firstName: {
             label: 'Nome',
             type: 'text'
         },
-        lastName: {
-            label: 'Sobrenome',
-            type: 'text'
-        },
+
         email: {
             label: 'E-mail',
             type: 'text'

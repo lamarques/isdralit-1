@@ -56,7 +56,7 @@ exports.getFields = function (dataModel) {
 
     return fields;
 };
-
+//conversar com o marlon
 exports.getOptions = function (field) {
     var options = ko.observableArray([]);
 

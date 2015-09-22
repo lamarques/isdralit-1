@@ -11,13 +11,24 @@
 
 
 #form-contato {
-
-  width: 50%;
-
-  margin: 0 auto;
-
-  min-height: 650px;
-
+  &, & ~ div {
+    float: left;
+    width: 50%;
+    min-height: 650px;
+    box-sizing: border-box;
+  }
+  & ~ div {
+    padding: 2em;
+    ul {
+      li {
+        margin-bottom: 1em;
+        p {
+          margin: 0;
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
 }
 
 form {

@@ -37,10 +37,10 @@
     .certified {
       @extend .footer-column;
       .stamps {
-        width: 227px;
-        height: 63px;
+        width: 363px;
+        height: 80px;
         background-image: url('/images/stamps.png');
-        background-size: 227px 63px;
+        background-size: 363px 80px;
       }
     }
   }

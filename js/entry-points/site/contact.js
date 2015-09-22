@@ -23,10 +23,7 @@ ViewModel = function () {
             label: 'Nome',
             type: 'text'
         },
-        lastName: {
-            label: 'Sobrenome',
-            type: 'text'
-        },
+
         email: {
             label: 'E-mail',
             type: 'text'
@@ -35,8 +32,13 @@ ViewModel = function () {
             label: 'Telefone',
             type: 'text'
         },
+        //state: {
+        //    label: 'Estado',
+        //    type: 'combo-box',
+        //    fieldOptionName:self.state
+        //},
         subject: {
-            label: 'Titulo',
+            label: 'Título',
             type: 'text'
         },
         content: {
@@ -50,9 +52,8 @@ ViewModel = function () {
         //    fieldOptionName: self.categories
         //}
     };
-    //self.categories = [
-    //    'Arquiteto', 'Construtor', 'Vendedor', 'Engenheiro', 'Consumidor final',
-    //    'Profissional da Construção Civil', 'Lojista'
+    //self.state = [
+    //    'RS'
     //];
     ko.utils.extend(self, new crud.ViewModel('contact', self.dataModel));
 };
