@@ -43,17 +43,10 @@ ViewModel = function () {
             label: 'Sua menssagem',
             type: 'text-area'
         }
-        //,
-        //category: {
-        //    label: 'Categoria',
-        //    type: 'combo-box',
-        //    fieldOptionName: self.categories
-        //}
+
     };
-    //self.categories = [
-    //    'Arquiteto', 'Construtor', 'Vendedor', 'Engenheiro', 'Consumidor final',
-    //    'Profissional da Construção Civil', 'Lojista'
-    //];
+
+
     ko.utils.extend(self, new crud.ViewModel('contact', self.dataModel));
 };
 

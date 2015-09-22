@@ -1,5 +1,17 @@
 @import "variables";
 
+.contact {
+  .footer {
+    .nav-bar {
+      > div {
+        .title {
+          padding-bottom: 6px !important;
+        }
+      }
+    }
+  }
+}
+
 .footer-column {
   float: left;
   width: 369px;

@@ -8,7 +8,8 @@ Contact = mongoose.model('Contact', mongoose.Schema({
     state: String,
     email: String,
     subject: String,
-    content: String
+    content: String,
+    cellphone:String
     //category: String
 
 }));

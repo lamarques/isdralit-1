@@ -34,23 +34,22 @@ ViewModel = function () {
         },
         //state: {
         //    label: 'Estado',
-        //    type: 'combo-box',
-        //    fieldOptionName:self.state
+        //    type: 'combo-box2',
+        //    fieldOptionName:ko.observableArray(['RS', 'SC', 'PR'])
         //},
         subject: {
             label: 'Título',
             type: 'text'
         },
         content: {
-            label: 'Sua menssagem',
+            label: 'Sua mensagem',
             type: 'text-area'
         }
-        //,
-        //category: {
-        //    label: 'Categoria',
-        //    type: 'combo-box',
-        //    fieldOptionName: self.categories
-        //}
+        //states: ko.observableArray(['RS', 'SC', 'PR']),
+        //categories : ko.observableArray( [
+        //    'Arquiteto', 'Construtor', 'Vendedor', 'Engenheiro', 'Consumidor final',
+        //    'Profissional da Construção Civil', 'Lojista'
+        //])
     };
     //self.state = [
     //    'RS'
