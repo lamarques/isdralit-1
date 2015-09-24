@@ -12,6 +12,8 @@ require('bootstrap');
 var external = this;
 
 exports.save = function (name, data, successfulAction) {
+    console.log(name);
+    console.log(data);
     $.ajax({
         type: 'POST',
         contentType: 'application/json',

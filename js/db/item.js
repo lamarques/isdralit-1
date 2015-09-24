@@ -29,6 +29,10 @@ Item = mongoose.model('Item', mongoose.Schema({
         type: ObjectId,
         ref: 'File'
     }],
+    downloads: [{
+        type: ObjectId,
+        ref: 'File'
+    }],
     order: Number
 }));
 
@@ -60,5 +64,5 @@ exports.defaultValues = [
 ];
 
 exports.Model = Item;
-exports.Populate = 'category measuresImage backgroundImage image images';
+exports.Populate = 'category measuresImage backgroundImage image images downloads';
 exports.Sort = 'order';
