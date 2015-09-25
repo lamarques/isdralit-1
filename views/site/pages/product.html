@@ -34,11 +34,17 @@
         <div class="tab-bar">
             <menu class="tabber-menu">
                 <a href="#tab-1" class="tabber-handle">Medidas</a>
+                <a href="#tab-3" class="tabber-handle">Downloads</a>
                 <!--<a href="#tab-2" class="tabber-handle">Informações Técnicas</a>-->
             </menu>
 
             <div id="tab-1" class="tabber-tab">
                 <img style="width: auto;" data-bind="visible: measuresImageSource, attr: { src: measuresImageSource }" />
+            </div>
+
+            <div id="tab-3" class="tabber-tab"  data-bind="foreach: { data: downloads, as: 'download' }">
+                <!--<img style="width: auto;" data-bind="visible: measuresImageSource, attr: { src: measuresImageSource }" />-->
+                <a data-bind="attr: { href: download, title: download }">Report</a>
             </div>
 
             <!--<div id="tab-2" class="tabber-tab" data-bind="foreach: { data: informations, as: 'information' }">-->

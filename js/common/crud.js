@@ -164,7 +164,7 @@ exports.ViewModel = function (name, dataModel) {
             }
             field.value(external.findOption(field, value) || value);
         });
-       
+
         if (!value && field.isMultiple)
         {
             value = [];
