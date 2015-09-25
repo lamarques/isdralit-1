@@ -49,15 +49,15 @@
     .certified {
       @extend .footer-column;
       .stamps {
-        width: 363px;
-        height: 80px;
+        width: 454px;
+        height: 129px;
         background-image: url('/images/stamps.png');
-        background-size: 363px 80px;
+        background-size: 454px 129px;
       }
     }
   }
   .bottom-bar {
-    height: 73px;
+    height: 90px;
     background-color: $main-color;
     .logo {
       float: left;
@@ -79,12 +79,20 @@
     }
     .linkedin {
       float: left;
-      width: 109px;
-      height: 26px;
-      margin-top: 23.5px;
-      margin-left: 80px;
-      //background-image: url('/images/linkedin_isdralit.jpg');
-      background-size: 109px 26px;
+      width: 80px;
+      height: 20px;
+      margin-top: 31px;
+      margin-left: 70px;
+      background-size: 70px 10px;
+      a {
+        display: block;
+        width: 80px;
+        height: 20px;
+        img {
+          width: 80px;
+          height: 20px;
+        }
+      }
     }
   }
 }
