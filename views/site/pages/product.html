@@ -43,8 +43,10 @@
             </div>
 
             <div id="tab-3" class="tabber-tab"  data-bind="foreach: { data: downloads, as: 'download' }">
+
                 <!--<img style="width: auto;" data-bind="visible: measuresImageSource, attr: { src: measuresImageSource }" />-->
-                <a data-bind="attr: { href: download, title: download }">Report</a>
+
+                <a data-bind="attr: { href: download.originalname }"><p data-bind="html: download.originalname"></p></a>
             </div>
 
             <!--<div id="tab-2" class="tabber-tab" data-bind="foreach: { data: informations, as: 'information' }">-->
