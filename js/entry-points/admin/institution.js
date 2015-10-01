@@ -20,7 +20,8 @@ ViewModel = function () {
         },
         detailHtml: {
             label: 'Descrição',
-            type: 'html-editor'
+            type: 'html-editor',
+            isTableHidden: true
         },
 
 
