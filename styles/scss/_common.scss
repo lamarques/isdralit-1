@@ -3,7 +3,7 @@
 @import "separator";
 @import "spinner";
 
-html {
+html, body {
   height: 100%;
 }
 
@@ -14,18 +14,6 @@ body {
   font-family: PTSans-Regular;
   font-size: 16px;
   background-color: $background-color;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  &.site:after {
-    display: block;
-    content: '';
-    height: 248px;
-  }
   &.admin {
     padding-top: 70px;
     @media (max-width: $screen-mobile-max-width) {
@@ -39,14 +27,23 @@ body {
 
 .content {
   position: relative;
-  margin: 0 auto;
-  flex: 1;
+}
+
+.site > .content,
+.admin > .content {
+  min-height: 100%;
+  margin-bottom: -300px;
+  &:after {
+    content: "";
+    display: block;
+    height: 300px;
+  }
 }
 
 .site .content,
 .admin .content {
   width: 1200px;
-  flex: 1;
+  margin: 0 auto;
 }
 
 .container {

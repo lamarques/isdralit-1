@@ -2,6 +2,7 @@
 <html>
 <head lang="pt-BR">
     <% include ../partials/head %>
+
 </head>
 <body class="<%= path %>">
 
@@ -34,11 +35,24 @@
         <div class="tab-bar">
             <menu class="tabber-menu">
                 <a href="#tab-1" class="tabber-handle">Medidas</a>
+                <a href="#tab-3" class="tabber-handle">Downloads</a>
                 <!--<a href="#tab-2" class="tabber-handle">Informações Técnicas</a>-->
             </menu>
 
             <div id="tab-1" class="tabber-tab">
                 <img style="width: auto;" data-bind="visible: measuresImageSource, attr: { src: measuresImageSource }" />
+            </div>
+
+            <div id="tab-3" class="tabber-tab">
+                <p>Altere o arquivo baixado para o nome do documento que está nesta tela</p>
+             <div   data-bind="foreach: { data: downloads, as: 'download' }">
+                       <a    data-bind="attr: { href: '/' + download.path,download:download.origialname,'download':download.origialname},download:download.origialname,html: download.originalname">
+
+                       </a>
+                 <br>
+
+                <!--<a data-bind="attr: { href: '/' + download.path}, 'title':  download.originalname">  <p data-bind="html: download.origialname"></p></a>-->
+                 </div>
             </div>
 
             <!--<div id="tab-2" class="tabber-tab" data-bind="foreach: { data: informations, as: 'information' }">-->

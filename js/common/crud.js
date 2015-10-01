@@ -12,6 +12,8 @@ require('bootstrap');
 var external = this;
 
 exports.save = function (name, data, successfulAction) {
+    console.log(name);
+    console.log(data);
     $.ajax({
         type: 'POST',
         contentType: 'application/json',
@@ -156,8 +158,17 @@ exports.ViewModel = function (name, dataModel) {
 
         self.fields().forEach(function (field) {
             var value = data[field.name];
+            if (!value && field.isMultiple)
+            {
+                value = [];
+            }
             field.value(external.findOption(field, value) || value);
         });
+
+        if (!value && field.isMultiple)
+        {
+            value = [];
+        }
     };
 
     self.getValue = function (value) {

@@ -47,6 +47,12 @@ ViewModel = function () {
             isMultiple: true,
             isTableHidden: true
         },
+        downloads: {
+            label: 'Downloads',
+            type: 'upload',
+            isMultiple: true,
+            isTableHidden: true
+        },
         order: {
             label: 'Ordem',
             type: 'number'

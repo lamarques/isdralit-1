@@ -16,7 +16,7 @@ exports.init = function (field) {
         var settings = {
             action: '/upload',
             param: 'file',
-            allow: '*.(jpg|jpeg|gif|png)',
+            //allow: '*.(jpg|jpeg|gif|png)',
             loadstart: function () {
                 $bar.css('width', '0%').text('0%');
                 $progress.removeClass('uk-hidden');
