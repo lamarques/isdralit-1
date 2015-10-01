@@ -46,12 +46,12 @@
             <div id="tab-3" class="tabber-tab">
                 <p>Altere o arquivo baixado para o nome do documento que está nesta tela</p>
              <div   data-bind="foreach: { data: downloads, as: 'download' }">
-                       <a    data-bind="attr: { href: '/' + download.path},html: download.originalname">
 
-                       </a>
-                 <br>
 
-                <!--&lt;!&ndash;<a data-bind="attr: { href: '/' + download.path}, 'title':  download.originalname">  <p data-bind="html: download.origialname"></p></a>&ndash;&gt;-->
+                     <a    data-bind="attr: { href: '/' + download.path,download : download.originalname},html: download.originalname"></a>
+                     <br>
+
+                
                  </div>
             </div>
 

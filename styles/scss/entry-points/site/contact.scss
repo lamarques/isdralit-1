@@ -139,3 +139,19 @@ textarea#content {
   }
 
 }
+
+
+.contact > .content {
+
+  &:after {
+
+    content: "";
+
+    display: block;
+
+    height: 700px;
+
+  }
+
+}
+
