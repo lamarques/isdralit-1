@@ -22,21 +22,21 @@ ViewModel = function () {
         firstName: {
             label: 'Nome',
             type: 'text'
-        },
 
+
+        },
         email: {
             label: 'E-mail',
             type: 'text'
+        },
+        state: {
+            label:'Selecione seu estado',
+            type: 'combo-box2'
         },
         cellphone: {
             label: 'Telefone',
             type: 'text'
         },
-        //state: {
-        //    label: 'Estado',
-        //    type: 'combo-box2',
-        //    fieldOptionName:ko.observableArray(['RS', 'SC', 'PR'])
-        //},
         subject: {
             label: 'Título',
             type: 'text'
@@ -51,10 +51,13 @@ ViewModel = function () {
         //    'Profissional da Construção Civil', 'Lojista'
         //])
     };
-    //self.state = [
-    //    'RS'
-    //];
-    ko.utils.extend(self, new crud.ViewModel('contact', self.dataModel));
+    //var states= ko.observableArray(['RS', 'SC', 'PR']);
+    //self.firstName = ko.observable().extend({ required: true });
+    //if (self.firstName !=null)
+        ko.utils.extend(self, new crud.ViewModelContact('contact', self.dataModel));
+    //else
+    //    ko.utils.extend(self, null);
+
 };
 
 ko.applyBindings(new ViewModel());

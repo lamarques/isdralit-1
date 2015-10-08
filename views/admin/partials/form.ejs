@@ -2,7 +2,7 @@
     <!-- ko foreach: { data: fields, as: 'field' } -->
     <!-- ko if: !field.isFormHidden -->
     <div class="form-group">
-        <label data-bind="html: field.label, attr: { for: field.name }">Nome</label>
+        <label data-bind="html: field.label, attr: { for: field.name } ">Nome</label>
 
         <!-- ko if: field.type == 'text' -->
         <input type="text" class="form-control" data-bind="value: field.value, attr: { id: field.name }">

@@ -3,6 +3,15 @@
 <head lang="pt-BR">
     <% include ../partials/head %>
     <% include ../partials/scripts %>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["firstName"].value;
+            if (x == null || x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+    </script>
 </head>
 <body class="<%= path %> contact">
 
@@ -10,9 +19,9 @@
 
 <div class="content container-fluid">
     <div class="row">
-        <div id="form-contato">
+        <div id="form-contato" >
 
-            <% include ../partials/form %>
+            <% include ../partials/form2 %>
             </br></br>
             <p style="font-size:160%">Atendimento Comercial: 0800 512 295</p>
         </div>
