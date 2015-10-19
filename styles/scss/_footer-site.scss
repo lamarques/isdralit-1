@@ -39,7 +39,7 @@
   width: 100%;
   min-width: 1200px;
   .nav-bar {
-    height: 174px;
+    height: 184px;
     background-color: $light-gray-color;
     border-top: 1px solid $light-gray-border-color;
     .menu {
@@ -52,10 +52,10 @@
     .certified {
       @extend .footer-column;
       .stamps {
-        width: 454px;
-        height: 129px;
+        width: 460px;
+        height: 135px;
         background-image: url('/images/stamps.png');
-        background-size: 454px 129px;
+        background-size: 460px 135px;
       }
     }
   }
