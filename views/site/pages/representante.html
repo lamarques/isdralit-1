@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-BR">
+    <% include ../partials/head %>
+    <link rel="stylesheet" type="text/css" href="/styles/scss/entry-points/site/representante.css">
+</head>
+<body class="<%= path %>">
+
+<% include ../partials/header %>
+
+<div class="content">
+    <div class="section sectionrepresentante">
+        <div class="representante-grid">
+
+            <div class="inforepresentante">
+                <div class="titlerepresentante">
+                	Encontre aqui os representantes da <b>Isdralit</b><br> 
+                	distribuídos por todo o país<br><br>
+                	<span style="color: #f7941d;">SELECIONE UM ESTADO</span>
+                	<div style="margin-top: 25px;">
+						<select id="select" style="font-size: 20px;">
+							<option value="" default>Selecione um Estado</option>
+							<option value="AC">Acre</option>
+							<option value="AL">Alagoas</option>
+							<option value="AM">Amazonas</option>
+							<option value="BA">Bahia</option>
+							<option value="CE">Ceara</option>
+							<option value="DF">Distrito Federal</option>
+							<option value="ES">Espirito Santos</option>
+							<option value="GO">Goiania</option>
+							<option value="MA">Maranhao</option>
+							<option value="MT">Mato Grosso</option>
+							<option value="MS">Mato Grosso do Sul</option>
+							<option value="MG">Minas Gerais</option>
+							<option value="PA">Para</option>
+							<option value="PR">Parana</option>
+							<option value="PB">Pernambuco</option>
+							<option value="PI">Piaui</option>
+							<option value="RJ">Rio de Janeiro</option>
+							<option value="RN">Rio Grande do Norte</option>
+							<option value="RS">Rio Grande do Sul</option>
+							<option value="RO">Rondonia</option>
+							<option value="SC">Santa Catarina</option>
+							<option value="SP">Sao Paulo</option>
+							<option value="SE">Sergipe</option>
+						</select>
+                	</div>
+                </div>
+                <div id="representante_content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>
+
+</body>
+</html>
