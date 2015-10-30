@@ -144,7 +144,7 @@ exports.ViewModel = function (name, dataModel) {
                     link += '" data-uk-lightbox data-lightbox-type="image">';
                     link += file['originalname'];
                     link += '</a>';
-                    //link += '<a class="upload-link" href="/';
+                    //link += '<a class="upload-link" data-bind="click: removeValue.bind($data, )" href="/';
                     //link += 'removeValue('
                     //link += file['filename'];
                     //link += '")">';
