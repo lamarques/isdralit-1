@@ -144,7 +144,13 @@ exports.ViewModel = function (name, dataModel) {
                     link += '" data-uk-lightbox data-lightbox-type="image">';
                     link += file['originalname'];
                     link += '</a>';
-
+                    //link += '<a class="upload-link" href="/';
+                    //link += 'removeValue('
+                    //link += file['filename'];
+                    //link += '")">';
+                    //link += '&nbsp remover';
+                    //link += '</a>';
+                    link += '</br>';
                 }
             }
 
@@ -185,6 +191,13 @@ exports.ViewModel = function (name, dataModel) {
             return value._id;
         }
         return value;
+    };
+
+    self.removeValue = function (array1,value) {
+        var index = array1.indexOf(value);
+        console.log( index);
+        console.log(array1);
+        array1.splice(index,1);
     };
 
     self.find = function () {
@@ -272,8 +285,6 @@ exports.ViewModelContact = function (name, dataModel) {
                     link += '<a class="upload-link" href="/';
                     link += file['path'];
                     link += '" data-uk-lightbox data-lightbox-type="image">';
-                    link += file['originalname'];
-                    link += '</a>';
 
                 }
             }
@@ -316,6 +327,7 @@ exports.ViewModelContact = function (name, dataModel) {
         }
         return value;
     };
+
 
     self.find = function () {
         self.dataValues([]);
