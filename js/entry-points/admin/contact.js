@@ -43,6 +43,13 @@ ViewModel = function () {
             label: 'Sua menssagem',
             type: 'text-area'
         }
+        ,
+        date: {
+            label: 'data',
+            type: 'text',
+            isTableHidden: true 
+        }
+
 
     };
 
