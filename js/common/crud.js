@@ -340,12 +340,9 @@ exports.ViewModelContact = function (name, dataModel) {
     self.save = function () {
         var validRegistration = 1;
         var data = {
-            _id: self.selectedId()
-
+            _id: self.selectedId(),
+            date: new Date()
         };
-        //data.data= new Date();
-        console.log("inicia save");
-        console.log(data);
         self.fields().forEach(function (field) {
                 var value = field.value();
                 var auxValue = self.getValue(value);
