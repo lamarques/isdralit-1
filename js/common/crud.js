@@ -14,6 +14,7 @@ var external = this;
 exports.save = function (name, data, successfulAction) {
     console.log(name);
     console.log(data);
+
     $.ajax({
         type: 'POST',
         contentType: 'application/json',
@@ -50,6 +51,7 @@ exports.getFields = function (dataModel) {
             isFormHidden: model.isFormHidden,
             isTableHidden: model.isTableHidden,
             fieldOptionName: model.fieldOptionName,
+
 
             value: model.isMultiple ? ko.observableArray([]) : ko.observable()
         };
@@ -339,7 +341,11 @@ exports.ViewModelContact = function (name, dataModel) {
         var validRegistration = 1;
         var data = {
             _id: self.selectedId()
+
         };
+        //data.data= new Date();
+        console.log("inicia save");
+        console.log(data);
         self.fields().forEach(function (field) {
                 var value = field.value();
                 var auxValue = self.getValue(value);
@@ -379,8 +385,8 @@ exports.ViewModelContact = function (name, dataModel) {
                     }
                 }
             }
-        )
-        ;
+        );
+
         //console.log(validRegistration);
         if (validRegistration == 1) {
             self.fields().forEach(function (field) {
@@ -391,6 +397,8 @@ exports.ViewModelContact = function (name, dataModel) {
         } else {
             self.remove(name, self.selectedId());
         }
+        console.log("finalizando o  save");
+        console.log(data);
         if (validRegistration == 1) {
 
             external.save(name, data, function () {
