@@ -9,7 +9,8 @@ Contact = mongoose.model('Contact', mongoose.Schema({
     email: String,
     subject: String,
     content: String,
-    cellphone:String
+    cellphone:String,
+    date:Date
     //category: String
 
 }));
