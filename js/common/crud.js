@@ -339,9 +339,12 @@ exports.ViewModelContact = function (name, dataModel) {
 
     self.save = function () {
         var validRegistration = 1;
+        var dia = new Date();
+        dia = dia.getDate() + "/" +(dia.getMonth() + 1) + "/" + dia.getFullYear();
+
         var data = {
             _id: self.selectedId(),
-            date: new Date()
+            date:dia
         };
         self.fields().forEach(function (field) {
                 var value = field.value();
