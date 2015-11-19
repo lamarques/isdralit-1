@@ -45,9 +45,9 @@ ViewModel = function () {
         }
         ,
         date: {
-            label: 'data',
+            label: 'Data',
             type: 'text',
-            isTableHidden: true 
+            isTableHidden: true
         }
 
 
