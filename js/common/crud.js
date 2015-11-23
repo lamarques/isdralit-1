@@ -397,7 +397,8 @@ exports.ViewModelContact = function (name, dataModel) {
         } else {
             self.remove(name, self.selectedId());
         }
-        
+        console.log("finalizando o  save");
+        console.log(data);
         if (validRegistration == 1) {
 
             external.save(name, data, function () {

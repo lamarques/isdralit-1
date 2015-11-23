@@ -13,8 +13,8 @@
 var $ = require('jquery');
 var ko = require('knockout');
 var crud = require('../../common/crud');
-var now = new Date();
-console.log(now);
+
+
 ViewModel = function () {
     var self = this;
 

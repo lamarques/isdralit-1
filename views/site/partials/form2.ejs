@@ -77,6 +77,9 @@
         <!-- ko if: field.type == 'number' -->
         <input type="text" class="form-control" data-bind="value: field.value, attr: { id: field.name }">
         <!-- /ko -->
+        <!-- ko if: field.type == 'text_date' -->
+        <input type="text" class="form-control" data-bind="value: moment(field.value).format('L'), attr: { id: field.name }">
+        <!-- /ko -->
     </div>
     <!-- /ko -->
     <!-- /ko -->

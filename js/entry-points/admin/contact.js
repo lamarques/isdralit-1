@@ -18,6 +18,12 @@ ViewModel = function () {
     var self = this;
 
     self.dataModel = {
+
+        date: {
+            label: 'Data',
+            type: 'text'
+
+        },
         state: {
             label: 'Estado',
             type: 'text'
@@ -41,14 +47,11 @@ ViewModel = function () {
         },
         content: {
             label: 'Sua menssagem',
-            type: 'text-area'
-        }
-        ,
-        date: {
-            label: 'Data',
-            type: 'text',
+            type: 'text-area',
             isTableHidden: true
         }
+
+
 
 
     };
