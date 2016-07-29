@@ -60,7 +60,12 @@ app.use('/styles', express.static(__dirname + '/styles'));
 app.use('/js', browserify(__dirname + '/js/entry-points'));
 
 app.get('/', function (req, res) {
-    res.redirect('/views/home');
+    //res.redirect('/views/home');
+    res.redirect('/index');
+});
+
+app.get('/index', function (req, res) {
+    res.render('index.ejs', {});
 });
 
 app.get('/cms', function (req, res) {

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-BR">
+    <% include ../partials/head %>
+</head>
+<body class="<%= path %>">
+
+<% include ../partials/header %>
+
+<div class="content">
+    <div class="banner">
+        <div class="arrow previous"></div>
+        <div class="arrow next"></div>
+
+        <div class="button" data-bind="click: openProducts">
+            <span>Conheça nossos produtos</span>
+
+            <div class="play"></div>
+        </div>
+
+        <ul data-bind="foreach: banners">
+            <li data-bind="style: { backgroundImage: backgroundImage }, attr: { 'data-url': url }">
+                <div class="detail" data-bind="html: detailHtml"></div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <div class="product" data-bind="foreach: categories">
+            <div data-bind="click: $root.openProducts">
+                <div class="background" data-bind="style: { backgroundImage: backgroundImage }"></div>
+                <div class="description">
+                    <div class="title" data-bind="html: titleHtml"></div>
+                </div>
+            </div>
+        </div>
+        
+        <p></p>
+        <div class="info" data-bind="foreach: informations">
+            <div data-bind="click: $root.openUrl">
+                <div class="background" data-bind="style: { backgroundImage: backgroundImage }"></div>
+                <div class="description">
+                    <div class="title" data-bind="html: titleHtml"></div>
+                    <div class="detail" data-bind="html: detailHtml"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>
+
+</body>
+</html>

@@ -1,0 +1,727 @@
+{ 
+"AC":[
+	{
+		"Titulo": "MONTANHA REPRES LTDA",
+		"Nome": "Sr Albino e Neuza",
+		"Cidade": "Estados - RO, PA, MA, AM, RR, AC",
+		"EmailPrincipal": "montanha@montanha.biz",
+		"EmailSecundario": "",
+		"TelefonePrincipal": "(65) 3634-1336",
+		"TelefoneSecundario": "3634-6109"
+	}
+],
+"AL":[
+	{
+		"Titulo": "REPRESENTACOES  MANARY LTDA",
+		"Nome": "Sr Ricardo",
+		"Cidade": "Estados AL, SE, BA PI, PE, PB, CE, RN",
+		"EmailPrincipal": "ricardomanary@uol.com.br",
+		"EmailSecundario": "",
+		"TelefonePrincipal": "(79) 3021-5510",
+		"TelefoneSecundario": "9156-0505"
+	}
+],
+"AM":[
+	{
+		"Titulo": "MONTANHA REPRES LTDA",
+		"Nome": "Sr Albino e Neuza",
+		"Cidade": "Estados - RO, PA, MA, AM, RR, AC",
+		"EmailPrincipal": "montanha@montanha.biz",
+		"EmailSecundario": "",
+		"TelefonePrincipal": "(65) 3634-1336",
+		"TelefoneSecundario": "3634-6109"
+	}
+],
+"BA":[
+	{
+		"Titulo": "REPRESENTACOES  MANARY LTDA",
+		"Nome": "Sr Ricardo",
+		"EmailPrincipal": "ricardomanary@uol.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Estados AL, SE, BA PI, PE, PB, CE, RN",
+		"TelefonePrincipal": "(79) 3021-5510",
+		"TelefoneSecundario": "9156-0505"
+	}
+],
+"CE":[
+	{
+		"Titulo": "REPRESENTACOES  MANARY LTDA",
+		"Nome": "Sr Ricardo",
+		"EmailPrincipal": "ricardomanary@uol.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Estados AL, SE, BA PI, PE, PB, CE, RN",
+		"TelefonePrincipal": "(79) 3021-5510",
+		"TelefoneSecundario": "9156-0505"
+	}
+],
+"DF":[
+	{
+		"Titulo": "HULK REPRESENTACOES LTDA",
+		"Nome": "Sr Hulk",
+		"EmailPrincipal": "hulkrepresentacoes@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Estados de GO e DF",
+		"TelefonePrincipal": "(62) 3251-0635",
+		"TelefoneSecundario": "3942-1025"
+	}
+],
+"ES":[
+	{
+		"Titulo": "ADEZIL REPRESENTACOES LTDA",
+		"Nome": "Sr Ilderson",
+		"EmailPrincipal": "adezil.rep@gmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Todo Estado - ES",
+		"TelefonePrincipal": "(27) 99782-6918",
+		"TelefoneSecundario": "99278-3582"
+	},
+	{
+		"Titulo": "Carlos Grossi",
+		"Nome": "",
+		"EmailPrincipal": "carlos.grossi@isdralit.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Gerente Regional SP-MG-RJ-ES",
+		"TelefonePrincipal": "(11) 99657-9866",
+		"TelefoneSecundario": ""
+	}
+],
+"GO":[
+	{
+		"Titulo": "HULK REPRESENTACOES LTDA",
+		"Nome": "Sr Hulk",
+		"EmailPrincipal": "hulkrepresentacoes@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Estados de GO e DF",
+		"TelefonePrincipal": "(62) 3251-0635",
+		"TelefoneSecundario": "3942-1025"
+	}
+],
+"MA":[
+	{
+		"Titulo": "MONTANHA REPRES LTDA",
+		"Nome": "Sr Albino e Neuza",
+		"EmailPrincipal": "montanha@montanha.biz",
+		"EmailSecundario": "",
+		"Cidade": "Estados - RO, PA, MA, AM, RR, AC",
+		"TelefonePrincipal": "(65) 3634-1336",
+		"TelefoneSecundario": "3634-6109"
+	}
+],
+"MT":[
+	{
+		"Titulo": "SPREL SOC. PAULISTA  REPRES. S/C  LTDA M E",
+		"Nome": "Sra Valdete",
+		"EmailPrincipal": "sprel@terra.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Todo Estado do MT",
+		"TelefonePrincipal": "(65) 3322-4062",
+		"TelefoneSecundario": "9981-5445"
+	}
+],
+"MS":[
+	{
+		"Titulo": "IMPERIO REPRESENT. COM  S/S LTDA",
+		"Nome": "Sr José",
+		"EmailPrincipal": "imperiorepresentacoes@uol.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Umuarama – PR e todo Estado MS",
+		"TelefonePrincipal": "(44) 3622-7999",
+		"TelefoneSecundario": "3056-6999"
+	}
+],
+"MG":[
+	{
+		"Titulo": "ALDA REPRESENTACOES LTDA",
+		"Nome": "Srª Alda",
+		"EmailPrincipal": "aldarep@terra.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Triângulo Mineiro - MG",
+		"TelefonePrincipal": "(34)  9986-2514",
+		"TelefoneSecundario": "3814-0678"
+	},
+	{
+		"Titulo": "ALYSSON BESSA REPRES. LTDA",
+		"Nome": "Sr Alysson",
+		"EmailPrincipal": "alybessa@connect.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Montes Claros - MG",
+		"TelefonePrincipal": "(38)  9963-8987",
+		"TelefoneSecundario": "9197-1308"
+	},
+	{
+		"Titulo": "CALIXTO REPRESENTAÇÕES LTDA",
+		"Nome": "Sr Calixto",
+		"EmailPrincipal": "calixtorep2@gmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Gov. Valadares - MG",
+		"TelefonePrincipal": "(33) 3271-5320",
+		"TelefoneSecundario": "9989-4576"
+	},
+	{
+		"Titulo": "DECASA REPRESENTACOES LTDA",
+		"Nome": "Sr Bitencourt",
+		"EmailPrincipal": "pedidos@decasarepresentacoes.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Belo Horizonte,  São Lourenço - MG",
+		"TelefonePrincipal": "(35) 3332-3425",
+		"TelefoneSecundario": "9963-0701"
+	},
+	{
+		"Titulo": "Carlos Grossi",
+		"Nome": "",
+		"EmailPrincipal": "carlos.grossi@isdralit.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Gerente Regional SP-MG-RJ-ES",
+		"TelefonePrincipal": "(11) 99657-9866",
+		"TelefoneSecundario": ""
+	}
+],
+"PA":[
+	{
+		"Titulo": "MONTANHA REPRES LTDA",
+		"Nome": "Sr Albino e Neuza",
+		"EmailPrincipal": "montanha@montanha.biz",
+		"EmailSecundario": "",
+		"Cidade": "Estados - RO, PA, MA, AM, RR, AC",
+		"TelefonePrincipal": "(65) 3634-1336",
+		"TelefoneSecundario": "3634-6109"
+	}
+],
+"PB":[
+	{
+		"Titulo": "REPRESENTACOES  MANARY LTDA",
+		"Nome": "Sr Ricardo",
+		"EmailPrincipal": "ricardomanary@uol.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Estados AL, SE, BA PI, PE, PB, CE, RN",
+		"TelefonePrincipal": "(79) 3021-5510",
+		"TelefoneSecundario": "9156-0505"
+	}
+],
+"PR":[
+	{
+		"Titulo": "A. DOMENEGHETTI & CIA LTDA",
+		"Nome": "Sr Aderbal",
+		"EmailPrincipal": "addomeneghetti@yahoo.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Londrina - PR",
+		"TelefonePrincipal": "(43) 3323-8762",
+		"TelefoneSecundario": "9913-0946"
+	},
+	{
+		"Titulo": "COBERSUL REPRES. COML. S/C LTDA",
+		"Nome": "Sr Lauro",
+		"EmailPrincipal": "silvia.maciag@gmail.com",
+		"EmailSecundario": "lau.isdra@gmail.com",
+		"Cidade": "Francisco Beltrão - PR",
+		"TelefonePrincipal": "(46) 3524-3377",
+		"TelefoneSecundario": "9933-3377"
+	},
+	{
+		"Titulo": "IMPERIO REPRESENT. COM  S/S LTDA",
+		"Nome": "Sr José",
+		"EmailPrincipal": "imperiorepresentacoes@uol.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Umuarama – PR e todo Estado MS",
+		"TelefonePrincipal": "(44) 3622-7999",
+		"TelefoneSecundario": "3056-6999"
+	},
+	{
+		"Titulo": "LUPERAL REPRES COMERCIAIS LTDA",
+		"Nome": "Srª Cleuza",
+		"EmailPrincipal": "luperal@gmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Maringa - PR",
+		"TelefonePrincipal": "(44) 32249808",
+		"TelefoneSecundario": "9972-9808"
+	},
+	{
+		"Titulo": "REPRESENTAÇÕES COM CANAA S/CLTDA",
+		"Nome": "Srª Eni",
+		"EmailPrincipal": "eni_alvess@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Cascavel - PR",
+		"TelefonePrincipal": "(45) 3224-9347",
+		"TelefoneSecundario": "8805-7028"
+	},
+	{
+		"Titulo": "SÓ FABRICAS REPRES.COMERCIAIS LTDA",
+		"Nome": "Sr Celso",
+		"EmailPrincipal": "grupoemac@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Curitiba - PR",
+		"TelefonePrincipal": "(41) 3346-5663",
+		"TelefoneSecundario": ""
+	}
+],
+"PI":[
+	{
+		"Titulo": "REPRESENTACOES  MANARY LTDA",
+		"Nome": "Sr Ricardo",
+		"EmailPrincipal": "ricardomanary@uol.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Estados AL, SE, BA PI, PE, PB, CE, RN",
+		"TelefonePrincipal": "(79) 3021-5510",
+		"TelefoneSecundario": "9156-0505"
+	}
+],
+"RJ":[
+	{
+		"Titulo": "M. FRANK - REPRES COMERCIAL LTDA",
+		"Nome": "Sr Mauro",
+		"EmailPrincipal": "mfrank.mfrank@gmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Região dos Lagos, Macaé - RJ",
+		"TelefonePrincipal": "(22) 2624-6777",
+		"TelefoneSecundario": "98813-6690"
+	},
+	{
+		"Titulo": "PESTANA REP LTDA",
+		"Nome": "Sr Luiz Pestana",
+		"EmailPrincipal": "  pestanarep@gmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Grande Rio - RJ",
+		"TelefonePrincipal": "(21) 3040-0008",
+		"TelefoneSecundario": "37863-9816"
+	},
+	{
+		"Titulo": "Carlos Grossi",
+		"Nome": "",
+		"EmailPrincipal": "carlos.grossi@isdralit.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Gerente Regional SP-MG-RJ-ES",
+		"TelefonePrincipal": "(11) 99657-9866",
+		"TelefoneSecundario": ""
+	}
+],
+"RN":[
+	{
+		"Titulo": "REPRESENTACOES  MANARY LTDA",
+		"Nome": "Sr Ricardo",
+		"EmailPrincipal": "ricardomanary@uol.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Estados AL, SE, BA PI, PE, PB, CE, RN",
+		"TelefonePrincipal": "(79) 3021-5510",
+		"TelefoneSecundario": "9156-0505"
+	}
+],
+"RS":[
+	{
+		"Titulo": "D. MOHR & CIA LTDA",
+		"Nome": "Sr Daniel",
+		"EmailPrincipal": "dtelha@gmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Zona Norte de POA, Alvorada - RS",
+		"TelefonePrincipal": "(51) 9968-4055",
+		"TelefoneSecundario": "3029-7070"
+	},
+	{
+		"Titulo": "ELOY S OLIVEIRA & CIA LTDA",
+		"Nome": "Sr Eloy",
+		"EmailPrincipal": "yole.aniger@terra.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Vale dos Sinos - RS",
+		"TelefonePrincipal": "(51) 3592-2228",
+		"TelefoneSecundario": "9989-3107"
+	},
+	{
+		"Titulo": "MGUICHARD REPRES COM. LTDA",
+		"Nome": "Sr Gabriel",
+		"EmailPrincipal": "comercial@mguichard.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Zona Sul de POA, Viamão - RS",
+		"TelefonePrincipal": "(51) 3222-0755",
+		"TelefoneSecundario": "9981-1551"
+	},
+	{
+		"Titulo": "HIDALGO  &  MIELKE LTDA",
+		"Nome": "Sr Mielke",
+		"EmailPrincipal": "mielke@alternet.com.br",
+		"EmailSecundario": "mielkegrunwald@gmail.com",
+		"Cidade": "Uruguaiana,  Bagé - RS",
+		"TelefonePrincipal": "(53) 3242-7507",
+		"TelefoneSecundario": "9972-2521"
+	},
+	{
+		"Titulo": "JCF SERVC REPRESENT. COMERC  LTDA",
+		"Nome": "Sr Joni",
+		"EmailPrincipal": "joni-cristian@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Zona Norte POA, Gravataí, litoral - RS",
+		"TelefonePrincipal": "(51) 8426-5056",
+		"TelefoneSecundario": "8411-6596"
+	},
+	{
+		"Titulo": "KMG REPRES  COMERCIAIS LTDA",
+		"Nome": "Sr Gaspar",
+		"EmailPrincipal": "vera.beatriz@droidstudio.com.br",
+		"EmailSecundario": "atendimento@rirepresenta.com.br",
+		"Nome": "Sr Gaspar",
+		"EmailPrincipal": "vera.beatriz@droidstudio.com.br",
+		"Cidade": "Sapucaia, Canoas, Esteio - RS",
+		"TelefonePrincipal": "(55) 3226-3411",
+		"TelefoneSecundario": "9808-5206"
+	},
+	{
+		"Titulo": "R I COMERCIO E REPRES. LTDA – ME",
+		"Nome": "Sr Vagner",
+		"EmailPrincipal": "atendimento@rirepresenta.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Santa Maria - RS",
+		"TelefonePrincipal": "(55) 3226-3411",
+		"TelefoneSecundario": "9721-3599"
+	},
+	{
+		"Titulo": "RUAS & RUAS",
+		"Nome": "Sr Ronaldo",
+		"EmailPrincipal": "ronaldoruas@via-rs.net",
+		"EmailSecundario": "",
+		"Cidade": "Erechim, Passo Fundo - RS",
+		"TelefonePrincipal": "(54) 2103-5841",
+		"TelefoneSecundario": "9982-8990"
+	},
+	{
+		"Titulo": "REPRESENTACOES REZNICEK LTDA ME",
+		"Nome": "Sr Marcos",
+		"EmailPrincipal": "reznicek@brturbo.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Ijuí, Cruz Alta - RS",
+		"TelefonePrincipal": "(51) 3340-5354",
+		"TelefoneSecundario": "9968-9171"
+	},	
+	{
+		"Titulo": "ROYALLE REPRES LTDA",
+		"Nome": "Sr Arthur e Murilo",
+		"EmailPrincipal": "amdutra@terra.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Caxia do Sul - RS",
+		"TelefonePrincipal": "(54) 3028-0400",
+		"TelefoneSecundario": "8404-2643"
+	},
+	{
+		"Titulo": "REPRESENTAÇÕES KUHN LTDA ME",
+		"Nome": "Sr Marcos",
+		"EmailPrincipal": "rkl.comercial@gmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Ijuí, Cruz Alta - RS",
+		"TelefonePrincipal": "(55) 3332-7585",
+		"TelefoneSecundario": "9681-6974"
+	},
+	{
+		"Titulo": "REPRESENTACOES LANZIOTTI LTDA",
+		"Nome": "Sr Giovani",
+		"EmailPrincipal": "gtelha@terra.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Gravataí, litoral - RS",
+		"TelefonePrincipal": "(51) 3388-7766",
+		"TelefoneSecundario": "9986-0459"
+	},
+	{
+		"Titulo": "SERGIO RENATO BOEIRA  & CIA LTDA",
+		"Nome": "Sr Sergio",
+		"EmailPrincipal": "sboeira@sboeira.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Rio Grande, Pelotas - RS",
+		"TelefonePrincipal": "(53) 3272-3666",
+		"TelefoneSecundario": "8403-6581"
+	},
+	{
+		"Titulo": "U.R.S.  REPRESENTACOES LTDA",
+		"Nome": "Sr Uilson",
+		"EmailPrincipal": "ursltda@terra.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Rio Grande, Pelotas - RS",
+		"TelefonePrincipal": "(53) 3027-4252",
+		"TelefoneSecundario": "8447--5814"
+	},
+	{
+		"Titulo": "ZAPA REPRES. E CONSULTORIA LTDA",
+		"Nome": "Sr Rafael",
+		"EmailPrincipal": "zapa.representacoes.rs@gmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Vale dos Sinos, Ivoti - RS",
+		"TelefonePrincipal": "(51) 3592-2228",
+		"TelefoneSecundario": "8905-0281"
+	},
+	{
+		"Titulo": "Jackson Machado",
+		"Nome": "",
+		"EmailPrincipal": "jackson.machado@isdralit.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Supervisor de Vendas RS e SC",
+		"TelefonePrincipal": "(51) 9707-4750",
+		"TelefoneSecundario": ""
+	}
+],
+"RO":[
+	{
+		"Titulo": "MONTANHA REPRES LTDA",
+		"Nome": "Sr Albino e Neuza",
+		"EmailPrincipal": "montanha@montanha.biz",
+		"EmailSecundario": "",
+		"Cidade": "Estados - RO, PA, MA, AM, RR, AC",
+		"TelefonePrincipal": "(65) 3634-1336",
+		"TelefoneSecundario": "3634-6109"
+	}
+],
+"RR":[
+	{
+		"Titulo": "MONTANHA REPRES LTDA",
+		"Nome": "Sr Albino e Neuza",
+		"EmailPrincipal": "montanha@montanha.biz",
+		"EmailSecundario": "",
+		"Cidade": "Estados - RO, PA, MA, AM, RR, AC",
+		"TelefonePrincipal": "(65) 3634-1336",
+		"TelefoneSecundario": "3634-6109"
+	}
+],
+"SC":[
+	{
+		"Titulo": "CELITO REPRESENTACOES LTDA",
+		"Nome": "Sr Celito",
+		"EmailPrincipal": "celito.s@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Lages, Caçador - SC",
+		"TelefonePrincipal": "(49) 3018-3558",
+		"TelefoneSecundario": "9958-7342"
+	},
+	{
+		"Titulo": "CONCEITO-REPRES. E SERVICOS LTDA",
+		"Nome": "Srª Gisela",
+		"EmailPrincipal": "gisela_eicke@yahoo.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Florianópolis - SC",
+		"TelefonePrincipal": "(47) 9977-9020",
+		"TelefoneSecundario": "3366-0450"
+	},
+	{
+		"Titulo": "MAGNUM REPRESENTAÇÕES LTDA",
+		"Nome": "Sr Renato",
+		"EmailPrincipal": "magnum@magnumvendas.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Chapecó, Concórdia - SC",
+		"TelefonePrincipal": "(51) 3716-1718",
+		"TelefoneSecundario": "9953-4481"
+	},
+	{
+		"Titulo": "PINTER COMERCIO E REPRES LTDA",
+		"Nome": "Sr Lourival",
+		"EmailPrincipal": "lourivalpinter@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Passo de Torre, Criciúma - SC",
+		"TelefonePrincipal": "(48) 3433-9304",
+		"TelefoneSecundario": "9978-0297"
+	},
+	{
+		"Titulo": "R.B.K. COMERCIO E REPRES LTDA",
+		"Nome": "Sr Renato",
+		"EmailPrincipal": "magnum@magnumvendas.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Chapecó, Concórdia - SC",
+		"TelefonePrincipal": "(51) 3716-1718",
+		"TelefoneSecundario": "9953-4481"
+	},
+	{
+		"Titulo": "Jackson Machado",
+		"Nome": "",
+		"EmailPrincipal": "jackson.machado@isdralit.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Supervisor de Vendas RS e SC",
+		"TelefonePrincipal": "(51) 9707-4750",
+		"TelefoneSecundario": ""
+	}
+],
+"SP":[
+	{
+		"Titulo": "A ABUD REPRES. COMERCIAL LTDA",
+		"Nome": "Sr Antonio",
+		"EmailPrincipal": "antonioabud@terra.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Ribeirão Preto - SP",
+		"TelefonePrincipal": "(16) 3916-2533",
+		"TelefoneSecundario": "99137-4881"
+	},
+	{
+		"Titulo": "BENMAIS REPRESENTAÇÕES LTDA ME",
+		"Nome": "Sr Tiago",
+		"EmailPrincipal": "benmais.representacoes@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Campinas - SP",
+		"TelefonePrincipal": "(11) 97191-7863",
+		"TelefoneSecundario": "98566-4553"
+	},
+	{
+		"Titulo": "BLOOMBERG REPRES. S/C LTDA",
+		"Nome": "Sr Martinho",
+		"EmailPrincipal": "martinho.repres.isdra@uol.com.br",
+		"Cidade": "Zona Leste da Capital de SP",
+		"TelefonePrincipal": "(11) 5011-4742",
+		"TelefoneSecundario": "98167-2676"
+	},
+	{
+		"Titulo": "D'ACLE COML E REPRES LTDA",
+		"Nome": "Sr Douglas",
+		"EmailPrincipal": "douglas_repre@yahoo.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Stª Isabel, Itaquaquecetuba - SP",
+		"TelefonePrincipal": "(11) 2987-2793",
+		"TelefoneSecundario": "98272-8190"
+	},
+	{
+		"Titulo": "DINAMISMO  COM. E REPRES LTDA",
+		"Nome": "Sr Mauro",
+		"EmailPrincipal": "fr-nasc@uol.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Peruíbe, Litoral -SP",
+		"TelefonePrincipal": "(13) 3239-8682",
+		"TelefoneSecundario": "7802-1120"
+	},
+	{
+		"Titulo": "F R NASCIMENTO COM.REPRESENT.LTDA ME",
+		"Nome": "",
+		"EmailPrincipal": "fr-nasc@uol.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Peruíbe, Litoral -SP",
+		"TelefonePrincipal": "(13) 3239-8682",
+		"TelefoneSecundario": "7802-1120"
+	},
+	{
+		"Titulo": "FAMBRINI  COM. E REPRES. LTDA",
+		"Nome": "Sr Elder",
+		"EmailPrincipal": "elder.daniel@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Marília - SP",
+		"TelefonePrincipal": "(14) 3454-3645",
+		"TelefoneSecundario": "99721-8887"
+	},
+	{
+		"Titulo": "FIBROMIX REPRESENTAÇÕES LTDA",
+		"Nome": "Sr Luis",
+		"EmailPrincipal": "luizfibromix.vendas@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Zona Sul SP, Taboão da Serra - SP",
+		"TelefonePrincipal": "(11) 98026-3140",
+		"TelefoneSecundario": "98563-6011"
+	},
+	{
+		"Titulo": "J. FERREIRA REPR.COM. S/S LTDA",
+		"Nome": "Sr Zé Antonio",
+		"EmailPrincipal": "jferreirapp@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Presidente Prudente - SP",
+		"TelefonePrincipal": "(18) 99700-5660",
+		"TelefoneSecundario": ""
+	},
+	{
+		"Titulo": "J.I. COML E ASSIST. TECNICA EM PVC LTDA-ME",
+		"Nome": "João",
+		"EmailPrincipal": "japseji@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Mauá, Santo André - SP",
+		"TelefonePrincipal": "(11) 99379-7157",
+		"TelefoneSecundario": ""
+	},
+	{
+		"Titulo": "JAPS REPRESENT.COMERCIAIS S/C LTDA-ME",
+		"Nome": "João",
+		"EmailPrincipal": "japseji@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Mauá, Santo André - SP",
+		"TelefonePrincipal": "(11) 99379-7157",
+		"TelefoneSecundario": ""
+	},
+	{
+		"Titulo": "MSP REPRES COML S/C LTDA – ME",
+		"Nome": "Srª Mara",
+		"EmailPrincipal": "mspmara@ig.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Diadema, S. Bernardo Campo - SP",
+		"TelefonePrincipal": "(11) 3031-7838",
+		"TelefoneSecundario": "98269-0281"
+	},
+	{
+		"Titulo": "M.M.G. REPRESENTAÇÕES LTDA",
+		"Nome": "Sr Marcos",
+		"EmailPrincipal": "mmg_ozani@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Vale do Ribeira, Registro, Osasco - SP",
+		"TelefonePrincipal": "(11) 5011-5373",
+		"TelefoneSecundario": "99943-1367"
+	},
+	{
+		"Titulo": "OZANI REPR.  COMERCIAIS S/C LTDA",
+		"Nome": "Sr Marcos",
+		"EmailPrincipal": "mmg_ozani@hotmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Vale do Ribeira, Registro, Osasco - SP",
+		"TelefonePrincipal": "(11) 5011-5373",
+		"TelefoneSecundario": "99943-1367"
+	},
+	{
+		"Titulo": "RAINHA DA PAZ  COM E REPR DE M/C  LTDA",
+		"Nome": "Sergio",
+		"EmailPrincipal": "sergioisdralit@terra.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Bauru - SP",
+		"TelefonePrincipal": "(14) 99793-4381",
+		"TelefoneSecundario": "3208-3321"
+	},
+	{
+		"Titulo": "REINOR REPRESENTAÇÕES S/C LTDA – ME",
+		"Nome": "Reinor",
+		"EmailPrincipal": "reinoraps@terra.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Zona Norte - SP",
+		"TelefonePrincipal": "(11) 2212-2262",
+		"TelefoneSecundario": "99904-1358"
+	},
+	{
+		"Titulo": "L M  DO AMARAL & CIA LTDA",
+		"Nome": "Sr Carlos",
+		"EmailPrincipal": "carlos.rmunhoz@terra.com.br",
+		"EmailSecundario": "",
+		"EmailSecundario": "comercialmunhoz@gmail.com",
+		"Cidade": "São Jose do Rio do Preto - SP",
+		"TelefonePrincipal": "(17) 3421-8044",
+		"TelefoneSecundario": "99134-2900"
+	},
+	{
+		"Titulo": "SCORPIONS  REPRES  S/C LTDA ME",
+		"Nome": "Sr Rinaldo",
+		"EmailPrincipal": "scorpionsrep@gmail.com",
+		"EmailSecundario": "",
+		"Cidade": "Jundiaí - SP",
+		"TelefonePrincipal": "(19) 99627-3242",
+		"TelefoneSecundario": "98284-5456"
+	},
+	{
+		"Titulo": "TOTTA  REPRESENTAÇÕES LTDA",
+		"Nome": "Sr . Caio",
+		"EmailPrincipal": "kaiototta@bol.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Sorocaba, Sumaré, Americana - SP",
+		"TelefonePrincipal": "(15) 3018-3337",
+		"TelefoneSecundario": "99658-3056"
+	},
+	{
+		"Titulo": "Carlos Grossi",
+		"Nome": "",
+		"EmailPrincipal": "carlos.grossi@isdralit.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Gerente Regional SP-MG-RJ-ES",
+		"TelefonePrincipal": "(11) 99657-9866",
+		"TelefoneSecundario": ""
+	}
+],
+"SE":[
+	{
+		"Titulo": "REPRESENTACOES  MANARY LTDA",
+		"Nome": "Sr Ricardo",
+		"EmailPrincipal": "ricardomanary@uol.com.br",
+		"EmailSecundario": "",
+		"Cidade": "Estados AL, SE, BA PI, PE, PB, CE, RN",
+		"TelefonePrincipal": "(79) 3021-5510",
+		"TelefoneSecundario": "9156-0505"
+	}
+]
+}
